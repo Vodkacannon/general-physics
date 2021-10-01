@@ -1,18 +1,22 @@
-#include "simple_phys.h"
+//Physics: A verbose C++ physics library.
+//Functions with fabs() in them are scalar.
 
-namespace physics
+#include "simple_phys.h"
+#include <math.h>
+
+namespace simple_phys
 {
 	float speed(float distance, float time)
 	{
 		return fabs(distance) / time;
 	}
 
-	inline float velocity(float displacement, float time)
+	float velocity(float displacement, float time)
 	{
 		return displacement / time;
 	}
 
-	inline float displacement(float velocity, float time)
+	float displacement(float velocity, float time)
 	{
 		return velocity / time;
 	}
@@ -42,34 +46,54 @@ namespace physics
 		return (velocity_2 - velocity_1) / (time_2 - time_1);
 	}
 
-	inline float mometum(float mass, float velocity)
+	float mometum(float mass, float velocity)
 	{
 		return mass * velocity;
 	}
 
-	inline float force(float mass, float acceleration)
+	float force(float mass, float acceleration)
 	{
 		return mass	* acceleration;
 	}
 
-	inline float pressure(float force, float area)
+	float pressure(float force, float area)
 	{
 		return force / area;
 	}
 
-	inline float impulse(float force, float time)
+	float density(float mass, float volume)
+	{
+		return mass / volume;
+	}
+
+	float impulse(float force, float time)
 	{
 		return force * time;
 	}
 
-	inline float time(float frequency)
+	float time(float frequency)
 	{
 		return 1 / frequency;
 	}
 
-	inline float frequency(float time)
+	float frequency(float time)
 	{
 		return 1 / time;
+	}
+
+	float final_free_fall_velocity(float acceleration_of_gravity, float initial_height)
+	{
+		return sqrtf(2 * acceleration_of_gravity * initial_height);
+	}
+
+	float centripedal_acceleration(float tangental_velocity, float radius)
+	{
+		return (tangental_velocity * tangental_velocity) / radius;
+	}
+
+	float centripedal_acceleration(float angular_velocity, float radius)
+	{
+		return -angular_velocity * angular_velocity * radius;
 	}
 
 	float angular_velocity(float angle, float time)
@@ -92,17 +116,22 @@ namespace physics
 		return (angular_velocity_2 - angular_velocity_1) / (time_2 - time_1);
 	}
 
-	float torque(float radius, float force, float angle)
+	//I want to implement this but I don't know what it does.
+	float angular_momentum(float mass, float radius, float velocity, float angle)
+	{
+		//TODO.
+	}
+	template <typename T> torque(T radius, T force, T angle)
 	{
 		return radius * force * sin(angle);
 	}
 
-	inline float torque(float inertia, float angular_acceleration)
+	float torque(float inertia, float angular_acceleration)
 	{
 		return inertia * angular_acceleration;
 	}
 
-	inline float dry_friction(float coefficient_of_friction, float normal_force)
+	float dry_friction(float coefficient_of_friction, float normal_force)
 	{
 		return coefficient_of_friction * normal_force;
 	}
@@ -110,6 +139,11 @@ namespace physics
 	float newtons_gravitational_force(float mass_1, float mass_2, float radius_between_masses)
 	{
 		return NEWTONS_GRAVITATIONAL_CONSTANT * mass_1 * mass_2 / (radius_between_masses * radius_between_masses);
+	}
+
+	float escape_speed(float mass, float radius)
+	{
+		return sqrtf((2 * NEWTONS_GRAVITATIONAL_CONSTANT * mass) / radius);
 	}
 
 	float classical_kinetic_energy(float mass, float velocity)
@@ -122,6 +156,11 @@ namespace physics
 		return mass * gravitational_acceleration * height;
 	}
 
+	float orbital_period(float velocity, float radius)
+	{
+		return (2 * M_PI * radius) / velocity;
+	}
+
 	float elastic_potential_energy(const float spring_constant, float displacement)
 	{
 		return (1 / 2) * spring_constant * displacement * displacement;
@@ -130,6 +169,11 @@ namespace physics
 	float rotational_kinetic_energy(float rotational_inertia, float angular_velocity)
 	{
 		return (1 / 2) * rotational_inertia * angular_velocity * angular_velocity;
+	}
+
+	float rolling_object_kinetic_energy(float kinetic_energy, float rotational_kinetic_energy)
+	{
+		return kinetic_energy + rotational_kinetic_energy;
 	}
 
 	float relativistic_velocity_clamp(float velocity)
@@ -179,6 +223,29 @@ namespace physics
 		return lorentz_factor(velocity) * mass;
 	}
 
+	float mass_energy(float mass)
+	{
+		return mass * SPEED_OF_LIGHT * SPEED_OF_LIGHT;
+	}
+
+	float energy_momentum()
+	{
+		//TODO.
+	}
+
+	float sum_of_momenta(const std::vector<std::pair<mass, velocity>> &momenta)
+	{
+		unsigned int momenta_size = momenta.size();
+		float sum_of_momenta = 0.0;
+
+		for(unsigned int i = 0; i < momenta_size; i++)
+		{
+			sum_of_momenta += momenta[i].first * momenta[i].second;
+		}
+
+		return sum_of_momenta;
+	}
+
 	float sum_of_forces(const std::vector<std::pair<mass, acceleration>> &forces)
 	{
 		unsigned int forces_size = forces.size();
@@ -192,7 +259,17 @@ namespace physics
 		return sum_of_forces;
 	}
 
-	float center_of_mass(const std::vector<std::pair<mass, radius_from_center>> &mass_moments)
+	bool are_forces_in_equilibrium(const std::vector<std::pair<mass, acceleration>> &forces)
+	{
+		if(sum_of_forces(forces) == 0)
+		{
+			return true;
+		}
+
+		return false;
+	}
+
+	float center_of_mass(const std::vector<std::pair<mass, radius_from_zero>> &mass_moments)
 	{
 		float sum_of_masses = 0.0;
 		float mass_moment_sum = 0.0;
@@ -248,5 +325,70 @@ namespace physics
 	float pendulum_potential_energy(float mass, float gravitational_acceleration, float pendulum_length, float angle)
 	{
 		return mass * gravitational_acceleration * pendulum_length * (1 - cos(angle));
+	}
+
+	float efficiency(float work_out, float energy_in)
+	{
+		return work_out / energy_in;
+	}
+
+	float power(float work_2, float work_1, float time_2, float time_1)
+	{
+		return (work_2 - work_1) / (time_2 - time_1);
+	}
+
+	float power_velocity(float force, float velocity, float applied_angle)
+	{
+		return force * velocity * cos(applied_angle);
+	}
+
+	float drag_force(float air_density, float velocity, float drag_coefficient, float cross_sectional_area)
+	{
+		return (1 / 2) * air_density * velocity * velocity * drag_coefficient * cross_sectional_area;
+	}
+
+	float index_of_refraction(float speed_of_light_in_medium)
+	{
+		return SPEED_OF_LIGHT / speed_of_light_in_medium;
+	}
+
+	float photon_energy(float frequency)
+	{
+		return PLANCKS_CONSTANT * frequency;
+	}
+
+	float photon_momentum(float wavelength)
+	{
+		return PLANCKS_CONSTANT * wavelength;
+	}
+
+	float voltage(float current, float resistance)
+	{
+		return current * resistance;
+	}
+
+	float current(float voltage, float resistance)
+	{
+		return voltage / resistance;
+	}
+
+	float heisenberg_momentum_uncertainty(float max_position, float min_position)
+	{
+		return REDUCED_PLANCKS_CONSTANT / (2 * (max_position - min_position));
+	}
+
+	float heisenberg_position_uncertainty(float max_momentum, float min_momentum)
+	{
+		return REDUCED_PLANCKS_CONSTANT / (2 * (max_momentum - min_momentum));
+	}
+
+	float boltzman_entropy(unsigned int multiplicity)
+	{
+		return BOLTZMANS_CONSTANT * log(multiplicity);
+	}
+
+	float speed_from_velocity_3(float velocity_x, float velocity_y, float velocity_z)
+	{
+		return sqrtf(velocity_x * velocity_x)
 	}
 }
