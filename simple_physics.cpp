@@ -53,7 +53,7 @@ namespace simple_phys
 
 	float force(float mass, float acceleration)
 	{
-		return mass	* acceleration;
+		return mass * acceleration;
 	}
 
 	float pressure(float force, float area)
