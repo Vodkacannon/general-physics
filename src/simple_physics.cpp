@@ -187,11 +187,13 @@ namespace simple_phys
 
 	float relativistic_velocity_clamp(float velocity)
 	{
-		if(velocity > SPEED_OF_LIGHT){
+		if(velocity > SPEED_OF_LIGHT)
+		{
 			return SPEED_OF_LIGHT;
 		}
 
-		else if(velocity < -SPEED_OF_LIGHT){
+		else if(velocity < -SPEED_OF_LIGHT)
+		{
 			return -SPEED_OF_LIGHT;
 		}
 		else
