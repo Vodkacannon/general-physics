@@ -1,7 +1,7 @@
 //simple-physics: A verbose C++ physics library.
 //Functions with fabs() in them are scalar.
 
-#include "simple_phys.h"
+#include "include/simple_phys.hpp"
 
 namespace simple_phys
 {
@@ -10,255 +10,180 @@ namespace simple_phys
 		return fabs(distance) / time;
 	}
 
-	double speed(double distance, double time);
-
 	float velocity(float displacement, float time)
 	{
 		return displacement / time;
 	}
-
-	double velocity(double displacement, double time);
 
 	float displacement(float velocity, float time)
 	{
 		return velocity / time;
 	}
 
-	double displacement(double velocity, double time);
-
 	float distance(float speed, float time)
 	{
 		return fabs(speed) / time;
 	}
-
-	double distance(double speed, double time);
 
 	float time(float distance, float velocity)
 	{
 		return distance / velocity;
 	}
 
-	double time(double distance, double velocity);
-
 	float displacement_2(float velocity_1, float time, float acceleration)
 	{
 		velocity_1 * time + (1 / 2) * acceleration * time * time;
 	}
-
-	double displacement_2(double velocity_1, double time, double acceleration);
 
 	float displacement_3(float velocity_1, float velocity_2, float acceleration)
 	{
 		return (velocity_2 * velocity_2 - velocity_1 * velocity_1) / (2 * acceleration);
 	}
 
-	double displacement_3(double velocity_1, double velocity_2, double acceleration);
-
 	float acceleration(float velocity_2, float velocity_1, float time_2, float time_1)
 	{
 		return (velocity_2 - velocity_1) / (time_2 - time_1);
 	}
-
-	double acceleration(double velocity_2, double velocity_1, double time_2, double time_1);
 
 	float mometum(float mass, float velocity)
 	{
 		return mass * velocity;
 	}
 
-	double mometum(double mass, double velocity);
-
-
 	float force(float mass, float acceleration)
 	{
 		return mass	* acceleration;
 	}
-
-	double force(double mass, double acceleration);
 
 	float pressure(float force, float area)
 	{
 		return force / area;
 	}
 
-	double pressure(double force, double area);
-
 	float density(float mass, float volume)
 	{
 		return mass / volume;
 	}
-
-	double density(double mass, double volume);
 
 	float impulse(float force, float time)
 	{
 		return force * time;
 	}
 
-	double impulse(double force, double time);
-
 	double work(double force, double distance)
 	{
 		return force * distance;
 	}
-
-	double work(double force, double distance);
 
 	float time(float frequency)
 	{
 		return 1 / frequency;
 	}
 
-	double time(double frequency);
-
 	float frequency(float time)
 	{
 		return 1 / time;
 	}
 
-	double frequency(double time);
-
 	float final_free_fall_velocity(float acceleration_of_gravity, float initial_height)
 	{
-		return sqrtf(2 * acceleration_of_gravity * initial_height);
+		return sqrt(2 * acceleration_of_gravity * initial_height);
 	}
-
-	double final_free_fall_velocity(double acceleration_of_gravity, double initial_height);
 
 	float centripedal_acceleration_from_tangental(float tangental_velocity, float radius)
 	{
 		return (tangental_velocity * tangental_velocity) / radius;
 	}
 
-	double centripedal_acceleration_from_tangental(double tangental_velocity, double radius);
-
 	float centripedal_acceleration_from_angular(float angular_velocity, float radius)
 	{
 		return -angular_velocity * angular_velocity * radius;
 	}
-
-	double centripedal_acceleration_from_angular(double angular_velocity, double radius);
 
 	float centripedal_force(float mass, float tangental_velocity, float radius)
 	{
 		return (mass * tangental_velocity * tangental_velocity) / radius;
 	}
 
-	double centripedal_force(double mass, double tangental_velocity, double radius);
-
 	float angular_velocity(float angle, float time)
 	{
 		return angle / time;
 	}
-
-	double angular_velocity(double angle, double time);
 
 	float angular_velocity(float angle_2, float angle_1, float time_2, float time_1)
 	{
 		return (angle_2 - angle_1) / (time_2 - time_1);
 	}
 
-	double angular_velocity(double angle_2, double angle_1, double time_2, double time_1);
-
-
 	float angular_acceleration(float angular_velocity, float time)
 	{
 		return angular_velocity / time;
 	}
-
-	double angular_acceleration(double angular_velocity, double time);
 
 	float angular_acceleration(float angular_velocity_2, float angular_velocity_1, float time_2, float time_1)
 	{
 		return (angular_velocity_2 - angular_velocity_1) / (time_2 - time_1);
 	}
 
-	double angular_acceleration(double angular_velocity_2, double angular_velocity_1, double time_2, double time_1);
-
-	//I want to implement this but I don't know what it does.
-	float angular_momentum(float mass, float radius, float velocity, float angle)
+	float perpendicular_angular_momentum(float radius, float mass, float velocity, float perpendicular_angle)
 	{
-		//TODO.
+		return radius * mass * velocity * sin(perpendicular_angle);
 	}
-
-	double angular_momentum(double mass, double radius, double velocity, double angle);
 
 	float torque(float radius, float force, float angle)
 	{
 		return radius * force * sin(angle);
 	}
 
-	double torque(double radius, double force, double angle);
-
-	float torque_2(float inertia, float angular_acceleration)
+	float torque(float inertia, float angular_acceleration)
 	{
 		return inertia * angular_acceleration;
 	}
-
-	double torque_2(double inertia, double angular_acceleration);
 
 	float dry_friction(float coefficient_of_friction, float normal_force)
 	{
 		return coefficient_of_friction * normal_force;
 	}
 
-	double dry_friction(double coefficient_of_friction, double normal_force);
-
 	float newtons_gravitational_force(float mass_1, float mass_2, float radius_between_masses)
 	{
 		return NEWTONS_GRAVITATIONAL_CONSTANT * mass_1 * mass_2 / (radius_between_masses * radius_between_masses);
 	}
-
-	double newtons_gravitational_force(double mass_1, double mass_2, double radius_between_masses);
 
 	float escape_speed(float mass, float radius)
 	{
 		return sqrt((2 * NEWTONS_GRAVITATIONAL_CONSTANT * mass) / radius);
 	}
 
-	double escape_speed(double mass, double radius);
-
 	float classical_kinetic_energy(float mass, float velocity)
 	{
 		return (1 / 2) * mass * velocity * velocity;
 	}
-
-	double classical_kinetic_energy(double mass, double velocity);
 
 	float gravitational_potential_energy(float mass, float gravitational_acceleration, float height)
 	{
 		return mass * gravitational_acceleration * height;
 	}
 
-	double gravitational_potential_energy(double mass, double gravitational_acceleration, double height);
-
 	float orbital_period(float velocity, float radius)
 	{
 		return (2 * M_PI * radius) / velocity;
 	}
-
-	double orbital_period(double velocity, double radius);
 
 	float elastic_potential_energy(const float spring_constant, float displacement)
 	{
 		return (1 / 2) * spring_constant * displacement * displacement;
 	}
 
-	double elastic_potential_energy(const double spring_constant, double displacement);
-
 	float rotational_kinetic_energy(float rotational_inertia, float angular_velocity)
 	{
 		return (1 / 2) * rotational_inertia * angular_velocity * angular_velocity;
 	}
 
-	double rotational_kinetic_energy(double rotational_inertia, double angular_velocity);
-
 	float rolling_object_kinetic_energy(float kinetic_energy, float rotational_kinetic_energy)
 	{
 		return kinetic_energy + rotational_kinetic_energy;
 	}
-
-	double rolling_object_kinetic_energy(double kinetic_energy, double rotational_kinetic_energy);
 
 	float relativistic_velocity_clamp(float velocity)
 	{
@@ -275,69 +200,52 @@ namespace simple_phys
 		}
 	}
 
-	double relativistic_velocity_clamp(double velocity);
-
 	float lorentz_factor(float velocity)
 	{
 		return 1 / sqrt(1 - (velocity * velocity) / (SPEED_OF_LIGHT * SPEED_OF_LIGHT));
 	}
-
-	double lorentz_factor(double velocity);
 
 	float relativistic_time_dilation(float lorentz_factor, float proper_time)
 	{
 		return proper_time / lorentz_factor;
 	}
 
-	double relativistic_time_dilation(double lorentz_factor, double proper_time);
-
 	float relativistic_time_dilation_2(float velocity, float proper_time)
 	{
 		return proper_time / lorentz_factor(velocity);
 	}
 
-	double relativistic_time_dilation_2(double velocity, double proper_time);
-
-	float relativistic_time_dilation_3(float lorentz_factor, float proper_time_2, float proper_time_1)
+	float relativistic_time_dilation(float lorentz_factor, float proper_time_2, float proper_time_1)
 	{
 		return (proper_time_2 - proper_time_1) / lorentz_factor;
 	}
-
-	double relativistic_time_dilation_3(double lorentz_factor, double proper_time_2, double proper_time_1);
 
 	float relativistic_length_contraction(float lorentz_factor, float proper_length)
 	{
 		return (1 / lorentz_factor) * proper_length;
 	}
 
-	double relativistic_length_contraction(double lorentz_factor, double proper_length);
-
 	float relativistic_length_contraction_2(float velocity, float proper_length)
 	{
 		return lorentz_factor(velocity) * proper_length;
 	}
-
-	double relativistic_length_contraction_2(double velocity, double proper_length);
-
 	
 	float relativistic_momentum(float lorentz_factor, float mass, float velocity)
 	{
 		return lorentz_factor * mass * velocity;
 	}
 
+	double relativistic_momentum(double lorentz_factor, double mass, double velocity);
+	
 	float relativistic_momentum(float velocity, float mass)
 	{
 		return lorentz_factor(velocity) * mass;
 	}
 
-	double relativistic_momentum(double velocity, double mass);
-
 	float mass_energy(float mass)
 	{
 		return mass * SPEED_OF_LIGHT * SPEED_OF_LIGHT;
 	}
-
-	double mass_energy(double mass);
 
 	float energy_momentum(float momentum, float rest_mass)
 	{
@@ -346,8 +254,6 @@ namespace simple_phys
 		
 		return sqrt(momentum_part + mass_energy_part);
 	}
-
-	float energy_momentum(float momentum, float rest_mass);
 
 	float sum_of_momenta(const std::vector<std::pair<types::mass, types::velocity>> &momenta)
 	{
@@ -423,126 +329,90 @@ namespace simple_phys
 		return significant_figure_count;
 	}
 
-	double significant_figures(double value);
-
 	float heat_flow(float mass, float specific_heat_capacity, float temperature_change)
 	{
 		return mass * specific_heat_capacity * temperature;	
 	}
-
-	double heat_flow(double mass, double specific_heat_capacity, double temperature_change);
 
 	float heat_flow(float mass, float specific_heat_2, float specific_heat_1, float temperature)
 	{
 		return mass * (specific_heat_2 - specific_heat_1) * temperature;	
 	}
 
-	double heat_flow(double mass, double specific_heat_2, double specific_heat_1, double temperature);
-
 	float thermal_energy_transfer(float thermal_mass_of_body, float temperature_2, float temperature_1)
 	{
 		return thermal_mass_of_body * (temperature_2 - temperature_1);
 	}
-
-	double thermal_energy_transfer(double thermal_mass_of_body, double temperature_2, double temperature_1);
 
 	float pendulum_potential_energy(float mass, float gravitational_acceleration, float pendulum_length, float angle)
 	{
 		return mass * gravitational_acceleration * pendulum_length * (1 - cos(angle));
 	}
 
-	double pendulum_potential_energy(double mass, double gravitational_acceleration, double pendulum_length, double angle);
-
 	float efficiency(float energy_out, float energy_in)
 	{
 		return energy_out / energy_in;
 	}
-
-	double efficiency(double work_out, double energy_in);
 
 	float power(float energy, float time)
 	{
 		return energy / time;
 	}
 
-	double power(double energy, double time);
-
 	float power_velocity(float force, float velocity, float applied_angle)
 	{
 		return force * velocity * cos(applied_angle);
 	}
-
-	double power_velocity(double force, double velocity, double applied_angle);
 
 	float drag_force(float air_density, float velocity, float drag_coefficient, float cross_sectional_area)
 	{
 		return (1 / 2) * air_density * velocity * velocity * drag_coefficient * cross_sectional_area;
 	}
 
-	double drag_force(double air_density, double velocity, double drag_coefficient, double cross_sectional_area);
-
 	float index_of_refraction(float speed_of_light_in_medium)
 	{
 		return SPEED_OF_LIGHT / speed_of_light_in_medium;
 	}
-
-	double index_of_refraction(double speed_of_light_in_medium);
 
 	float photon_energy(float frequency)
 	{
 		return PLANCKS_CONSTANT * frequency;
 	}
 
-	double photon_energy(double frequency);
-
 	float photon_momentum(float wavelength)
 	{
 		return PLANCKS_CONSTANT * wavelength;
 	}
-
-	double photon_momentum(double wavelength);
 
 	float wave_velocity(float frequency, float wavelength)
 	{
 		return frequency * wavelength;
 	}
 
-	double wave_velocity(double frequency, double wavelength);
-
 	float voltage(float current, float resistance)
 	{
 		return current * resistance;
 	}
-
-	double voltage(double current, double resistance);
 
 	float current(float voltage, float resistance)
 	{
 		return voltage / resistance;
 	}
 
-	double current(double voltage, double resistance);
-
 	float heisenberg_momentum_uncertainty(float max_position, float min_position)
 	{
 		return REDUCED_PLANCKS_CONSTANT / (2 * (max_position - min_position));
 	}
-
-	double heisenberg_momentum_uncertainty(double max_position, double min_position);
 
 	float heisenberg_position_uncertainty(float max_momentum, float min_momentum)
 	{
 		return REDUCED_PLANCKS_CONSTANT / (2 * (max_momentum - min_momentum));
 	}
 
-	double heisenberg_position_uncertainty(double max_momentum, double min_momentum);
-
 	float boltzman_entropy(unsigned int multiplicity)
 	{
 		return BOLTZMANS_CONSTANT * log(multiplicity);
 	}
-
-	//double boltzman_entropy(unsigned int multiplicity);
 
 	float speed_from_velocity_vec_2(float velocity_x, float velocity_y)
 	{
@@ -579,95 +449,63 @@ namespace simple_phys
 		return celcius + 273.5;
 	}
 
-	double celcius_to_kelvin(double celcius);
-
 	float kelvin_to_celcius(float kelvin)
 	{
 		return kelvin - 273.5;
 	}
-
-	double kelvin_to_celcius(double kelvin);
 
 	float ideal_gas_pressure(unsigned int moles, float temperature, float volume)
 	{
 		return (moles * IDEAL_GAS_CONSTANT * temperature) / volume;
 	}
 
-	double ideal_gas_pressure(unsigned int moles, double temperature, double volume);
-
 	float average_kinetic_energy_of_ideal_gas(float gas_temperature)
 	{
 		return (3 / 2) * BOLTZMANS_CONSTANT * gas_temperature;
 	}
-
-	double average_kinetic_energy_of_ideal_gas(double gas_temperature);
 
 	float reynolds_number(float flow_speed, float characteristic_linear_dimension_as_length, float kinematic_viscosity)
 	{
 		return (flow_speed * characteristic_linear_dimension_as_length) / kinematic_viscosity;
 	}
 
-	double reynolds_number(double flow_speed, double characteristic_linear_dimension_as_length, double kinematic_viscosity);
-
 	float reynolds_number_2(float fluid_density, float flow_speed, float characteristic_linear_dimension_as_length, float dynamic_viscosity)
 	{
 		return (fluid_density * flow_speed * characteristic_linear_dimension_as_length) / dynamic_viscosity;
 	}
-
-	double reynolds_number_2(double fluid_density, double flow_speed, double characteristic_linear_dimension_as_length, double dynamic_viscosity);
 
 	float drag_coefficient(float wet_area, float front_area, float bejan_number, double reynolds_number)
 	{
 		return 2 * (wet_area / front_area) * (bejan_number / (reynolds_number * reynolds_number));
 	}
 
-	double drag_coefficient(double wet_area, double front_area, double bejan_number, double reynolds_number);
-
 	float ballistic_coefficient(float mass, float drag_coefficient, float cross_sectional_area)
 	{
 		return (mass * drag_coefficient) / cross_sectional_area;
 	}
-
-	double ballistic_coefficient(double mass, double drag_coefficient, double cross_sectional_area);
 
 	float ballistic_coefficient_2(float mass, float drag_coefficient, float cross_sectional_area)
 	{
 		return (mass * drag_coefficient) / cross_sectional_area;
 	}
 
-	double ballistic_coefficient_2(double density, double characteristic_body_length, double drag_coefficient);
-
 	float charge(float voltage, float time)
 	{
 		return voltage * time;
 	}
-
-	double charge(double voltage, double time);
 
 	float electric_energy(float voltage, float current, float time)
 	{
 		return voltage * current * time;
 	}
 
-	double electric_energy(double voltage, double current, double time);
-
 	float electric_energy(float voltage, float charge)
 	{
 		return voltage * charge;
 	}
 
-	double electric_energy(double voltage, double charge);
-
 	float electric_power(float voltage, float current)
 	{
 		return voltage * current;
 	}
-
-	double electric_power(double voltage, double current);
-
-}
-
-int main()
-{
-	return 0;
 }
