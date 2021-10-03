@@ -510,4 +510,9 @@ namespace simple_phys
 	{
 		return voltage * current;
 	}
+	
+	float electric_power_2(float current, resistance)
+	{
+		return current * resistance * resistance;
+	}
 }
