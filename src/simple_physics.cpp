@@ -1,7 +1,7 @@
 //simple-physics: A verbose C++ physics library.
 //Functions with fabs() in them are scalar.
 
-#include "src/simple_phys.h"
+#include "simple_phys.h"
 
 namespace simple_phys
 {
@@ -425,12 +425,12 @@ namespace simple_phys
 
 	double significant_figures(double value);
 
-	float heat_flow(float mass, float specific_heat, float temperature)
+	float heat_flow(float mass, float specific_heat_capacity, float temperature_change)
 	{
-		return mass * specific_heat * temperature;	
+		return mass * specific_heat_capacity * temperature;	
 	}
 
-	double heat_flow(double mass, double specific_heat, double temperature);
+	double heat_flow(double mass, double specific_heat_capacity, double temperature_change);
 
 	float heat_flow(float mass, float specific_heat_2, float specific_heat_1, float temperature)
 	{
@@ -453,19 +453,19 @@ namespace simple_phys
 
 	double pendulum_potential_energy(double mass, double gravitational_acceleration, double pendulum_length, double angle);
 
-	float efficiency(float work_out, float energy_in)
+	float efficiency(float energy_out, float energy_in)
 	{
-		return work_out / energy_in;
+		return energy_out / energy_in;
 	}
 
 	double efficiency(double work_out, double energy_in);
 
-	float power(float work_2, float work_1, float time_2, float time_1)
+	float power(float energy, float time)
 	{
-		return (work_2 - work_1) / (time_2 - time_1);
+		return energy / time;
 	}
 
-	double power(double work_2, double work_1, double time_2, double time_1);
+	double power(double energy, double time);
 
 	float power_velocity(float force, float velocity, float applied_angle)
 	{
@@ -501,6 +501,13 @@ namespace simple_phys
 	}
 
 	double photon_momentum(double wavelength);
+
+	float wave_velocity(float frequency, float wavelength)
+	{
+		return frequency * wavelength;
+	}
+
+	double wave_velocity(double frequency, double wavelength);
 
 	float voltage(float current, float resistance)
 	{
@@ -630,12 +637,34 @@ namespace simple_phys
 
 	double ballistic_coefficient_2(double density, double characteristic_body_length, double drag_coefficient);
 
+	float charge(float voltage, float time)
+	{
+		return voltage * time;
+	}
+
+	double charge(double voltage, double time);
+
 	float electric_energy(float voltage, float current, float time)
 	{
 		return voltage * current * time;
 	}
 
 	double electric_energy(double voltage, double current, double time);
+
+	float electric_energy(float voltage, float charge)
+	{
+		return voltage * charge;
+	}
+
+	double electric_energy(double voltage, double charge);
+
+	float electric_power(float voltage, float current)
+	{
+		return voltage * current;
+	}
+
+	double electric_power(double voltage, double current);
+
 }
 
 int main()
