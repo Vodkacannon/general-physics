@@ -2,9 +2,6 @@
 //Functions with fabs() in them are scalar.
 
 #include "simple_phys.h"
-#include <math.h>
-#include <algorithm>
-#include <utility>
 
 namespace simple_phys
 {
