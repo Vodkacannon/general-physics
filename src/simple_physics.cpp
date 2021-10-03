@@ -1,7 +1,7 @@
 //simple-physics: A verbose C++ physics library.
 //Functions with fabs() in them are scalar.
 
-#include "simple_phys.h"
+#include "src/simple_phys.h"
 
 namespace simple_phys
 {
