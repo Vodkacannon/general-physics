@@ -97,6 +97,11 @@ namespace simple_phys
 		return -angular_velocity * angular_velocity * radius;
 	}
 
+	float centripedal_force(float mass, float tangental_velocity, float radius)
+	{
+		return (mass * tangental_velocity * tangental_velocity) / radius;
+	}
+
 	float angular_velocity(float angle, float time)
 	{
 		return angle / time;
@@ -420,5 +425,50 @@ namespace simple_phys
 	float momentum_from_velocity_vec_3(float mass, vec_3 velocity)
 	{
 		return mass * sqrtf(velocity.x * velocity.x + velocity.y * velocity.y + velocity.z * velocity.z);
+	}
+
+	float celcius_to_kelvin(float celcius)
+	{
+		return celcius + 273.5;
+	}
+
+	float kelvin_to_celcius(float kelvin)
+	{
+		return kelvin - 273.5;
+	}
+
+	float ideal_gas_pressure(unsigned int moles, float temperature, float volume)
+	{
+		return (moles * IDEAL_GAS_CONSTANT * temperature) / volume;
+	}
+
+	float average_kinetic_energy_of_ideal_gas(float gas_temperature)
+	{
+		return (3 / 2) * BOLTZMANS_CONSTANT * gas_temperature;
+	}
+
+	float reynolds_number(float flow_speed, characteristic_linear_dimension_as_length, float kinematic_viscosity)
+	{
+		return (flow_speed * characteristic_linear_dimension_as_length) / kinematic_viscosity;
+	}
+
+	float reynolds_number_2(float fluid_density, float flow_speed, characteristic_linear_dimension_as_length, float dynamic_viscosity)
+	{
+		return (fluid_density * flow_speed * characteristic_linear_dimension_as_length) / dynamic_viscosity;
+	}
+
+	float drag_coefficient(float wet_area, float front_area, float bejan_number, reynolds_number)
+	{
+		return 2 * (wet_area / front_area) * (bejan_number / (reynolds_number * reynolds_number));
+	}
+
+	float ballistic_coefficient(float mass, float drag_coefficient, float cross_sectional_area)
+	{
+		return (mass * drag_coefficient) / cross_sectional_area;
+	}
+
+	float ballistic_coefficient_2(float density, float characteristic_body_length, drag_coefficient)
+	{
+		return (mass * drag_coefficient) / cross_sectional_area;
 	}
 }
