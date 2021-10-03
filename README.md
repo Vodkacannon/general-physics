@@ -1,2 +1,2 @@
 # simple-physics
-A simple physics library.
+A simple, but verbose physics library.
