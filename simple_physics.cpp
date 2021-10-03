@@ -3,6 +3,7 @@
 
 #include "simple_phys.h"
 #include <math.h>
+#include <algorithm>
 
 namespace simple_phys
 {
@@ -31,14 +32,14 @@ namespace simple_phys
 		return distance / velocity;
 	}
 
-	float displacement(float velocity_1, float time, float acceleration)
+	float displacement_2(float velocity_1, float time, float acceleration)
 	{
 		velocity_1 * time + (1 / 2) * acceleration * time * time;
 	}
 
-	float displacement(float velocity_1, float velocity_2, float acceleration)
+	float displacement_3(float velocity_1, float velocity_2, float acceleration)
 	{
-		return (velocity_2 * velocity_2 - velocity_1 * velocity_1) / (2 * a)
+		return (velocity_2 * velocity_2 - velocity_1 * velocity_1) / (2 * acceleration);
 	}
 
 	float acceleration(float velocity_2, float velocity_1, float time_2, float time_1)
@@ -53,7 +54,7 @@ namespace simple_phys
 
 	float force(float mass, float acceleration)
 	{
-		return mass * acceleration;
+		return mass	* acceleration;
 	}
 
 	float pressure(float force, float area)
@@ -86,12 +87,12 @@ namespace simple_phys
 		return sqrtf(2 * acceleration_of_gravity * initial_height);
 	}
 
-	float centripedal_acceleration(float tangental_velocity, float radius)
+	float centripedal_acceleration_from_tangental(float tangental_velocity, float radius)
 	{
 		return (tangental_velocity * tangental_velocity) / radius;
 	}
 
-	float centripedal_acceleration(float angular_velocity, float radius)
+	float centripedal_acceleration_from_angular(float angular_velocity, float radius)
 	{
 		return -angular_velocity * angular_velocity * radius;
 	}
@@ -103,7 +104,7 @@ namespace simple_phys
 
 	float angular_velocity(float angle_2, float angle_1, float time_2, float time_1)
 	{
-		return (angle_2 - angle_1) / (time2 - time1);
+		return (angle_2 - angle_1) / (time_2 - time_1);
 	}
 
 	float angular_acceleration(float angular_velocity, float time)
@@ -121,6 +122,7 @@ namespace simple_phys
 	{
 		//TODO.
 	}
+
 	template <typename T> torque(T radius, T force, T angle)
 	{
 		return radius * force * sin(angle);
@@ -191,12 +193,12 @@ namespace simple_phys
 		return proper_time / lorentz_factor;
 	}
 
-	float relativistic_time_dilation(float velocity, float proper_time)
+	float relativistic_time_dilation_2(float velocity, float proper_time)
 	{
 		return proper_time / lorentz_factor(velocity);
 	}
 
-	float relativistic_time_dilation(float lorentz_factor, float proper_time_2, float proper_time_1)
+	float relativistic_time_dilation_3(float lorentz_factor, float proper_time_2, float proper_time_1)
 	{
 		return (proper_time_2 - proper_time_1) / lorentz_factor;
 	}
@@ -206,7 +208,7 @@ namespace simple_phys
 		return (1 / lorentz_factor) * proper_length;
 	}
 
-	float relativistic_length_contraction(float velocity, float proper_length)
+	float relativistic_length_contraction_2(float velocity, float proper_length)
 	{
 		return lorentz_factor(velocity) * proper_length;
 	}
@@ -228,9 +230,12 @@ namespace simple_phys
 		return mass * SPEED_OF_LIGHT * SPEED_OF_LIGHT;
 	}
 
-	float energy_momentum()
+	float energy_momentum(float momentum, float rest_mass)
 	{
-		//TODO.
+		float momentum_part = (momentum * SPEED_OF_LIGHT) * (momentum * SPEED_OF_LIGHT);
+		float mass_energy_part = mass_energy(rest_mass) * mass_energy(rest_mass);
+		
+		return sqrtf(momentum_part + mass_energy_part);
 	}
 
 	float sum_of_momenta(const std::vector<std::pair<mass, velocity>> &momenta)
@@ -301,7 +306,7 @@ namespace simple_phys
 			else
 			{
 				significant_figure_count++; 
-			}		 
+			}	 
 		}
 
 		return significant_figure_count;
@@ -387,8 +392,33 @@ namespace simple_phys
 		return BOLTZMANS_CONSTANT * log(multiplicity);
 	}
 
-	float speed_from_velocity_3(float velocity_x, float velocity_y, float velocity_z)
+	float speed_from_velocity_vec_2(float velocity_x, float velocity_y)
 	{
-		return sqrtf(velocity_x * velocity_x)
+		return sqrtf(velocity_x * velocity_x + velocity_y * velocity_y);
+	}
+
+	float speed_from_velocity_vec_2(vec_2 velocity)
+	{
+		return vec_2.length();
+	}
+
+	float speed_from_velocity_vec_3(float velocity_x, float velocity_y, float velocity_z)
+	{
+		return sqrtf(velocity_x * velocity_x + velocity_y * velocity_y + velocity_z * velocity_z);
+	}
+
+	float speed_from_velocity_vec_3(vec_3 velocity)
+	{
+		return velocity.length();
+	}
+
+	float momentum_from_velocity_vec_2(float mass, vec_2 velocity)
+	{
+		return mass * sqrtf(velocity.x * velocity.x + velocity.y * velocity.y);
+	}
+
+	float momentum_from_velocity_vec_3(float mass, vec_3 velocity)
+	{
+		return mass * sqrtf(velocity.x * velocity.x + velocity.y * velocity.y + velocity.z * velocity.z);
 	}
 }
