@@ -46,9 +46,10 @@ namespace simple_phys
 	double relativistic_time_dilation(double lorentz_factor, double proper_time_2, double proper_time_1);
 	double relativistic_length_contraction(double lorentz_factor, double proper_length);
 	double relativistic_length_contraction_2(double velocity, double proper_length);
+	double relativistic_momentum(double lorentz_factor, double mass, double velocity);
 	double relativistic_momentum(double velocity, double mass);
 	double mass_energy(double mass);
-	float energy_momentum(float momentum, float rest_mass);
+	double energy_momentum(double momentum, double rest_mass);
 	double significant_figures(double value);
 	double heat_flow(double mass, double specific_heat_capacity, double temperature_change);
 	double heat_flow(double mass, double specific_heat_2, double specific_heat_1, double temperature);
