@@ -523,4 +523,9 @@ namespace simple_phys
 	{
 		return RAYLEIGHS_CRITERION_CONSTANT * (light_wavelength / lens_aperture_diameter);
 	}
+	
+	float lateral_resolution(float light_wavelength, float half_angle_of_light, float index_of_refraction)
+	{
+		return (RAYLEIGHS_CRITERION_CONSTANT * light_wavelength) / (2 * index_of_refraction * sin(half_angle_of_light);
+	}
 }
