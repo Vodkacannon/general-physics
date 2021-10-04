@@ -1,4 +1,4 @@
-//SimplePhys: A verbose C++ physics library.
+//simple-phys: A verbose C++ physics library.
 //All units are SI.
 
 #include <math.h>
