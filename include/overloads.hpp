@@ -80,5 +80,5 @@ namespace simple_phys
 	double electric_energy(double voltage, double current, double time);
 	double electric_energy(double voltage, double charge);
 	double electric_power(double voltage, double current);
-	double maluses_law(double initial_intensity, double angle_between_polarizer_and_initial_polarization_direction)
+	double maluses_law(double initial_intensity, double angle_between_polarizer_and_initial_polarization_direction);
 };
