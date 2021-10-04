@@ -513,4 +513,9 @@ namespace simple_phys
 	{
 		return current * resistance * resistance;
 	}
+	
+	float maluses_law(float initial_intensity, angle_between_polarizer_and_initial_polarization_direction)
+	{
+		return initial_intensity * cos(angle_between_polarizer_and_initial_polarization_direction) * cos(angle_between_polarizer_and_initial_polarization_direction);
+	}
 }
