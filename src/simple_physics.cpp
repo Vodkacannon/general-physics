@@ -518,4 +518,8 @@ namespace simple_phys
 	{
 		return initial_intensity * cos(angle_between_polarizer_and_initial_polarization_direction) * cos(angle_between_polarizer_and_initial_polarization_direction);
 	}
+	
+	float rayleigh_criterion()
+	{
+	}
 }
