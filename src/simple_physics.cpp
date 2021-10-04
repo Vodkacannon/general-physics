@@ -236,8 +236,6 @@ namespace simple_phys
 	{
 		return lorentz_factor * mass * velocity;
 	}
-
-	double relativistic_momentum(double lorentz_factor, double mass, double velocity);
 	
 	float relativistic_momentum(float velocity, float mass)
 	{
