@@ -526,6 +526,11 @@ namespace simple_phys
 	
 	float lateral_resolution(float light_wavelength, float half_angle_of_light, float index_of_refraction)
 	{
-		return (RAYLEIGHS_CRITERION_CONSTANT * light_wavelength) / (2 * index_of_refraction * sin(half_angle_of_light);
+		return (RAYLEIGHS_CRITERION_CONSTANT * light_wavelength) / (2 * index_of_refraction * sin(half_angle_of_light));
 	}
+									    
+	float luminosity_distance(float luminosity, float redshift, float angular_diameter_distance)
+	{
+		return luminosity / (4 * M_PI * (1 + redshift) * (1 + redshift) * angular_diameter_distance); 	
+	}									    
 }
