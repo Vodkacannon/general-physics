@@ -519,7 +519,8 @@ namespace simple_phys
 		return initial_intensity * cos(angle_between_polarizer_and_initial_polarization_direction) * cos(angle_between_polarizer_and_initial_polarization_direction);
 	}
 	
-	float rayleigh_criterion()
+	float rayleigh_criterion(float light_wavelength, float lens_aprerture_diameter)
 	{
+		return RAYLEIGHS_CRITERION_CONSTANT * (light_wavelength / lens_aperture_diameter);
 	}
 }
