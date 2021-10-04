@@ -81,4 +81,6 @@ namespace simple_phys
 	double electric_energy(double voltage, double charge);
 	double electric_power(double voltage, double current);
 	double maluses_law(double initial_intensity, double angle_between_polarizer_and_initial_polarization_direction);
+	double rayleigh_criterion(double light_wavelength, double lens_aprerture_diameter);
+	double lateral_resolution(double light_wavelength, double half_angle_of_light, double index_of_refraction);
 };
