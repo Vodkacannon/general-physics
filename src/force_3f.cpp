@@ -1,6 +1,6 @@
 #include "include/force_3f.hpp"
 
-force_3f sum(const force_3_f& force_1, const force_3_f& force_2)
+force_3f sum(const force_3f& force_1, const force_3f& force_2)
 {
   force_3f sum_force;
   
