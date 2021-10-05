@@ -516,4 +516,9 @@ namespace simple_physics
     {
         return luminosity / (4 * M_PI * (1 + redshift) * (1 + redshift) * angular_diameter_distance);
     }
+    
+    double wave_intensity(double power, double area)
+    {
+        return power / area;
+    }
 }
