@@ -1,5 +1,3 @@
-#include "simple_physics.hpp"
-
 namespace simple_phys
 {
 	double speed(double distance, double time);
