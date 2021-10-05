@@ -2,7 +2,7 @@
 
 struct vec_3d
 {
-  float x;
-  float y;
-  float z;
+  double x;
+  double y;
+  double z;
 };
