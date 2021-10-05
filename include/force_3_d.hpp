@@ -1,4 +1,4 @@
-#include "simple_physics.h"
+#include "simple_physics.hpp"
 
 struct force_3_d
 {
