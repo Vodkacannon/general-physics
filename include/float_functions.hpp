@@ -90,4 +90,7 @@ namespace simple_physics
     float lateral_resolution(float light_wavelength, float half_angle_of_light, float index_of_refraction);
     float luminosity_distance(float luminosity, float redshift, float angular_diameter_distance);
     float wave_intensity(float power, float area);
+    float orbital_period(float mass_of_orbited_body);
+	float rocket_delta_velocity(float specific_impulse, float gravitational_acceleration, float initial_mass, float final_mass);
+	float doppler_effect(float sound_wave_speed, float observer_velocity, float source_velocity, float actual_sound_wave_frequency);
 };
