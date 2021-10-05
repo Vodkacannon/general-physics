@@ -76,7 +76,7 @@ namespace simple_physics
 		return force * distance;
 	}
 
-    float time(float frequency)
+        float time(float frequency)
 	{
 		return 1 / frequency;
 	}
