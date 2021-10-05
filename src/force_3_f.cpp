@@ -1,10 +1,10 @@
-#include "include/force_3_f.hpp"
+#include "include/force_3f.hpp"
 
-force_3_f sum(const force_3_f& force_1, const force_3_f& force_2)
+force_3f sum(const force_3_f& force_1, const force_3_f& force_2)
 {
-  force_3_f sum_force;
+  force_3f sum_force;
   
-  sum_force->mass += force_1->mass + force_2->mass;
+  sum_force.mass += force_1.mass + force_2.mass;
   
   sum_force.acceleration.x = force_1->acceleration->x + force_2->acceleration->x;
   sum_force.acceleration.y = force_1->acceleration->y + force_2->acceleration->y;
