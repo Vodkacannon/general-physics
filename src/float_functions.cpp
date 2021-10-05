@@ -41,6 +41,11 @@ namespace simple_physics
 		return (velocity_2 * velocity_2 - velocity_1 * velocity_1) / (2 * acceleration);
 	}
 
+	float displacement_4(float velocity_1, float velocity_2, float time)
+	{
+		return ((velocity_1 + velocity_2) * time) / 2;
+	}
+	
 	float acceleration(float velocity_2, float velocity_1, float time_2, float time_1)
 	{
 		return (velocity_2 - velocity_1) / (time_2 - time_1);
