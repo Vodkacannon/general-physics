@@ -7,7 +7,7 @@
 #include <algorithm>
 #include <vector>
 
-namespace simple_phys
+namespace simple_physics
 {
 	namespace types
 	{
