@@ -524,4 +524,9 @@ namespace simple_physics
 	{
 		return power / area;
 	}
+	
+	float orbital_period(float mass_of_orbited_body)
+	{
+		return (4 * M_PI * M_PI) / (NEWTONS_GRAVITATIONAL_CONSTANT * mass_of_orbited_body);
+	}
 }
