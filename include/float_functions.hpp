@@ -89,4 +89,5 @@ namespace simple_physics
     float rayleigh_criterion(float light_wavelength, float lens_aperture_diameter);
     float lateral_resolution(float light_wavelength, float half_angle_of_light, float index_of_refraction);
     float luminosity_distance(float luminosity, float redshift, float angular_diameter_distance);
+    float wave_intensity(float power, float area);
 };
