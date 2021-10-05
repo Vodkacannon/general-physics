@@ -1,6 +1,9 @@
-struct vec_3f
+namespace simple_physics
 {
-  float x;
-  float y;
-  float z;
-};
+  struct vec_3f
+  {
+    float x;
+    float y;
+    float z;
+  };
+}
