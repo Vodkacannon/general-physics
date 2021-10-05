@@ -518,5 +518,10 @@ namespace simple_physics
 	float luminosity_distance(float luminosity, float redshift, float angular_diameter_distance)
 	{
 		return luminosity / (4 * M_PI * (1 + redshift) * (1 + redshift) * angular_diameter_distance); 	
-	}									    
+	}
+	
+	float intensity(float power, float area)
+	{
+		return power / area;
+	}
 }
