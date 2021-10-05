@@ -1,4 +1,4 @@
-#include "float_functions.hpp"
+#include "float_types.hpp"
 namespace simple_physics {
     struct force_3d {
         mass value;

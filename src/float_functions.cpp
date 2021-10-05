@@ -1,9 +1,9 @@
 //simple-physics: A verbose C++ physics library.
 //Functions with fabs() in them are scalar.
 
-#include <double_function_declarations.hpp>
+#include <double_functions.hpp>
 
-#include "float_functions.hpp"
+#include "float_types.hpp"
 #include "constants.hpp"
 
 namespace simple_physics

@@ -1,4 +1,4 @@
-#include "double_functions.hpp"
+#include "double_types.hpp"
 #include "constants.hpp"
 
 namespace simple_physics
