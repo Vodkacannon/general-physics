@@ -3,7 +3,7 @@
 //
 
 #pragma once
-#include "simple_physics_float.hpp"
+#include "float_types.hpp"
 
 namespace simple_physics
 {

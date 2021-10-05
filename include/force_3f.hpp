@@ -1,4 +1,4 @@
-#include "simple_physics_float.hpp"
+#include "float_types.hpp"
 #include "vec_3f.hpp"
 
 namespace simple_physics {

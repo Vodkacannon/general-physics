@@ -1,4 +1,4 @@
-#include "simple_physics_double.hpp"
+#include "double_types.hpp"
 #include "constants.hpp"
 
 namespace simple_physics
@@ -253,7 +253,7 @@ namespace simple_physics
         return sqrt(momentum_part + mass_energy_part);
     }
 
-    double sum_of_momenta(const std::vector<std::pair<float_types::mass, float_types::velocity>> &momenta)
+    double sum_of_momenta(const std::vector<std::pair<double_types::mass, double_types::velocity>> &momenta)
     {
         unsigned int momenta_size = momenta.size();
         double sum_of_momenta = 0.0;
@@ -407,7 +407,7 @@ namespace simple_physics
         return REDUCED_PLANCKS_CONSTANT / (2 * (max_momentum - min_momentum));
     }
 
-    double boltzman_entropy(unsigned int multiplicity)
+    double boltzman_entropy(unsigned long multiplicity)
     {
         return BOLTZMANS_CONSTANT * log(multiplicity);
     }

@@ -8,8 +8,8 @@
 #include <string>
 #include <algorithm>
 #include <vector>
-#include "declarations.hpp"
-#include "overloads.hpp"
+#include "float_function_declarations.hpp"
+#include "double_function_declarations.hpp"
 
 namespace simple_physics
 {
