@@ -6,5 +6,5 @@
 #define SIMPLE_PHYSICS_SIMPLE_PHYSICS_HPP
 #include "constants.hpp"
 #include "float_function_declarations.hpp"
-#include "double_types.hpp"
+#include "double_functions.hpp"
 #endif //SIMPLE_PHYSICS_SIMPLE_PHYSICS_HPP

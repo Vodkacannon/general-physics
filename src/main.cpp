@@ -1,5 +1,5 @@
 #include <iostream>
-#include "float_types.hpp"
+#include "float_functions.hpp"
 
 int main()
 {

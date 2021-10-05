@@ -3,7 +3,7 @@
 
 #include <double_function_declarations.hpp>
 
-#include "float_types.hpp"
+#include "float_functions.hpp"
 #include "constants.hpp"
 
 namespace simple_physics

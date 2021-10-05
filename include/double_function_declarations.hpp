@@ -1,5 +1,5 @@
 #pragma once
-#include "float_types.hpp"
+#include "float_functions.hpp"
 
 namespace simple_physics
 {
