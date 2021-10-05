@@ -1,6 +1,8 @@
 //simple-phys: A verbose C++ physics library.
 //All units are SI.
 
+#pragma once
+
 #include <math.h>
 #include <numeric>
 #include <string>
