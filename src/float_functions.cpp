@@ -520,7 +520,7 @@ namespace simple_physics
 		return luminosity / (4 * M_PI * (1 + redshift) * (1 + redshift) * angular_diameter_distance); 	
 	}
 	
-	float intensity(float power, float area)
+	float wave_intensity(float power, float area)
 	{
 		return power / area;
 	}
