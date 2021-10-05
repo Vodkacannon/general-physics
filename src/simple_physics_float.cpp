@@ -1,9 +1,12 @@
 //simple-physics: A verbose C++ physics library.
 //Functions with fabs() in them are scalar.
 
-#include "include/simple_phys.hpp"
+#include <overloads.hpp>
 
-namespace simple_phys
+#include "simple_physics_float.hpp"
+#include "constants.hpp"
+
+namespace simple_physics
 {
 	float speed(float distance, float time)
 	{
@@ -45,7 +48,7 @@ namespace simple_phys
 		return (velocity_2 - velocity_1) / (time_2 - time_1);
 	}
 
-	float mometum(float mass, float velocity)
+	float momentum(float mass, float velocity)
 	{
 		return mass * velocity;
 	}
@@ -70,12 +73,12 @@ namespace simple_phys
 		return force * time;
 	}
 
-	double work(double force, double distance)
+	float work(float force, float distance)
 	{
 		return force * distance;
 	}
 
-	float time(float frequency)
+    float time(float frequency)
 	{
 		return 1 / frequency;
 	}
@@ -255,7 +258,7 @@ namespace simple_phys
 		return sqrt(momentum_part + mass_energy_part);
 	}
 
-	float sum_of_momenta(const std::vector<std::pair<types::mass, types::velocity>> &momenta)
+	float sum_of_momenta(const std::vector<std::pair<float_types::mass, float_types::velocity>> &momenta)
 	{
 		unsigned int momenta_size = momenta.size();
 		float sum_of_momenta = 0.0;
@@ -268,7 +271,7 @@ namespace simple_phys
 		return sum_of_momenta;
 	}
 
-	float sum_of_forces(const std::vector<std::pair<types::mass, types::acceleration>> &forces)
+	float sum_of_forces(const std::vector<std::pair<float_types::mass, float_types::acceleration>> &forces)
 	{
 		unsigned int forces_size = forces.size();
 		float sum_of_forces = 0.0;
@@ -281,7 +284,7 @@ namespace simple_phys
 		return sum_of_forces;
 	}
 
-	bool are_forces_in_equilibrium(const std::vector<std::pair<types::mass, types::acceleration>> &forces)
+	bool are_forces_in_equilibrium(const std::vector<std::pair<float_types::mass, float_types::acceleration>> &forces)
 	{
 		if(sum_of_forces(forces) == 0)
 		{
@@ -291,7 +294,7 @@ namespace simple_phys
 		return false;
 	}
 
-	float center_of_mass(const std::vector<std::pair<types::mass, types::radius_from_zero>> &mass_moments)
+	float center_of_mass(const std::vector<std::pair<float_types::mass, float_types::radius_from_zero>> &mass_moments)
 	{
 		float sum_of_masses = 0.0;
 		float mass_moment_sum = 0.0;
@@ -331,7 +334,7 @@ namespace simple_phys
 
 	float heat_flow(float mass, float specific_heat_capacity, float temperature_change)
 	{
-		return mass * specific_heat_capacity * temperature;	
+		return mass * specific_heat_capacity * temperature_change;
 	}
 
 	float heat_flow(float mass, float specific_heat_2, float specific_heat_1, float temperature)
@@ -419,21 +422,6 @@ namespace simple_phys
 		return sqrt(velocity_x * velocity_x + velocity_y * velocity_y);
 	}
 
-	float speed_from_velocity_vec_2(vec_2 velocity)
-	{
-		return vec_2_length(velocity);
-	}
-
-	float speed_from_velocity_vec_3(float velocity_x, float velocity_y, float velocity_z)
-	{
-		return sqrtf(velocity_x * velocity_x + velocity_y * velocity_y + velocity_z * velocity_z);
-	}
-
-	float speed_from_velocity_vec_3(vec_3 velocity)
-	{
-		return vec_3_length(velocity);
-	}
-
 	float momentum_from_velocity_vec_2(float mass, vec_2 velocity)
 	{
 		return mass * sqrtf(velocity.x * velocity.x + velocity.y * velocity.y);
@@ -509,17 +497,17 @@ namespace simple_phys
 		return voltage * current;
 	}
 	
-	float electric_power_2(float current, resistance)
+	float electric_power_2(float current, float resistance)
 	{
 		return current * resistance * resistance;
 	}
-	
-	float maluses_law(float initial_intensity, angle_between_polarizer_and_initial_polarization_direction)
+
+	float maluses_law(float initial_intensity, float angle_between_polarizer_and_initial_polarization_direction)
 	{
 		return initial_intensity * cos(angle_between_polarizer_and_initial_polarization_direction) * cos(angle_between_polarizer_and_initial_polarization_direction);
 	}
 	
-	float rayleigh_criterion(float light_wavelength, float lens_aprerture_diameter)
+	float rayleigh_criterion(float light_wavelength, float lens_aperture_diameter)
 	{
 		return RAYLEIGHS_CRITERION_CONSTANT * (light_wavelength / lens_aperture_diameter);
 	}

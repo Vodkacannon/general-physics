@@ -1,4 +1,7 @@
-namespace simple_phys
+#pragma once
+#include "simple_physics_float.hpp"
+
+namespace simple_physics
 {
 	double speed(double distance, double time);
 	double electric_energy(double voltage, double charge);
@@ -9,7 +12,7 @@ namespace simple_phys
 	double displacement_2(double velocity_1, double time, double acceleration);
 	double displacement_3(double velocity_1, double velocity_2, double acceleration);
 	double acceleration(double velocity_2, double velocity_1, double time_2, double time_1);
-	double mometum(double mass, double velocity);
+	double momentum(double mass, double velocity);
 	double force(double mass, double acceleration);
 	double pressure(double force, double area);
 	double density(double mass, double volume);
@@ -81,5 +84,5 @@ namespace simple_phys
 	double maluses_law(double initial_intensity, double angle_between_polarizer_and_initial_polarization_direction);
 	double rayleigh_criterion(double light_wavelength, double lens_aprerture_diameter);
 	double lateral_resolution(double light_wavelength, double half_angle_of_light, double index_of_refraction);
-	double luminosity_distance(double luminosity, double redshift, double angular_diameter_distance)
+	double luminosity_distance(double luminosity, double redshift, double angular_diameter_distance);
 };

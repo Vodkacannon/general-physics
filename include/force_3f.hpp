@@ -1,7 +1,9 @@
-#include "simple_physics.hpp"
+#include "simple_physics_float.hpp"
+#include "vec_3f.hpp"
 
-struct force_3f
-{
-  types::mass value;
-  vec_3_f acceleration;
-};
+namespace simple_physics {
+    struct force_3f {
+        float mass;
+        vec_3f acceleration;
+    };
+}

@@ -1,7 +1,9 @@
-#include "simple_physics.hpp"
+#include "simple_physics_float.hpp"
+#include "vec_3f.hpp"
 
-struct momentum_3f
-{
-  float mass;
-  vec_3f velocity;
-};
+namespace simple_physics {
+    struct momentum_3f {
+        float mass;
+        vec_3f velocity;
+    };
+}
