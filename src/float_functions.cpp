@@ -540,8 +540,8 @@ namespace simple_physics
 		return specific_impulse * gravitational_acceleration * log(initial_mass / final_mass);
 	}
 	
-	float doppler_effect(float sound_wave_speed, float observer_velocity, float source_velocity, float actual_sound_wave_frequency)
+	float doppler_effect(float sound_wave_speed, float observer_velocity, float source_velocity, float origional_sound_wave_frequency)
 	{
-		return ((sound_wave_speed + observer_velocity) / (sound_wave_speed + source_velocity)) * actual_sound_wave_frequency;
+		return ((sound_wave_speed + observer_velocity) / (sound_wave_speed + source_velocity)) * origional_sound_wave_frequency;
 	}
 }
