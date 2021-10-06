@@ -16,5 +16,9 @@
 #include "momentum_3f.hpp"
 #include "vec_3f.hpp"
 #include "vec_3d.hpp"
+#include "vec2f_functions.hpp"
+#include "vec3f_functions.hpp"
+#include "vec2d_functions.hpp"
+#include "vec3d_functions.hpp"
 
 #endif //SIMPLE_PHYSICS_SIMPLE_PHYSICS_HPP
