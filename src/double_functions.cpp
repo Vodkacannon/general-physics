@@ -523,17 +523,17 @@ namespace simple_physics
     }
     
     double orbital_period(double mass_of_orbited_body)
-	{
-		return (4 * M_PI * M_PI) / (NEWTONS_GRAVITATIONAL_CONSTANT * mass_of_orbited_body);
-	}
+    {
+	return (4 * M_PI * M_PI) / (NEWTONS_GRAVITATIONAL_CONSTANT * mass_of_orbited_body);
+    }
 	
-	double rocket_delta_velocity(double specific_impulse, double gravitational_acceleration, double initial_mass, double final_mass)
-	{
-		return specific_impulse * gravitational_acceleration * log(initial_mass / final_mass);
-	}
+    double rocket_delta_velocity(double specific_impulse, double gravitational_acceleration, double initial_mass, double final_mass)
+    {
+	return specific_impulse * gravitational_acceleration * log(initial_mass / final_mass);
+    }
 	
-	double doppler_effect(float sound_wave_speed, double observer_velocity, double source_velocity, double origional_sound_wave_frequency)
-	{
-		return ((sound_wave_speed + observer_velocity) / (sound_wave_speed + source_velocity)) * origional_sound_wave_frequency;
-	}
+    double doppler_effect(float sound_wave_speed, double observer_velocity, double source_velocity, double origional_sound_wave_frequency)
+    {
+	return ((sound_wave_speed + observer_velocity) / (sound_wave_speed + source_velocity)) * origional_sound_wave_frequency;
+    }
 }
