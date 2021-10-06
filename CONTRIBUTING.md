@@ -1,8 +1,8 @@
-*Please use snake-case (underscores).
+* Please use snake-case (underscores).
 
-*Please keep variable and function names descriptive.
+* Please keep variable and function names descriptive.
 
-*Please use curly braces in this format:
+* Please use curly braces in this format:
 
 {
 
