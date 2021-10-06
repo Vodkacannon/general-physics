@@ -12,8 +12,8 @@ namespace simple_physics
 		return vec2f(speed.x / time, speed.y / time, speed.z / time);
 	}
 	
-	float vec_2f_time(vec2f distance)
+	float vec_2f_time(vec2f distance, vec2f velocity)
 	{
-		
+		return vec2f(distance.x / velocity.x, distance.y / velocity.y);
 	}
 };
