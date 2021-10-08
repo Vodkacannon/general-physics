@@ -6,4 +6,9 @@ namespace simple_physics
   {
     return {x, y};
   }
+  
+  vec2f::add(const vec2f& vector1, const vec2f& vector2)
+  {
+    return {vector1.x + vector2.x, vector2.x + vector2.y};
+  }
 }
