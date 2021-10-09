@@ -1,6 +1,8 @@
 #include "force_3f.hpp"
-namespace simple_physics {
-    force_3f sum(const force_3f &force_1, const force_3f &force_2) {
+
+namespace simple_physics
+{
+    force_3f force_3f::sum(const force_3f &force_1, const force_3f &force_2) {
         force_3f sum_force;
 
         sum_force.mass += force_1.mass + force_2.mass;
