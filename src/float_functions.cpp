@@ -551,4 +551,9 @@ namespace simple_physics
 		float second_half = (1 / expf(1, simple_physics::PLANCKS_CONSTANT * electromagnetic_frequency / simple_physics::BOLTZMANS_CONSTANT * absolute_temperature) - 1);
 		return first_half * second_half;
 	}
+	
+	float coloumbs_force(float charge_1, float charge_2)
+	{
+		
+	}
 }
