@@ -1,8 +1,5 @@
-//
-// Created by Veseli on 10/5/2021.
-//
-
 #pragma once
+
 #include "float_types.hpp"
 
 namespace simple_physics
