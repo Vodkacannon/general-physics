@@ -552,8 +552,8 @@ namespace simple_physics
 		return first_half * second_half;
 	}
 	
-	float coulombs_force(float charge_1, float charge_2)
+	float coulombs_force(float charge_1, float charge_2, float distance_between_charges)
 	{
-		
+		return (COULOMBS_CONSTANT * charge_1 * charge_2) / (distance_between_charges * distance_between_charges);
 	}
 }
