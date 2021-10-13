@@ -552,7 +552,7 @@ namespace simple_physics
 		return first_half * second_half;
 	}
 	
-	float coloumbs_force(float charge_1, float charge_2)
+	float coulombs_force(float charge_1, float charge_2)
 	{
 		
 	}
