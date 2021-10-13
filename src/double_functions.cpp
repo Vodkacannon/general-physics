@@ -3,245 +3,245 @@
 
 namespace simple_physics
 {
-    double speed(double distance, double time)
-    {
-        return fabs(distance) / time;
-    }
+	double speed(double distance, double time)
+    	{
+        	return fabs(distance) / time;
+    	}
 
-    double velocity(double displacement, double time)
-    {
-        return displacement / time;
-    }
+	double velocity(double displacement, double time)
+    	{
+        	return displacement / time;
+    	}
 
-    double displacement(double velocity, double time)
-    {
-        return velocity / time;
-    }
+    	double displacement(double velocity, double time)
+    	{
+        	return velocity / time;
+    	}
 
-    double distance(double speed, double time)
-    {
-        return fabs(speed) / time;
-    }
+    	double distance(double speed, double time)
+    	{
+        	return fabs(speed) / time;
+    	}
 
-    double time(double distance, double velocity)
-    {
-        return distance / velocity;
-    }
+    	double time(double distance, double velocity)
+    	{
+        	return distance / velocity;
+    	}
 
-    double displacement_2(double velocity_1, double time, double acceleration)
-    {
-        velocity_1 * time + (1 / 2) * acceleration * time * time;
-    }
+    	double displacement_2(double velocity_1, double time, double acceleration)
+    	{
+        	velocity_1 * time + (1 / 2) * acceleration * time * time;
+    	}
 
-    double displacement_3(double velocity_1, double velocity_2, double acceleration)
-    {
-        return (velocity_2 * velocity_2 - velocity_1 * velocity_1) / (2 * acceleration);
-    }
+    	double displacement_3(double velocity_1, double velocity_2, double acceleration)
+    	{
+        	return (velocity_2 * velocity_2 - velocity_1 * velocity_1) / (2 * acceleration);
+    	}
 
-    double acceleration(double velocity_2, double velocity_1, double time_2, double time_1)
-    {
-        return (velocity_2 - velocity_1) / (time_2 - time_1);
-    }
+    	double acceleration(double velocity_2, double velocity_1, double time_2, double time_1)
+    	{
+        	return (velocity_2 - velocity_1) / (time_2 - time_1);
+    	}
 
-    double momentum(double mass, double velocity)
-    {
-        return mass * velocity;
-    }
+    	double momentum(double mass, double velocity)
+    	{
+        	return mass * velocity;
+    	}
 
-    double force(double mass, double acceleration)
-    {
-        return mass * acceleration;
-    }
+    	double force(double mass, double acceleration)
+    	{
+        	return mass * acceleration;
+    	}
 
-    double pressure(double force, double area)
-    {
-        return force / area;
-    }
+    	double pressure(double force, double area)
+    	{
+        	return force / area;
+    	}
+	
+    	double density(double mass, double volume)
+    	{
+        	return mass / volume;
+    	}
 
-    double density(double mass, double volume)
-    {
-        return mass / volume;
-    }
+    	double impulse(double force, double time)
+    	{
+        	return force * time;
+    	}
 
-    double impulse(double force, double time)
-    {
-        return force * time;
-    }
+    	double work(double force, double distance)
+    	{
+        	return force * distance;
+    	}
 
-    double work(double force, double distance)
-    {
-        return force * distance;
-    }
+    	double time(double frequency)
+    	{
+        	return 1 / frequency;
+    	}
 
-    double time(double frequency)
-    {
-        return 1 / frequency;
-    }
+    	double frequency(double time)
+    	{
+        	return 1 / time;
+    	}
 
-    double frequency(double time)
-    {
-        return 1 / time;
-    }
+    	double final_free_fall_velocity(double acceleration_of_gravity, double initial_height)
+    	{
+        	return sqrt(2 * acceleration_of_gravity * initial_height);
+    	}
 
-    double final_free_fall_velocity(double acceleration_of_gravity, double initial_height)
-    {
-        return sqrt(2 * acceleration_of_gravity * initial_height);
-    }
+    	double centripedal_acceleration_from_tangental(double tangental_velocity, double radius)
+    	{
+        	return (tangental_velocity * tangental_velocity) / radius;
+    	}
 
-    double centripedal_acceleration_from_tangental(double tangental_velocity, double radius)
-    {
-        return (tangental_velocity * tangental_velocity) / radius;
-    }
+    	double centripedal_acceleration_from_angular(double angular_velocity, double radius)
+    	{
+        	return -angular_velocity * angular_velocity * radius;
+    	}
 
-    double centripedal_acceleration_from_angular(double angular_velocity, double radius)
-    {
-        return -angular_velocity * angular_velocity * radius;
-    }
+    	double centripedal_force(double mass, double tangental_velocity, double radius)
+    	{
+        	return (mass * tangental_velocity * tangental_velocity) / radius;
+    	}
 
-    double centripedal_force(double mass, double tangental_velocity, double radius)
-    {
-        return (mass * tangental_velocity * tangental_velocity) / radius;
-    }
+    	double angular_velocity(double angle, double time)
+    	{
+        	return angle / time;
+    	}
 
-    double angular_velocity(double angle, double time)
-    {
-        return angle / time;
-    }
+    	double angular_velocity(double angle_2, double angle_1, double time_2, double time_1)
+    	{
+        	return (angle_2 - angle_1) / (time_2 - time_1);
+    	}
 
-    double angular_velocity(double angle_2, double angle_1, double time_2, double time_1)
-    {
-        return (angle_2 - angle_1) / (time_2 - time_1);
-    }
+    	double angular_acceleration(double angular_velocity, double time)
+    	{
+        	return angular_velocity / time;
+    	}
 
-    double angular_acceleration(double angular_velocity, double time)
-    {
-        return angular_velocity / time;
-    }
+    	double angular_acceleration(double angular_velocity_2, double angular_velocity_1, double time_2, double time_1)
+    	{
+        	return (angular_velocity_2 - angular_velocity_1) / (time_2 - time_1);
+    	}
 
-    double angular_acceleration(double angular_velocity_2, double angular_velocity_1, double time_2, double time_1)
-    {
-        return (angular_velocity_2 - angular_velocity_1) / (time_2 - time_1);
-    }
+    	double perpendicular_angular_momentum(double radius, double mass, double velocity, double perpendicular_angle)
+    	{
+        	return radius * mass * velocity * sin(perpendicular_angle);
+    	}
 
-    double perpendicular_angular_momentum(double radius, double mass, double velocity, double perpendicular_angle)
-    {
-        return radius * mass * velocity * sin(perpendicular_angle);
-    }
+    	double torque(double radius, double force, double angle)
+    	{
+        	return radius * force * sin(angle);
+    	}
 
-    double torque(double radius, double force, double angle)
-    {
-        return radius * force * sin(angle);
-    }
+    	double torque(double inertia, double angular_acceleration)
+    	{
+        	return inertia * angular_acceleration;
+    	}
 
-    double torque(double inertia, double angular_acceleration)
-    {
-        return inertia * angular_acceleration;
-    }
+    	double dry_friction(double coefficient_of_friction, double normal_force)
+    	{
+        	return coefficient_of_friction * normal_force;
+    	}
 
-    double dry_friction(double coefficient_of_friction, double normal_force)
-    {
-        return coefficient_of_friction * normal_force;
-    }
+    	double newtons_gravitational_force(double mass_1, double mass_2, double radius_between_masses)
+    	{
+        	return NEWTONS_GRAVITATIONAL_CONSTANT * mass_1 * mass_2 / (radius_between_masses * radius_between_masses);
+    	}
 
-    double newtons_gravitational_force(double mass_1, double mass_2, double radius_between_masses)
-    {
-        return NEWTONS_GRAVITATIONAL_CONSTANT * mass_1 * mass_2 / (radius_between_masses * radius_between_masses);
-    }
+    	double escape_speed(double mass, double radius)
+    	{
+        	return sqrt((2 * NEWTONS_GRAVITATIONAL_CONSTANT * mass) / radius);
+    	}
 
-    double escape_speed(double mass, double radius)
-    {
-        return sqrt((2 * NEWTONS_GRAVITATIONAL_CONSTANT * mass) / radius);
-    }
+    	double classical_kinetic_energy(double mass, double velocity)
+    	{
+        	return (1 / 2) * mass * velocity * velocity;
+    	}
 
-    double classical_kinetic_energy(double mass, double velocity)
-    {
-        return (1 / 2) * mass * velocity * velocity;
-    }
+    	double gravitational_potential_energy(double mass, double gravitational_acceleration, double height)
+    	{
+        	return mass * gravitational_acceleration * height;
+    	}
 
-    double gravitational_potential_energy(double mass, double gravitational_acceleration, double height)
-    {
-        return mass * gravitational_acceleration * height;
-    }
+    	double orbital_period(double velocity, double radius)
+    	{
+        	return (2 * M_PI * radius) / velocity;
+    	}
 
-    double orbital_period(double velocity, double radius)
-    {
-        return (2 * M_PI * radius) / velocity;
-    }
+    	double elastic_potential_energy(const double spring_constant, double displacement)
+    	{
+        	return (1 / 2) * spring_constant * displacement * displacement;
+    	}
 
-    double elastic_potential_energy(const double spring_constant, double displacement)
-    {
-        return (1 / 2) * spring_constant * displacement * displacement;
-    }
+    	double rotational_kinetic_energy(double rotational_inertia, double angular_velocity)
+    	{
+        	return (1 / 2) * rotational_inertia * angular_velocity * angular_velocity;
+    	}
 
-    double rotational_kinetic_energy(double rotational_inertia, double angular_velocity)
-    {
-        return (1 / 2) * rotational_inertia * angular_velocity * angular_velocity;
-    }
+    	double rolling_object_kinetic_energy(double kinetic_energy, double rotational_kinetic_energy)
+    	{
+        	return kinetic_energy + rotational_kinetic_energy;
+    	}
 
-    double rolling_object_kinetic_energy(double kinetic_energy, double rotational_kinetic_energy)
-    {
-        return kinetic_energy + rotational_kinetic_energy;
-    }
+    	double relativistic_velocity_clamp(double velocity)
+    	{
+        	if(velocity > SPEED_OF_LIGHT)
+        	{
+            		return SPEED_OF_LIGHT;
+        	}
 
-    double relativistic_velocity_clamp(double velocity)
-    {
-        if(velocity > SPEED_OF_LIGHT)
-        {
-            return SPEED_OF_LIGHT;
-        }
+        	else if(velocity < -SPEED_OF_LIGHT)
+        	{
+            		return -SPEED_OF_LIGHT;
+        	}
+        	else
+        	{
+            		return velocity;
+        	}
+    	}
 
-        else if(velocity < -SPEED_OF_LIGHT)
-        {
-            return -SPEED_OF_LIGHT;
-        }
-        else
-        {
-            return velocity;
-        }
-    }
+    	double lorentz_factor(double velocity)
+    	{
+        	return 1 / sqrt(1 - (velocity * velocity) / (SPEED_OF_LIGHT * SPEED_OF_LIGHT));
+    	}
 
-    double lorentz_factor(double velocity)
-    {
-        return 1 / sqrt(1 - (velocity * velocity) / (SPEED_OF_LIGHT * SPEED_OF_LIGHT));
-    }
+    	double relativistic_time_dilation(double lorentz_factor, double proper_time)
+    	{
+        	return proper_time / lorentz_factor;
+    	}
 
-    double relativistic_time_dilation(double lorentz_factor, double proper_time)
-    {
-        return proper_time / lorentz_factor;
-    }
+    	double relativistic_time_dilation_2(double velocity, double proper_time)
+    	{
+        	return proper_time / lorentz_factor(velocity);
+    	}
 
-    double relativistic_time_dilation_2(double velocity, double proper_time)
-    {
-        return proper_time / lorentz_factor(velocity);
-    }
+    	double relativistic_time_dilation(double lorentz_factor, double proper_time_2, double proper_time_1)
+    	{
+        	return (proper_time_2 - proper_time_1) / lorentz_factor;
+    	}
 
-    double relativistic_time_dilation(double lorentz_factor, double proper_time_2, double proper_time_1)
-    {
-        return (proper_time_2 - proper_time_1) / lorentz_factor;
-    }
+    	double relativistic_length_contraction(double lorentz_factor, double proper_length)
+    	{
+        	return (1 / lorentz_factor) * proper_length;
+    	}
 
-    double relativistic_length_contraction(double lorentz_factor, double proper_length)
-    {
-        return (1 / lorentz_factor) * proper_length;
-    }
+    	double relativistic_length_contraction_2(double velocity, double proper_length)
+    	{
+        	return lorentz_factor(velocity) * proper_length;
+    	}
 
-    double relativistic_length_contraction_2(double velocity, double proper_length)
-    {
-        return lorentz_factor(velocity) * proper_length;
-    }
+    	double relativistic_momentum(double lorentz_factor, double mass, double velocity)
+    	{
+        	return lorentz_factor * mass * velocity;
+    	}
 
-    double relativistic_momentum(double lorentz_factor, double mass, double velocity)
-    {
-        return lorentz_factor * mass * velocity;
-    }
+    	double relativistic_momentum(double velocity, double mass)
+    	{
+        	return lorentz_factor(velocity) * mass;
+    	}
 
-    double relativistic_momentum(double velocity, double mass)
-    {
-        return lorentz_factor(velocity) * mass;
-    }
-
-    double mass_energy(double mass)
-    {
+    	double mass_energy(double mass)
+    	{
         return mass * SPEED_OF_LIGHT * SPEED_OF_LIGHT;
     }
 
@@ -535,5 +535,17 @@ namespace simple_physics
     double doppler_effect(float sound_wave_speed, double observer_velocity, double source_velocity, double origional_sound_wave_frequency)
     {
 	return ((sound_wave_speed + observer_velocity) / (sound_wave_speed + source_velocity)) * origional_sound_wave_frequency;
-    }
+	}
+	
+	float spectral_radiance(float electromagnetic_frequency, float absolute_temperature)
+	{
+		float first_half = (((2 * simple_physics::PLACKS_CONSTANT * electromagnetic_frequency * electromagnetic_frequency * electromagnetic_frequency) / (simple_physics::SPEED_OF_LIGHT * simple_physics::SPEED_OF_LIGHT)));
+		float second_half = (1 / expf(1, simple_physics::PLANCKS_CONSTANT * electromagnetic_frequency / simple_physics::BOLTZMANS_CONSTANT * absolute_temperature) - 1);
+		return first_half * second_half;
+	}
+	
+	float coulombs_force(float charge_1, float charge_2, float distance_between_charges)
+	{
+		return (COULOMBS_CONSTANT * charge_1 * charge_2) / (distance_between_charges * distance_between_charges);
+	}
 }
