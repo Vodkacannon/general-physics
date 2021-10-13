@@ -93,4 +93,5 @@ namespace simple_physics
     float orbital_period(float mass_of_orbited_body);
     float rocket_delta_velocity(float specific_impulse, float gravitational_acceleration, float initial_mass, float final_mass);
     float doppler_effect(float sound_wave_speed, float observer_velocity, float source_velocity, float origional_sound_wave_frequency);
+    float coulombs_force(float charge_1, float charge_2, float distance_between_charges);
 };
