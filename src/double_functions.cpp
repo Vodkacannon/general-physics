@@ -539,7 +539,7 @@ namespace simple_physics
 	
 	float spectral_radiance(float electromagnetic_frequency, float absolute_temperature)
 	{
-		float first_half = (((2 * simple_physics::PLACKS_CONSTANT * electromagnetic_frequency * electromagnetic_frequency * electromagnetic_frequency) / (simple_physics::SPEED_OF_LIGHT * simple_physics::SPEED_OF_LIGHT)));
+		float first_half = (((2 * simple_physics::PLANCKS_CONSTANT * electromagnetic_frequency * electromagnetic_frequency * electromagnetic_frequency) / (simple_physics::SPEED_OF_LIGHT * simple_physics::SPEED_OF_LIGHT)));
 		float second_half = (1 / expf(1, simple_physics::PLANCKS_CONSTANT * electromagnetic_frequency / simple_physics::BOLTZMANS_CONSTANT * absolute_temperature) - 1);
 		return first_half * second_half;
 	}
