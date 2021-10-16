@@ -6,8 +6,6 @@
 
 * Please use curly braces in this format:
 
- example
-
  {
 
  }
