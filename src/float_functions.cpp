@@ -579,6 +579,6 @@ namespace simple_physics
 	
     	float integrate_acceleration_to_position(float acceleration, float delta_time)
 	{
-		return integrate_velocity_to_position(integrate_acceleration_to_velocity(float acceleration, float delta_time), delta_time);
+		return integrate_velocity_to_position(integrate_acceleration_to_velocity(float acceleration, float delta_time), float delta_time);
 	}
 }
