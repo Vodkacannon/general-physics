@@ -1,6 +1,6 @@
 namespace simple_physics
 {
-  float centripedal_acceleration_from_tangental(float tangental_velocity, float radius)
+  	float centripedal_acceleration_from_tangental(float tangental_velocity, float radius)
 	{
 		return (tangental_velocity * tangental_velocity) / radius;
 	}
