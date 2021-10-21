@@ -91,4 +91,9 @@ namespace simple_physics
     float rocket_delta_velocity(float specific_impulse, float gravitational_acceleration, float initial_mass, float final_mass);
     float doppler_effect(float sound_wave_speed, float observer_velocity, float source_velocity, float origional_sound_wave_frequency);
     float coulombs_force(float charge_1, float charge_2, float distance_between_charges);
+    float integrate_jerk_to_acceleration(float jerk, float delta_time);
+    float integrate_acceleration_to_velocity(float acceleration, float delta_time);
+    float integrate_velocity_to_position(float velocity, float delta_time);
+    float integrate_jerk_to_position(float acceleration, float delta_time);
+    float integrate_acceleration_to_position(float acceleration, float delta_time);
 };
