@@ -37,22 +37,10 @@ namespace simple_physics
 		return force * distance;
 	}
 
-        float time(float frequency)
-	{
-		return 1 / frequency;
-	}
-
-	float frequency(float time)
-	{
-		return 1 / time;
-	}
-
 	float final_free_fall_velocity(float acceleration_of_gravity, float initial_height)
 	{
 		return sqrt(2 * acceleration_of_gravity * initial_height);
 	}
-
-	
 
 	float dry_friction(float coefficient_of_friction, float normal_force)
 	{
