@@ -60,4 +60,9 @@ namespace simple_physics
 	{
 		return inertia * angular_acceleration;
 	}  
+	
+	float orbital_period(float velocity, float radius)
+	{
+		return (2 * M_PI * radius) / velocity;
+	}
 };
