@@ -1,6 +1,5 @@
 namespace simple_physics
 {
-	
 	float time(float frequency)
 	{
 		return 1 / frequency;
