@@ -1,6 +1,7 @@
 //simple-physics: A verbose C++ physics library.
 //Functions with fabs() in them are scalar.
 
+#include <math.h>
 #include "float_types.hpp"
 #include "constants.hpp"
 
@@ -487,5 +488,15 @@ namespace simple_physics
     	float integrate_acceleration_to_position(float acceleration, float delta_time)
 	{
 		return integrate_velocity_to_position(integrate_acceleration_to_velocity(float acceleration, float delta_time), float delta_time);
+	}
+	
+	float is_total_energy_zero(float kinetic_energy, float potential_energy, float floating_point_tolerance)
+	{
+		if(fabs(kinetic_energy + potential_energy) <= floating_point_tolerance)
+		{
+			return true;
+		}
+		
+		return false;
 	}
 }
