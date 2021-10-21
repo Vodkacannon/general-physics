@@ -1,5 +1,16 @@
 namespace simple_physics
 {
+	
+	float time(float frequency)
+	{
+		return 1 / frequency;
+	}
+
+	float frequency(float time)
+	{
+		return 1 / time;
+	}
+	
   	float centripedal_acceleration_from_tangental(float tangental_velocity, float radius)
 	{
 		return (tangental_velocity * tangental_velocity) / radius;
