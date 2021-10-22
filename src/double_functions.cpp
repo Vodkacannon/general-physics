@@ -524,17 +524,17 @@ namespace simple_physics
     
     double orbital_period(double mass_of_orbited_body)
     {
-	return (4 * M_PI * M_PI) / (NEWTONS_GRAVITATIONAL_CONSTANT * mass_of_orbited_body);
+		return (4 * M_PI * M_PI) / (NEWTONS_GRAVITATIONAL_CONSTANT * mass_of_orbited_body);
     }
 	
     double rocket_delta_velocity(double specific_impulse, double gravitational_acceleration, double initial_mass, double final_mass)
     {
-	return specific_impulse * gravitational_acceleration * log(initial_mass / final_mass);
+		return specific_impulse * gravitational_acceleration * log(initial_mass / final_mass);
     }
 	
     double doppler_effect(float sound_wave_speed, double observer_velocity, double source_velocity, double origional_sound_wave_frequency)
     {
-	return ((sound_wave_speed + observer_velocity) / (sound_wave_speed + source_velocity)) * origional_sound_wave_frequency;
+		return ((sound_wave_speed + observer_velocity) / (sound_wave_speed + source_velocity)) * origional_sound_wave_frequency;
 	}
 	
 	float spectral_radiance(float electromagnetic_frequency, float absolute_temperature)
@@ -547,5 +547,39 @@ namespace simple_physics
 	float coulombs_force(float charge_1, float charge_2, float distance_between_charges)
 	{
 		return (COULOMBS_CONSTANT * charge_1 * charge_2) / (distance_between_charges * distance_between_charges);
+	}
+	float integrate_jerk_to_acceleration(float jerk, float delta_time)
+	{
+		return jerk * delta_time;
+	}
+	
+    float integrate_acceleration_to_velocity(float acceleration, float delta_time)
+	{
+		return acceleration * delta_time;
+	}
+	
+    float integrate_velocity_to_position(float velocity, float delta_time)
+	{
+		return velocity * delta_time;
+	}
+	
+    float integrate_jerk_to_position(float jerk, float delta_time)
+	{
+		return integrate_velocity_to_position(integrate_acceleration_to_velocity(integrate_jerk_to_acceleration(float jerk, float delta_time), float delta_time), delta_time);
+	}
+	
+    float integrate_acceleration_to_position(float acceleration, float delta_time)
+	{
+		return integrate_velocity_to_position(integrate_acceleration_to_velocity(float acceleration, float delta_time), float delta_time);
+	}
+	
+	float is_total_energy_zero(float kinetic_energy, float potential_energy, float floating_point_tolerance)
+	{
+		if(fabs(kinetic_energy + potential_energy) <= floating_point_tolerance)
+		{
+			return true;
+		}
+		
+		return false;
 	}
 }
