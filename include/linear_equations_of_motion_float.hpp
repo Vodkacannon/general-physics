@@ -1,6 +1,6 @@
 namespace simple_physics
 {
-    float speed(float distance, float time);
+    	float speed(float distance, float time);
 	float velocity(float displacement, float time);
 	float displacement(float velocity, float time);
 	float distance(float speed, float time);
