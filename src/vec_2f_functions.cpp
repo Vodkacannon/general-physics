@@ -22,7 +22,7 @@ namespace simple_physics
 		return vec2f(force.x * distance, force.y * distance, force.z * distance);
 	}
 	
-	vec_2f::vec_2f(float x, float y)
+	vec2f vec_2f::vec_2f(float x, float y)
   	{
     		return {x, y};
   	}
