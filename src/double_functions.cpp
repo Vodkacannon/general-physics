@@ -30,7 +30,7 @@ namespace simple_physics
 
     	double displacement_2(double velocity_1, double time, double acceleration)
     	{
-        	velocity_1 * time + (1 / 2) * acceleration * time * time;
+        	return velocity_1 * time + (1 / 2) * acceleration * time * time;
     	}
 
     	double displacement_3(double velocity_1, double velocity_2, double acceleration)
