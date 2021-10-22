@@ -4,12 +4,12 @@ namespace simple_physics
 {
 	float vec_2f_speed(const vec2f& distance, const float time)
 	{
-		return float2(abs(distance.x / time), abs(distance.y / time));
+		return float2(fabs(distance.x / time), fabs(distance.y / time));
 	}
 	
 	float vec_2f_distance(const vec2f& speed, const float time)
 	{
-		return vec2f(abs(speed.x / time), abs(speed.y / time), abs(speed.z / time));
+		return vec2f(fabs(speed.x / time), fabs(speed.y / time), fabs(speed.z / time));
 	}
 	
 	float vec_2f_time(const vec2f& distance, const vec2f velocity)
