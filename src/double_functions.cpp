@@ -524,58 +524,59 @@ namespace simple_physics
     
     double orbital_period(double mass_of_orbited_body)
     {
-		return (4 * M_PI * M_PI) / (NEWTONS_GRAVITATIONAL_CONSTANT * mass_of_orbited_body);
+	return (4 * M_PI * M_PI) / (NEWTONS_GRAVITATIONAL_CONSTANT * mass_of_orbited_body);
     }
 	
     double rocket_delta_velocity(double specific_impulse, double gravitational_acceleration, double initial_mass, double final_mass)
     {
-		return specific_impulse * gravitational_acceleration * log(initial_mass / final_mass);
+	return specific_impulse * gravitational_acceleration * log(initial_mass / final_mass);
     }
 	
-    double doppler_effect(float sound_wave_speed, double observer_velocity, double source_velocity, double origional_sound_wave_frequency)
-    {
+	double doppler_effect(float sound_wave_speed, double observer_velocity, double source_velocity, double origional_sound_wave_frequency)
+    	{
 		return ((sound_wave_speed + observer_velocity) / (sound_wave_speed + source_velocity)) * origional_sound_wave_frequency;
 	}
 	
-	float spectral_radiance(float electromagnetic_frequency, float absolute_temperature)
+	double spectral_radiance(double electromagnetic_frequency, double absolute_temperature)
 	{
-		float first_half = (((2 * simple_physics::PLANCKS_CONSTANT * electromagnetic_frequency * electromagnetic_frequency * electromagnetic_frequency) / (simple_physics::SPEED_OF_LIGHT * simple_physics::SPEED_OF_LIGHT)));
-		float second_half = (1 / expf(simple_physics::PLANCKS_CONSTANT * electromagnetic_frequency / simple_physics::BOLTZMANS_CONSTANT * absolute_temperature) - 1);
+		double first_half = (((2 * simple_physics::PLANCKS_CONSTANT * electromagnetic_frequency * electromagnetic_frequency * electromagnetic_frequency) / (simple_physics::SPEED_OF_LIGHT * simple_physics::SPEED_OF_LIGHT)));
+		double second_half = (1 / expf(simple_physics::PLANCKS_CONSTANT * electromagnetic_frequency / simple_physics::BOLTZMANS_CONSTANT * absolute_temperature) - 1);
 		return first_half * second_half;
 	}
 	
-	float coulombs_force(float charge_1, float charge_2, float distance_between_charges)
+	double coulombs_force(double charge_1, double charge_2, double distance_between_charges)
 	{
 		return (COULOMBS_CONSTANT * charge_1 * charge_2) / (distance_between_charges * distance_between_charges);
 	}
-	float integrate_jerk_to_acceleration(float jerk, float delta_time)
+	
+	double integrate_jerk_to_acceleration(double jerk, double delta_time)
 	{
 		return jerk * delta_time;
 	}
 	
-    float integrate_acceleration_to_velocity(float acceleration, float delta_time)
+	double integrate_acceleration_to_velocity(double acceleration, double delta_time)
 	{
 		return acceleration * delta_time;
 	}
 	
-    float integrate_velocity_to_position(float velocity, float delta_time)
+	double integrate_velocity_to_position(double velocity, double delta_time)
 	{
 		return velocity * delta_time;
 	}
 	
-    float integrate_jerk_to_position(float jerk, float delta_time)
+	double integrate_jerk_to_position(double jerk, double delta_time)
 	{
-		return integrate_velocity_to_position(integrate_acceleration_to_velocity(integrate_jerk_to_acceleration(float jerk, float delta_time), float delta_time), delta_time);
+		return integrate_velocity_to_position(integrate_acceleration_to_velocity(integrate_jerk_to_acceleration(double jerk, double delta_time), double delta_time), delta_time);
 	}
 	
-    float integrate_acceleration_to_position(float acceleration, float delta_time)
+	double integrate_acceleration_to_position(double acceleration, double delta_time)
 	{
-		return integrate_velocity_to_position(integrate_acceleration_to_velocity(float acceleration, float delta_time), float delta_time);
+		return integrate_velocity_to_position(integrate_acceleration_to_velocity(double acceleration, double delta_time), double delta_time);
 	}
 	
-	float is_total_energy_zero(float kinetic_energy, float potential_energy, float floating_point_tolerance)
+	double is_total_energy_zero(double kinetic_energy, double potential_energy, double double_tolerance)
 	{
-		if(fabs(kinetic_energy + potential_energy) <= floating_point_tolerance)
+		if(fabs(kinetic_energy + potential_energy) <= double_tolerance)
 		{
 			return true;
 		}
