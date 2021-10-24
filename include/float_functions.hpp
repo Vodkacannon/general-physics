@@ -96,4 +96,6 @@ namespace simple_physics
     float integrate_velocity_to_position(float velocity, float delta_time);
     float integrate_jerk_to_position(float acceleration, float delta_time);
     float integrate_acceleration_to_position(float acceleration, float delta_time);
+    float period_of_spring_with_mass(float mass, float spring_constant);
+	float harmonic_oscillator_position(float amplitude, float frequency, float time, phase);
 };
