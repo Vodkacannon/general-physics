@@ -157,6 +157,11 @@ namespace simple_physics
 		return sqrt(momentum_part + mass_energy_part);
 	}
 
+	float relativistic_kinetic_energy(float mass_energy, float velocity)
+	{
+		return mass_energy * (lorenz_factor(velocity) - 1);
+	}
+	
 	float sum_of_momenta(const std::vector<std::pair<float_types::mass, float_types::velocity>> &momenta)
 	{
 		unsigned int momenta_size = momenta.size();
