@@ -1,6 +1,6 @@
 # Guidelines:
 
-* Please use snake-case (underscores).
+* Please use snake_case (underscores).
 
 * Please keep variable and function names descriptive.
 
