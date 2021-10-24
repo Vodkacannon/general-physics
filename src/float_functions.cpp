@@ -487,4 +487,14 @@ namespace simple_physics
 		
 		return false;
 	}
+	
+	float period_of_spring_with_mass(float mass, float spring_constant)
+	{
+		2 * M_PI * sqtf(mass / spring_constant);
+	}
+	
+	float harmonic_oscillator_position(float amplitude, float frequency, float time, phase)
+	{
+		return amplitude * sin(2 * M_PI * frequency * time + phase);
+	}
 }
