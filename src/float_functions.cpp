@@ -291,16 +291,6 @@ namespace simple_physics
 		return frequency * wavelength;
 	}
 
-	float voltage(float current, float resistance)
-	{
-		return current * resistance;
-	}
-
-	float current(float voltage, float resistance)
-	{
-		return voltage / resistance;
-	}
-
 	float heisenberg_momentum_uncertainty(float max_position, float min_position)
 	{
 		return REDUCED_PLANCKS_CONSTANT / (2 * (max_position - min_position));
