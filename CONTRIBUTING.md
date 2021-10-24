@@ -12,4 +12,4 @@
 
 * Please keep function implementations 40 lines or under.
 
-* Please separate long-one-liners into multiple lines.
+* Please separate long one-liners into multiple lines.
