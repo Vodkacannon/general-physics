@@ -9,3 +9,5 @@
     {
 
     }
+
+* Please keep function implementations 40 lines or under.
