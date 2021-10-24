@@ -39,4 +39,9 @@ namespace simple_physics
   	{
     		return (1 / 2) * (quantity_of_charge_separated * quantity_of_charge_separated) / applied_potential_difference;
   	}
+	
+	float electric_flux(float total_charge_in_volume)
+	{
+		return total_charge_in_volume / 
+	}
 }
