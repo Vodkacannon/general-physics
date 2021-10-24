@@ -1,5 +1,5 @@
 # simple-physics
-A simple, but verbose physics library.
+A simple, but verbose physics library that covers a wide range of physics.
 
 Code inspected with code-inspector.com:
 
