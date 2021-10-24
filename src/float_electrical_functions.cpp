@@ -1,6 +1,16 @@
 namespace simple_physics
 {
-  float charge(float voltage, float time)
+	float voltage(float current, float resistance)
+	{
+		return current * resistance;
+	}
+
+	float current(float voltage, float resistance)
+	{
+		return voltage / resistance;
+	}
+	
+  	float charge(float voltage, float time)
 	{
 		return voltage * time;
 	}
@@ -25,8 +35,8 @@ namespace simple_physics
 		return current * resistance * resistance;
 	}
   
-  capacitor_energy(float quantity_of_charge_separated, float applied_potential_difference)
-  {
-    return (1 / 2) * (quantity_of_charge_separated * quantity_of_charge_separated) / applied_potential_difference;
-  }
+  	capacitor_energy(float quantity_of_charge_separated, float applied_potential_difference)
+  	{
+    		return (1 / 2) * (quantity_of_charge_separated * quantity_of_charge_separated) / applied_potential_difference;
+  	}
 }
