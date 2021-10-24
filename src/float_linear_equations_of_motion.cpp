@@ -17,7 +17,7 @@ namespace simple_physics
 
 	float distance(float speed, float time)
 	{
-		return fabs(speed) / time;
+		return fabs(speed) * time;
 	}
 
 	float time(float distance, float velocity)
