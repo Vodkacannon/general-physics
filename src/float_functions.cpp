@@ -376,31 +376,6 @@ namespace simple_physics
 		return (mass * drag_coefficient) / cross_sectional_area;
 	}
 
-	float charge(float voltage, float time)
-	{
-		return voltage * time;
-	}
-
-	float electric_energy(float voltage, float current, float time)
-	{
-		return voltage * current * time;
-	}
-
-	float electric_energy(float voltage, float charge)
-	{
-		return voltage * charge;
-	}
-
-	float electric_power(float voltage, float current)
-	{
-		return voltage * current;
-	}
-	
-	float electric_power_2(float current, float resistance)
-	{
-		return current * resistance * resistance;
-	}
-
 	float maluses_law(float initial_intensity, float angle_between_polarizer_and_initial_polarization_direction)
 	{
 		return initial_intensity * cos(angle_between_polarizer_and_initial_polarization_direction) * cos(angle_between_polarizer_and_initial_polarization_direction);
