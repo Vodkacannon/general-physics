@@ -35,7 +35,7 @@ namespace simple_physics
 		return current * resistance * resistance;
 	}
   
-  	capacitor_energy(float quantity_of_charge_separated, float applied_potential_difference)
+  	float capacitor_energy(float quantity_of_charge_separated, float applied_potential_difference)
   	{
     		return (1 / 2) * (quantity_of_charge_separated * quantity_of_charge_separated) / applied_potential_difference;
   	}
