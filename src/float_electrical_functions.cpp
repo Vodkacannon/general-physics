@@ -1,3 +1,5 @@
+#include "../include/constants.hpp"
+
 namespace simple_physics
 {
 	float voltage(float current, float resistance)
@@ -42,6 +44,6 @@ namespace simple_physics
 	
 	float electric_flux(float total_charge_in_volume)
 	{
-		return total_charge_in_volume / 
+		return total_charge_in_volume / simple_physics::VACUUM_PERMITTIVITY_CONSTANT;
 	}
 }
