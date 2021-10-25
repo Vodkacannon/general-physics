@@ -44,6 +44,11 @@ namespace simple_physics
 	
 	float electric_flux(float total_charge_in_volume)
 	{
-		return total_charge_in_volume / simple_physics::VACUUM_PERMITTIVITY_CONSTANT;
+		return total_charge_in_volume / VACUUM_PERMITTIVITY_CONSTANT;
+	}
+	
+	float coulombs_force(float charge_1, float charge_2, float distance_between_charges)
+	{
+		return (COULOMBS_CONSTANT * charge_1 * charge_2) / (distance_between_charges * distance_between_charges);
 	}
 }
