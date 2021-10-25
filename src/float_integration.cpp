@@ -24,4 +24,4 @@ namespace simple_physics
 	{
 		return velocity * delta_time;
 	}
-};
+}
