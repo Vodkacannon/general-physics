@@ -39,7 +39,7 @@ namespace simple_physics
 
 	float final_free_fall_velocity(float acceleration_of_gravity, float initial_height)
 	{
-		return sqrt(2 * acceleration_of_gravity * initial_height);
+		return sqrtf(2 * acceleration_of_gravity * initial_height);
 	}
 
 	float dry_friction(float coefficient_of_friction, float normal_force)
@@ -54,7 +54,7 @@ namespace simple_physics
 
 	float escape_speed(float mass, float radius)
 	{
-		return sqrt((2 * NEWTONS_GRAVITATIONAL_CONSTANT * mass) / radius);
+		return sqrtf((2 * NEWTONS_GRAVITATIONAL_CONSTANT * mass) / radius);
 	}
 
 	float classical_kinetic_energy(float mass, float velocity)
@@ -106,7 +106,7 @@ namespace simple_physics
 
 	float lorentz_factor(float velocity)
 	{
-		return 1 / sqrt(1 - (velocity * velocity) / (SPEED_OF_LIGHT * SPEED_OF_LIGHT));
+		return 1 / sqrtf(1 - (velocity * velocity) / (SPEED_OF_LIGHT * SPEED_OF_LIGHT));
 	}
 
 	float relativistic_time_dilation(float lorentz_factor, float proper_time)
@@ -154,7 +154,7 @@ namespace simple_physics
 		float momentum_part = (momentum * SPEED_OF_LIGHT) * (momentum * SPEED_OF_LIGHT);
 		float mass_energy_part = mass_energy(rest_mass) * mass_energy(rest_mass);
 		
-		return sqrt(momentum_part + mass_energy_part);
+		return sqrtf(momentum_part + mass_energy_part);
 	}
 
 	float relativistic_kinetic_energy(float mass_energy, float velocity)
