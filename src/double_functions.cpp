@@ -462,31 +462,6 @@ namespace simple_physics
         return (mass * drag_coefficient) / cross_sectional_area;
     }
 
-    double charge(double voltage, double time)
-    {
-        return voltage * time;
-    }
-
-    double electric_energy(double voltage, double current, double time)
-    {
-        return voltage * current * time;
-    }
-
-    double electric_energy(double voltage, double charge)
-    {
-        return voltage * charge;
-    }
-
-    double electric_power(double voltage, double current)
-    {
-        return voltage * current;
-    }
-
-    double electric_power_2(double current, double resistance)
-    {
-        return current * resistance * resistance;
-    }
-
     double maluses_law(double initial_intensity, double angle_between_polarizer_and_initial_polarization_direction)
     {
         return initial_intensity * cos(angle_between_polarizer_and_initial_polarization_direction) * cos(angle_between_polarizer_and_initial_polarization_direction);
