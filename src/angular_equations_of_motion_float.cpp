@@ -1,3 +1,5 @@
+#include <math.h>
+
 namespace simple_physics
 {
 	float time(float frequency)
@@ -47,12 +49,12 @@ namespace simple_physics
 
 	float perpendicular_angular_momentum(float radius, float mass, float velocity, float perpendicular_angle)
 	{
-		return radius * mass * velocity * sin(perpendicular_angle);
+		return radius * mass * velocity * sinf(perpendicular_angle);
 	}
 
 	float torque(float radius, float force, float angle)
 	{
-		return radius * force * sin(angle);
+		return radius * force * sinf(angle);
 	}
 
 	float torque(float inertia, float angular_acceleration)

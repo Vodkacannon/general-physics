@@ -159,7 +159,7 @@ namespace simple_physics
 
 	float relativistic_kinetic_energy(float mass_energy, float velocity)
 	{
-		return mass_energy * (lorenz_factor(velocity) - 1);
+		return mass_energy * (lorentz_factor(velocity) - 1);
 	}
 	
 	float sum_of_momenta(const std::vector<std::pair<float_types::mass, float_types::velocity>> &momenta)
@@ -413,8 +413,8 @@ namespace simple_physics
 	
 	float spectral_radiance(float electromagnetic_frequency, float absolute_temperature)
 	{
-		float first_half = (((2 * simple_physics::PLACKS_CONSTANT * electromagnetic_frequency * electromagnetic_frequency * electromagnetic_frequency) / (simple_physics::SPEED_OF_LIGHT * simple_physics::SPEED_OF_LIGHT)));
-		float second_half = (1 / expf(1, simple_physics::PLANCKS_CONSTANT * electromagnetic_frequency / simple_physics::BOLTZMANS_CONSTANT * absolute_temperature) - 1);
+		float first_half = (((2 * PLANCKS_CONSTANT * electromagnetic_frequency * electromagnetic_frequency * electromagnetic_frequency) / (simple_physics::SPEED_OF_LIGHT * simple_physics::SPEED_OF_LIGHT)));
+		float second_half = (1 / expf(PLANCKS_CONSTANT * electromagnetic_frequency / BOLTZMANS_CONSTANT * absolute_temperature) - 1);
 		return first_half * second_half;
 	}
 	
@@ -435,10 +435,10 @@ namespace simple_physics
 	
 	float period_of_spring_with_mass(float mass, float spring_constant)
 	{
-		2 * M_PI * sqtf(mass / spring_constant);
+		2 * M_PI * sqrtf(mass / spring_constant);
 	}
 	
-	float harmonic_oscillator_position(float amplitude, float frequency, float time, phase)
+	float harmonic_oscillator_position(float amplitude, float frequency, float time, float phase)
 	{
 		return amplitude * sin(2 * M_PI * frequency * time + phase);
 	}
