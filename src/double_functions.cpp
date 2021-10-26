@@ -387,16 +387,6 @@ namespace simple_physics
         return frequency * wavelength;
     }
 
-    double voltage(double current, double resistance)
-    {
-        return current * resistance;
-    }
-
-    double current(double voltage, double resistance)
-    {
-        return voltage / resistance;
-    }
-
     double heisenberg_momentum_uncertainty(double max_position, double min_position)
     {
         return REDUCED_PLANCKS_CONSTANT / (2 * (max_position - min_position));
