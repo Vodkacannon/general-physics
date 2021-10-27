@@ -162,7 +162,7 @@ namespace simple_physics
 		return mass_energy * (lorentz_factor(velocity) - 1);
 	}
 	
-	float sum_of_momenta(const std::vector<std::pair<float_types::mass, float_types::velocity>> &momenta)
+	float sum_of_momenta(const std::vector<std::pair<mass, velocity>> &momenta)
 	{
 		unsigned int momenta_size = momenta.size();
 		float sum_of_momenta = 0.0;
@@ -175,7 +175,7 @@ namespace simple_physics
 		return sum_of_momenta;
 	}
 
-	float sum_of_forces(const std::vector<std::pair<float_types::mass, float_types::acceleration>> &forces)
+	float sum_of_forces(const std::vector<std::pair<mass, acceleration>> &forces)
 	{
 		unsigned int forces_size = forces.size();
 		float sum_of_forces = 0.0;
@@ -316,12 +316,12 @@ namespace simple_physics
 		return sqrt(velocity_x * velocity_x + velocity_y * velocity_y);
 	}
 
-	float momentum_from_velocity_vec_2(float mass, vec_2 velocity)
+	float momentum_from_velocity_vec_2(float mass, const vec_2& velocity)
 	{
 		return mass * sqrtf(velocity.x * velocity.x + velocity.y * velocity.y);
 	}
 
-	float momentum_from_velocity_vec_3(float mass, vec_3 velocity)
+	float momentum_from_velocity_vec_3(float mass, const vec_3& velocity)
 	{
 		return mass * sqrtf(velocity.x * velocity.x + velocity.y * velocity.y + velocity.z * velocity.z);
 	}
@@ -443,7 +443,7 @@ namespace simple_physics
 		return amplitude * sinf(2 * M_PI * frequency * time + phase);
 	}
 
-        float total_power_radiated(float body_area, float emissivity, body_temperature)
+        float total_power_radiated(float body_area, float emissivity, float body_temperature)
         {
                 return body_area * emissivity * STEFAN_BOLTZMAN_CONSTANT * powf(body_temperature, 4);
         }
