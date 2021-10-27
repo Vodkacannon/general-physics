@@ -188,16 +188,6 @@ namespace simple_physics
 		return sum_of_forces;
 	}
 
-	bool are_forces_in_equilibrium(const std::vector<std::pair<float_types::mass, float_types::acceleration>> &forces)
-	{
-		if(sum_of_forces(forces) == 0)
-		{
-			return true;
-		}
-
-		return false;
-	}
-
 	float center_of_mass(const std::vector<std::pair<float_types::mass, float_types::radius_from_zero>> &mass_moments)
 	{
 		float sum_of_masses = 0.0;
