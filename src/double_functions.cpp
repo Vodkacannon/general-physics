@@ -557,7 +557,7 @@ namespace simple_physics
 		);
 	}
 	
-	double is_total_energy_zero(double kinetic_energy, double potential_energy, double double_tolerance)
+	bool is_total_energy_zero(double kinetic_energy, double potential_energy, double double_tolerance)
 	{
 		if(fabs(kinetic_energy + potential_energy) <= double_tolerance)
 		{
