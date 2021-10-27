@@ -2,8 +2,8 @@
 //Functions with fabs() in them are scalar.
 
 #include <math.h>
-#include "float_types.hpp"
-#include "constants.hpp"
+#include "include/float_types.hpp"
+#include "include/constants.hpp"
 
 namespace simple_physics
 {
