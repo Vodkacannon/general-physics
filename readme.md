@@ -8,4 +8,4 @@ Code inspected with code-inspector.com:
 
 This project uses the c++11 standard and above.
 
-Please see contributing.md for my *simple* contributing rules.
+Please see contributing.md for my simple contributing rules.
