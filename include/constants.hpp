@@ -16,4 +16,5 @@ namespace simple_physics
     const float IDEAL_GAS_CONSTANT = 8.31446261815324;
     const float RAYLEIGHS_CRITERION_CONSTANT = 1.21966989;
     const float VACUUM_PERMITTIVITY_CONSTANT = 8.8541878128e−12;
+    const float STEFAN_BOLTZMAN_CONSTANT = 5.670374419e-8;
 };
