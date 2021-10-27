@@ -413,16 +413,6 @@ namespace simple_physics
 		return (COULOMBS_CONSTANT * charge_1 * charge_2) / (distance_between_charges * distance_between_charges);
 	}
 	
-	bool is_total_energy_zero(float kinetic_energy, float potential_energy, float floating_point_tolerance)
-	{
-		if(fabs(kinetic_energy + potential_energy) <= floating_point_tolerance)
-		{
-			return true;
-		}
-		
-		return false;
-	}
-	
 	float period_of_spring_with_mass(float mass, float spring_constant)
 	{
 		2 * M_PI * sqrtf(mass / spring_constant);
