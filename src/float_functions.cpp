@@ -423,7 +423,7 @@ namespace simple_physics
 		return (COULOMBS_CONSTANT * charge_1 * charge_2) / (distance_between_charges * distance_between_charges);
 	}
 	
-	float is_total_energy_zero(float kinetic_energy, float potential_energy, float floating_point_tolerance)
+	bool is_total_energy_zero(float kinetic_energy, float potential_energy, float floating_point_tolerance)
 	{
 		if(fabs(kinetic_energy + potential_energy) <= floating_point_tolerance)
 		{
