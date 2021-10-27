@@ -100,5 +100,4 @@ namespace simple_physics
     float is_total_energy_zero(float kinetic_energy, float potential_energy, float floating_point_tolerance);
     float period_of_spring_with_mass(float mass, float spring_constant);
     float harmonic_oscillator_position(float amplitude, float frequency, float time, float phase);
-	
 };
