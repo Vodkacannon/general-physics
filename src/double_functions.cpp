@@ -566,4 +566,14 @@ namespace simple_physics
 		
 		return false;
 	}
+	
+	double period_of_spring_with_mass(double mass, double spring_constant)
+	{
+		2 * M_PI * sqrt(mass / spring_constant);
+	}
+	
+	double harmonic_oscillator_position(double amplitude, double frequency, double time, double phase)
+	{
+		return amplitude * sin(2 * M_PI * frequency * time + phase);
+	}
 }
