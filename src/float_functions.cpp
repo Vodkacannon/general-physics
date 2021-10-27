@@ -440,6 +440,6 @@ namespace simple_physics
 	
 	float harmonic_oscillator_position(float amplitude, float frequency, float time, float phase)
 	{
-		return amplitude * sin(2 * M_PI * frequency * time + phase);
+		return amplitude * sinf(2 * M_PI * frequency * time + phase);
 	}
 }
