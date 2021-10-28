@@ -576,4 +576,9 @@ namespace simple_physics
 	{
 		return amplitude * sin(2 * M_PI * frequency * time + phase);
 	}
+	
+	double total_power_radiated(double body_area, double emissivity, double body_temperature)
+        {
+                return body_area * emissivity * STEFAN_BOLTZMAN_CONSTANT * pow(body_temperature, 4);
+        }
 }
