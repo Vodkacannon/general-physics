@@ -1,3 +1,5 @@
+#include "include/float_types.hpp"
+
 namespace simple_physics
 {
 	bool are_forces_in_equilibrium(const std::vector<std::pair<float_types::mass, float_types::acceleration>> &forces)
