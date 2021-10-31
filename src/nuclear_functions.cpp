@@ -4,4 +4,8 @@ namespace simple_physics
         {
                 return 1 / (nuclear_number_density * total_interaction_cross_section);
         }
+        
+        float prompt_criticality_reaction_growth_rate(float initial_growth_rate, neutron_time_to_cause_fission)
+        {
+        }
 }
