@@ -66,4 +66,9 @@ namespace simple_physics
 	{
 		return (2 * M_PI * radius) / velocity;
 	}
+	
+	float angular_energy( float moment_of_inertia, float rotational_velocity)
+	{
+		return (1 / 2) * moment_of_inertia * rotational_velocity * rotational_velocity; 
+	}
 };
