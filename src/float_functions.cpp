@@ -437,4 +437,9 @@ namespace simple_physics
 	{
 		2 * M_PI * sqrtf(powf(semi__major_axis, 3) / (NEWTONS_GRAVITY_CONSTANT * mass_of_orbited_body));
 	}
+	
+	float keplers_equation(float eccentric_anomaly, float eccentricity)
+	{
+		return eccentric_anomaly - eccentricity * sinf(eccentric_animaly);
+	}
 }
