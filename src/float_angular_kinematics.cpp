@@ -67,13 +67,18 @@ namespace simple_physics
 		return (2 * M_PI * radius) / velocity;
 	}
 	
-	float angular_energy( float moment_of_inertia, float rotational_velocity)
-	{
-		return (1 / 2) * moment_of_inertia * rotational_velocity * rotational_velocity; 
-	}
-	
 	float harmonic_oscillator_position(float amplitude, float frequency, float time, float phase)
 	{
 		return amplitude * sinf(2 * M_PI * frequency * time + phase);
+	}
+	
+	float rotational_kinetic_energy(float rotational_inertia, float angular_velocity)
+	{
+		return (1 / 2) * rotational_inertia * angular_velocity * angular_velocity;
+	}
+
+	float rolling_object_kinetic_energy(float kinetic_energy, float rotational_kinetic_energy)
+	{
+		return kinetic_energy + rotational_kinetic_energy;
 	}
 };
