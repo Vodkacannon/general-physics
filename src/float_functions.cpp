@@ -42,8 +42,6 @@ namespace simple_physics
 		return (2 * M_PI * radius) / velocity;
 	}
 	
-	
-	
 	float sum_of_momenta(const std::vector<std::pair<mass, velocity>> &momenta)
 	{
 		unsigned int momenta_size = momenta.size();
@@ -226,16 +224,6 @@ namespace simple_physics
 	float wave_intensity(float power, float area)
 	{
 		return power / area;
-	}
-	
-	float orbital_period(float mass_of_orbited_body)
-	{
-		return (4 * M_PI * M_PI) / (NEWTONS_GRAVITATIONAL_CONSTANT * mass_of_orbited_body);
-	}
-	
-	float rocket_delta_velocity(float specific_impulse, float gravitational_acceleration, float initial_mass, float final_mass)
-	{
-		return specific_impulse * gravitational_acceleration * log(initial_mass / final_mass);
 	}
 	
 	float doppler_effect(float sound_wave_speed, float observer_velocity, float source_velocity, float origional_sound_wave_frequency)
