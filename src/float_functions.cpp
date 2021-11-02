@@ -12,16 +12,6 @@ namespace simple_physics
 		return sqrtf(2 * acceleration_of_gravity * initial_height);
 	}
 
-	float newtons_gravitational_force(float mass_1, float mass_2, float radius_between_masses)
-	{
-		return NEWTONS_GRAVITATIONAL_CONSTANT * mass_1 * mass_2 / (radius_between_masses * radius_between_masses);
-	}
-
-	float escape_speed(float mass, float radius)
-	{
-		return sqrtf((2 * NEWTONS_GRAVITATIONAL_CONSTANT * mass) / radius);
-	}
-
 	float classical_kinetic_energy(float mass, float velocity)
 	{
 		return (1 / 2) * mass * velocity * velocity;
