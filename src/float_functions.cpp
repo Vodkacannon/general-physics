@@ -32,8 +32,6 @@ namespace simple_physics
 		return mass * gravitational_acceleration * height;
 	}
 
-	
-
 	float elastic_potential_energy(const float spring_constant, float displacement)
 	{
 		return (1 / 2) * spring_constant * displacement * displacement;
@@ -44,15 +42,7 @@ namespace simple_physics
 		return (2 * M_PI * radius) / velocity;
 	}
 	
-	float rotational_kinetic_energy(float rotational_inertia, float angular_velocity)
-	{
-		return (1 / 2) * rotational_inertia * angular_velocity * angular_velocity;
-	}
-
-	float rolling_object_kinetic_energy(float kinetic_energy, float rotational_kinetic_energy)
-	{
-		return kinetic_energy + rotational_kinetic_energy;
-	}
+	
 	
 	float sum_of_momenta(const std::vector<std::pair<mass, velocity>> &momenta)
 	{
