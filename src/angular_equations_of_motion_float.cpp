@@ -71,4 +71,9 @@ namespace simple_physics
 	{
 		return (1 / 2) * moment_of_inertia * rotational_velocity * rotational_velocity; 
 	}
+	
+	float harmonic_oscillator_position(float amplitude, float frequency, float time, float phase)
+	{
+		return amplitude * sinf(2 * M_PI * frequency * time + phase);
+	}
 };
