@@ -12,11 +12,6 @@ namespace simple_physics
 		return sqrtf(2 * acceleration_of_gravity * initial_height);
 	}
 
-	float dry_friction(float coefficient_of_friction, float normal_force)
-	{
-		return coefficient_of_friction * normal_force;
-	}
-
 	float newtons_gravitational_force(float mass_1, float mass_2, float radius_between_masses)
 	{
 		return NEWTONS_GRAVITATIONAL_CONSTANT * mass_1 * mass_2 / (radius_between_masses * radius_between_masses);
