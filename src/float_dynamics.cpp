@@ -29,4 +29,9 @@ namespace simple_physics
 	{
 		return force * distance;
 	}
+	
+	float dry_friction(float coefficient_of_friction, float normal_force)
+	{
+		return coefficient_of_friction * normal_force;
+	}
 }
