@@ -1,6 +1,6 @@
 namespace simple_physics
 {
-  float pendulum_potential_energy(float mass, float gravitational_acceleration, float pendulum_length, float angle)
+        float pendulum_potential_energy(float mass, float gravitational_acceleration, float pendulum_length, float angle)
 	{
 		return mass * gravitational_acceleration * pendulum_length * (1 - cos(angle));
 	}
