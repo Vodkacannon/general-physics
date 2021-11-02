@@ -12,7 +12,7 @@ namespace simple_physics
 
 	float displacement(float velocity, float time)
 	{
-		return velocity / time;
+		return velocity * time;
 	}
 
 	float distance(float speed, float time)
