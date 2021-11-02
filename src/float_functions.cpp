@@ -32,16 +32,18 @@ namespace simple_physics
 		return mass * gravitational_acceleration * height;
 	}
 
-	float orbital_period(float velocity, float radius)
-	{
-		return (2 * M_PI * radius) / velocity;
-	}
+	
 
 	float elastic_potential_energy(const float spring_constant, float displacement)
 	{
 		return (1 / 2) * spring_constant * displacement * displacement;
 	}
 
+	float orbital_period(float velocity, float radius)
+	{
+		return (2 * M_PI * radius) / velocity;
+	}
+	
 	float rotational_kinetic_energy(float rotational_inertia, float angular_velocity)
 	{
 		return (1 / 2) * rotational_inertia * angular_velocity * angular_velocity;
@@ -161,8 +163,6 @@ namespace simple_physics
 		return REDUCED_PLANCKS_CONSTANT / (2 * (max_momentum - min_momentum));
 	}
 
-
-
 	float speed_from_velocity_vec_2(float velocity_x, float velocity_y)
 	{
 		return sqrt(velocity_x * velocity_x + velocity_y * velocity_y);
@@ -187,8 +187,6 @@ namespace simple_physics
 	{
 		return kelvin - 273.5;
 	}
-
-
 
 	float reynolds_number(float flow_speed, float characteristic_linear_dimension_as_length, float kinematic_viscosity)
 	{
@@ -255,7 +253,6 @@ namespace simple_physics
 		return ((sound_wave_speed + observer_velocity) / (sound_wave_speed + source_velocity)) * origional_sound_wave_frequency;
 	}
 	
-	
 	float coulombs_force(float charge_1, float charge_2, float distance_between_charges)
 	{
 		return (COULOMBS_CONSTANT * charge_1 * charge_2) / (distance_between_charges * distance_between_charges);
@@ -265,13 +262,6 @@ namespace simple_physics
 	{
 		2 * M_PI * sqrtf(mass / spring_constant);
 	}
-	
-	float harmonic_oscillator_position(float amplitude, float frequency, float time, float phase)
-	{
-		return amplitude * sinf(2 * M_PI * frequency * time + phase);
-	}
-
-        
 	
 	float keplers_second_law(float major_axis, float minor_axis, float orbital_period)
 	{
