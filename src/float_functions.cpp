@@ -26,11 +26,6 @@ namespace simple_physics
 	{
 		return (1 / 2) * spring_constant * displacement * displacement;
 	}
-
-	float orbital_period(float velocity, float radius)
-	{
-		return (2 * M_PI * radius) / velocity;
-	}
 	
 	float sum_of_momenta(const std::vector<std::pair<mass, velocity>> &momenta)
 	{
