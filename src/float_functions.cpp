@@ -29,15 +29,14 @@ namespace simple_physics
 	
 	float sum_of_momenta(const std::vector<std::pair<mass, velocity>> &momenta)
 	{
-		unsigned int momenta_size = momenta.size();
 		float sum_of_momenta = 0.0;
-
-		for(unsigned int i = 0; i < momenta_size; i++)
+		
+		for(const auto& momentum : momenta)
 		{
-			sum_of_momenta += momenta[i].first * momenta[i].second;
+			sum_of_momenta += momentum.first * momentum.second;
 		}
 
-		return sum_of_momenta;
+		return sum_of_forces;
 	}
 
 	float sum_of_forces(const std::vector<std::pair<mass, acceleration>> &forces)
