@@ -1,3 +1,5 @@
+#include "include/constants.hpp"
+
 namespace simple_physics
 {
 	float photon_energy(float frequency)
