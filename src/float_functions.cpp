@@ -42,12 +42,11 @@ namespace simple_physics
 
 	float sum_of_forces(const std::vector<std::pair<mass, acceleration>> &forces)
 	{
-		unsigned int forces_size = forces.size();
 		float sum_of_forces = 0.0;
-
-		for(unsigned int i = 0; i < forces_size; i++)
+		
+		for(const auto& force : forces)
 		{
-			sum_of_forces += forces[i].first * forces[i].second;
+			sum_of_forces += force.first * force.second;
 		}
 
 		return sum_of_forces;
