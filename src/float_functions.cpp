@@ -216,11 +216,6 @@ namespace simple_physics
 		return ((sound_wave_speed + observer_velocity) / (sound_wave_speed + source_velocity)) * origional_sound_wave_frequency;
 	}
 	
-	float coulombs_force(float charge_1, float charge_2, float distance_between_charges)
-	{
-		return (COULOMBS_CONSTANT * charge_1 * charge_2) / (distance_between_charges * distance_between_charges);
-	}
-	
 	float period_of_spring_with_mass(float mass, float spring_constant)
 	{
 		2 * M_PI * sqrtf(mass / spring_constant);
