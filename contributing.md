@@ -1,5 +1,7 @@
 # Guidelines:
 
+* Use C++11 and above.
+
 * Please use snake_case (underscores).
 
 * Please keep variable and function names descriptive.
