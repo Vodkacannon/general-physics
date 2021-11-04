@@ -110,30 +110,10 @@ namespace simple_physics
 	{
 		return SPEED_OF_LIGHT / speed_of_light_in_medium;
 	}
-
-	float photon_energy(float frequency)
-	{
-		return PLANCKS_CONSTANT * frequency;
-	}
-
-	float photon_momentum(float wavelength)
-	{
-		return PLANCKS_CONSTANT * wavelength;
-	}
-
+	
 	float wave_velocity(float frequency, float wavelength)
 	{
 		return frequency * wavelength;
-	}
-
-	float heisenberg_momentum_uncertainty(float max_position, float min_position)
-	{
-		return REDUCED_PLANCKS_CONSTANT / (2 * (max_position - min_position));
-	}
-
-	float heisenberg_position_uncertainty(float max_momentum, float min_momentum)
-	{
-		return REDUCED_PLANCKS_CONSTANT / (2 * (max_momentum - min_momentum));
 	}
 
 	float speed_from_velocity_vec_2(float velocity_x, float velocity_y)
