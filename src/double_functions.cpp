@@ -1,5 +1,5 @@
-#include "double_types.hpp"
-#include "constants.hpp"
+#include "include/double_types.hpp"
+#include "include/constants.hpp"
 
 namespace simple_physics
 {
