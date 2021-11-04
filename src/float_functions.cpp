@@ -36,7 +36,7 @@ namespace simple_physics
 			sum_of_momenta += momentum.first * momentum.second;
 		}
 
-		return sum_of_forces;
+		return sum_of_momenta;
 	}
 
 	float sum_of_forces(const std::vector<std::pair<mass, acceleration>> &forces)
