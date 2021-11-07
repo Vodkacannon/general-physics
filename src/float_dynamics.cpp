@@ -44,4 +44,19 @@ namespace simple_physics
 	{
 		return (1 / 2) * air_density * velocity * velocity * drag_coefficient * cross_sectional_area;
 	}
+	
+	float classical_kinetic_energy(float mass, float velocity)
+	{
+		return (1 / 2) * mass * velocity * velocity;
+	}
+
+	float gravitational_potential_energy(float mass, float gravitational_acceleration, float height)
+	{
+		return mass * gravitational_acceleration * height;
+	}
+
+	float elastic_potential_energy(const float spring_constant, float displacement)
+	{
+		return (1 / 2) * spring_constant * displacement * displacement;
+	}
 }
