@@ -80,31 +80,6 @@ namespace simple_physics
 	{
 		return kelvin - 273.5;
 	}
-
-	float reynolds_number(float flow_speed, float characteristic_linear_dimension_as_length, float kinematic_viscosity)
-	{
-		return (flow_speed * characteristic_linear_dimension_as_length) / kinematic_viscosity;
-	}
-
-	float reynolds_number_2(float fluid_density, float flow_speed, float characteristic_linear_dimension_as_length, float dynamic_viscosity)
-	{
-		return (fluid_density * flow_speed * characteristic_linear_dimension_as_length) / dynamic_viscosity;
-	}
-
-	float drag_coefficient(float wet_area, float front_area, float bejan_number, double reynolds_number)
-	{
-		return 2 * (wet_area / front_area) * (bejan_number / (reynolds_number * reynolds_number));
-	}
-
-	float ballistic_coefficient(float mass, float drag_coefficient, float cross_sectional_area)
-	{
-		return (mass * drag_coefficient) / cross_sectional_area;
-	}
-
-	float ballistic_coefficient_2(float mass, float drag_coefficient, float cross_sectional_area)
-	{
-		return (mass * drag_coefficient) / cross_sectional_area;
-	}
 	
 	float wave_intensity(float power, float area)
 	{
