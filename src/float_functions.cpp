@@ -46,15 +46,7 @@ namespace simple_physics
 		return mass_moment_sum / sum_of_masses;
 	}
 
-	float index_of_refraction(float speed_of_light_in_medium)
-	{
-		return SPEED_OF_LIGHT / speed_of_light_in_medium;
-	}
 	
-	float wave_velocity(float frequency, float wavelength)
-	{
-		return frequency * wavelength;
-	}
 
 	float speed_from_velocity_vec_2(float velocity_x, float velocity_y)
 	{
@@ -69,16 +61,6 @@ namespace simple_physics
 	float momentum_from_velocity_vec_3(float mass, const vec_3& velocity)
 	{
 		return mass * sqrtf(velocity.x * velocity.x + velocity.y * velocity.y + velocity.z * velocity.z);
-	}
-	
-	float wave_intensity(float power, float area)
-	{
-		return power / area;
-	}
-	
-	float doppler_effect(float sound_wave_speed, float observer_velocity, float source_velocity, float origional_sound_wave_frequency)
-	{
-		return ((sound_wave_speed + observer_velocity) / (sound_wave_speed + source_velocity)) * origional_sound_wave_frequency;
 	}
 	
 	float period_of_spring_with_mass(float mass, float spring_constant)
