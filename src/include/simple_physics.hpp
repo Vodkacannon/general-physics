@@ -20,5 +20,7 @@
 #include "vec_3f_functions.hpp"
 #include "vec_2d_functions.hpp"
 #include "vec_3d_functions.hpp"
+#include "float_integration.hpp"
+#include "double_integration.hpp"
 
 #endif //SIMPLE_PHYSICS_SIMPLE_PHYSICS_HPP
