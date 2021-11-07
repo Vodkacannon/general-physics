@@ -7,11 +7,6 @@
 
 namespace simple_physics
 {
-	float final_free_fall_velocity(float acceleration_of_gravity, float initial_height)
-	{
-		return sqrtf(2 * acceleration_of_gravity * initial_height);
-	}
-
 	float classical_kinetic_energy(float mass, float velocity)
 	{
 		return (1 / 2) * mass * velocity * velocity;
