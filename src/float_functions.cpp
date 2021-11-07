@@ -89,16 +89,6 @@ namespace simple_physics
 		return energy / time;
 	}
 
-	float power_velocity(float force, float velocity, float applied_angle)
-	{
-		return force * velocity * cos(applied_angle);
-	}
-
-	float drag_force(float air_density, float velocity, float drag_coefficient, float cross_sectional_area)
-	{
-		return (1 / 2) * air_density * velocity * velocity * drag_coefficient * cross_sectional_area;
-	}
-
 	float index_of_refraction(float speed_of_light_in_medium)
 	{
 		return SPEED_OF_LIGHT / speed_of_light_in_medium;
