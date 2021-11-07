@@ -1,3 +1,5 @@
+#include <math.h>
+
 namespace simple_physics
 {
         float momentum(float mass, float velocity)
@@ -35,9 +37,14 @@ namespace simple_physics
 		return coefficient_of_friction * normal_force;
 	}
 	
-	float power_velocity(float force, float velocity, float applied_angle)
+	float power(float energy, float time)
 	{
-		return force * velocity * cos(applied_angle);
+		return energy / time;
+	}
+	
+	float power(float force, float velocity, float applied_angle)
+	{
+		return force * velocity * cosf(applied_angle);
 	}
 
 	float drag_force(float air_density, float velocity, float drag_coefficient, float cross_sectional_area)
