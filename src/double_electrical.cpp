@@ -1,4 +1,4 @@
-#include "../include/constants.hpp"
+#include "include/constants.hpp"
 
 namespace simple_physics
 {
