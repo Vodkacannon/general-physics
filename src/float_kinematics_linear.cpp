@@ -44,4 +44,10 @@ namespace simple_physics
 	{
 		return (velocity_2 - velocity_1) / (time_2 - time_1);
 	}
+	
+	float final_free_fall_velocity(float acceleration_of_gravity, float initial_height)
+	{
+		return sqrtf(2 * acceleration_of_gravity * initial_height);
+	}
+
 };
