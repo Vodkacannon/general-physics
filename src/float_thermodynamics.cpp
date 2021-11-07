@@ -1,8 +1,13 @@
 namespace simple_physics
 {
-        float pendulum_potential_energy(float mass, float gravitational_acceleration, float pendulum_length, float angle)
+	float celcius_to_kelvin(float celcius)
 	{
-		return mass * gravitational_acceleration * pendulum_length * (1 - cos(angle));
+		return celcius + 273.5;
+	}
+
+	float kelvin_to_celcius(float kelvin)
+	{
+		return kelvin - 273.5;
 	}
 	
 	float boltzman_entropy(unsigned int multiplicity)
