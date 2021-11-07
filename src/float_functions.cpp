@@ -45,11 +45,6 @@ namespace simple_physics
 
 		return mass_moment_sum / sum_of_masses;
 	}
-	
-	float power(float energy, float time)
-	{
-		return energy / time;
-	}
 
 	float index_of_refraction(float speed_of_light_in_medium)
 	{
