@@ -6,22 +6,7 @@
 #include "include/constants.hpp"
 
 namespace simple_physics
-{
-	float classical_kinetic_energy(float mass, float velocity)
-	{
-		return (1 / 2) * mass * velocity * velocity;
-	}
-
-	float gravitational_potential_energy(float mass, float gravitational_acceleration, float height)
-	{
-		return mass * gravitational_acceleration * height;
-	}
-
-	float elastic_potential_energy(const float spring_constant, float displacement)
-	{
-		return (1 / 2) * spring_constant * displacement * displacement;
-	}
-	
+{	
 	float sum_of_momenta(const std::vector<std::pair<mass, velocity>> &momenta)
 	{
 		float sum_of_momenta = 0.0;
