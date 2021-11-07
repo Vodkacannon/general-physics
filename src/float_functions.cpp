@@ -70,16 +70,6 @@ namespace simple_physics
 	{
 		return mass * sqrtf(velocity.x * velocity.x + velocity.y * velocity.y + velocity.z * velocity.z);
 	}
-
-	float celcius_to_kelvin(float celcius)
-	{
-		return celcius + 273.5;
-	}
-
-	float kelvin_to_celcius(float kelvin)
-	{
-		return kelvin - 273.5;
-	}
 	
 	float wave_intensity(float power, float area)
 	{
