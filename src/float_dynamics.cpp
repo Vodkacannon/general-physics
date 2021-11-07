@@ -34,4 +34,14 @@ namespace simple_physics
 	{
 		return coefficient_of_friction * normal_force;
 	}
+	
+	float power_velocity(float force, float velocity, float applied_angle)
+	{
+		return force * velocity * cos(applied_angle);
+	}
+
+	float drag_force(float air_density, float velocity, float drag_coefficient, float cross_sectional_area)
+	{
+		return (1 / 2) * air_density * velocity * velocity * drag_coefficient * cross_sectional_area;
+	}
 }
