@@ -19,4 +19,9 @@ namespace simple_physics
 	{
 		return sqrtf((2 * NEWTONS_GRAVITATIONAL_CONSTANT * mass) / radius);
 	}
+	
+	float galaxy_rotation_velocity(float dummy)
+	{
+		return dummy;
+	}
 }
