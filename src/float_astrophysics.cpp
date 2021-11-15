@@ -24,4 +24,19 @@ namespace simple_physics
 	{
 		return dummy;
 	}
+	
+	float keplers_second_law(float major_axis, float minor_axis, float orbital_period)
+	{
+		return  (a  * b * orbital_period) / 2;
+	}
+	
+	float keplers_third_law(float semi__major_axis, float mass_of_obrbited_body)
+	{
+		2 * M_PI * sqrtf(powf(semi__major_axis, 3) / (NEWTONS_GRAVITY_CONSTANT * mass_of_orbited_body));
+	}
+	
+	float keplers_equation(float eccentric_anomaly, float eccentricity)
+	{
+		return eccentric_anomaly - eccentricity * sinf(eccentric_animaly);
+	}
 }
