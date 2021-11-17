@@ -1,3 +1,5 @@
+#pragma once
+
 #include <math.h>
 
 namespace simple_physics
