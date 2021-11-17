@@ -1,3 +1,5 @@
+#pragma once
+
 #include "include/constants.hpp"
 
 namespace simple_physics
