@@ -1,3 +1,5 @@
+#pragma once
+
 namespace simple_physics
 {
 	double speed(double distance, double time);
