@@ -22,11 +22,6 @@ namespace simple_physics
 		return -angular_velocity * angular_velocity * radius;
 	}
 
-	float centripedal_force(float mass, float tangental_velocity, float radius)
-	{
-		return (mass * tangental_velocity * tangental_velocity) / radius;
-	}
-
 	float angular_velocity(float angle, float time)
 	{
 		return angle / time;
