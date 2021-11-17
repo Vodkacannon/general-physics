@@ -67,11 +67,6 @@ namespace simple_physics
 		return (1 / 2) * spring_constant * displacement * displacement;
 	}
 	
-	float pendulum_potential_energy(float mass, float gravitational_acceleration, float pendulum_length, float angle)
-	{
-		return mass * gravitational_acceleration * pendulum_length * (1 - cos(angle));
-	}
-	
 	float reynolds_number(float flow_speed, float characteristic_linear_dimension_as_length, float kinematic_viscosity)
 	{
 		return (flow_speed * characteristic_linear_dimension_as_length) / kinematic_viscosity;
