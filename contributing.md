@@ -16,6 +16,6 @@ Please:
 
 * keep function implementations 40 lines or under (for code quality compliance).
 
-* separate long one-liners into multiple lines.
+* separate one-liners, that overflow, into multiple lines.
 
 Thank you.
