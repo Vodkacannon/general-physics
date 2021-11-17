@@ -1,3 +1,5 @@
+#pragma once
+
 namespace simple_physics
 {
     double integrate_jerk_to_acceleration(double jerk, double delta_time);
