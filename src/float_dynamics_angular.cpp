@@ -9,4 +9,9 @@ namespace simple_physics
 	{
 		return mass * gravitational_acceleration * pendulum_length * (1 - cos(angle));
 	}
+	
+	float centripedal_force(float mass, float tangental_velocity, float radius)
+	{
+		return (mass * tangental_velocity * tangental_velocity) / radius;
+	}
 }
