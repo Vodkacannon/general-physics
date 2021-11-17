@@ -46,16 +46,6 @@ namespace simple_physics
 	{
 		return radius * mass * velocity * sinf(perpendicular_angle);
 	}
-
-	float torque(float radius, float force, float angle)
-	{
-		return radius * force * sinf(angle);
-	}
-
-	float torque(float inertia, float angular_acceleration)
-	{
-		return inertia * angular_acceleration;
-	}  
 	
 	float orbital_period(float velocity, float radius)
 	{
