@@ -1,3 +1,5 @@
+#pragma once
+
 namespace simple_physics
 {
 	float celcius_to_kelvin(float celcius)
