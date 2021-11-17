@@ -1,3 +1,5 @@
+#pragma once
+
 namespace simple_physics
 {
 	float orbital_period(float mass_of_orbited_body)
