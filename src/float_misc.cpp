@@ -1,6 +1,8 @@
+#pragma once
+
 namespace simple_physics
 {
-  //Calculate the number of significant figures of a float.
+  	//Calculate the number of significant figures of a float.
 	float significant_figures(float value)
 	{
 		std::string value_as_string = std::to_string(value);
