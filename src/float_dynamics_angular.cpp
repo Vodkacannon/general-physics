@@ -14,4 +14,14 @@ namespace simple_physics
 	{
 		return (mass * tangental_velocity * tangental_velocity) / radius;
 	}
+	
+	float torque(float radius, float force, float angle)
+	{
+		return radius * force * sinf(angle);
+	}
+
+	float torque(float inertia, float angular_acceleration)
+	{
+		return inertia * angular_acceleration;
+	}  
 }
