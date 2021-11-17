@@ -1,3 +1,5 @@
+#pragma once
+
 namespace simple_physics
 {
         float relativistic_velocity_clamp(float velocity)
