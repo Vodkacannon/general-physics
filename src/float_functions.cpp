@@ -21,9 +21,4 @@ namespace simple_physics
 	{
 		return mass * sqrtf(velocity.x * velocity.x + velocity.y * velocity.y + velocity.z * velocity.z);
 	}
-	
-	float period_of_spring_with_mass(float mass, float spring_constant)
-	{
-		2 * M_PI * sqrtf(mass / spring_constant);
-	}
 }
