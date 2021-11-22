@@ -12,6 +12,11 @@ namespace simple_physics
 		return mass * acceleration;
 	}
 
+	float force(float mass, float displacement_2, float displacement_1, float time_2, float time_1)
+	{
+		return mass * ((displacement_2 / time_2 - displacement_1 / time_1) / (time_2 - time_1));
+	}
+	
 	float pressure(float force, float area)
 	{
 		return force / area;
