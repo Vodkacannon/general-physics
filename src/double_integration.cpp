@@ -10,7 +10,7 @@ namespace simple_physics
 		return integrate_velocity_to_position(integrate_acceleration_to_velocity(integrate_jerk_to_acceleration(jerk, delta_time), delta_time), delta_time);
 	}
 	
-    double integrate_acceleration_to_velocity(double acceleration, double delta_time)
+    	double integrate_acceleration_to_velocity(double acceleration, double delta_time)
 	{
 		return acceleration * delta_time;
 	}
