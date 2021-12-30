@@ -21,6 +21,7 @@ namespace simple_physics
         
         float prompt_criticality_reaction_growth_rate(float initial_growth_rate, neutron_time_to_cause_fission)
         {
+                return 0;
         }
         
         float mass_difference_of_nucleus(float atomic_number, float mass_number, float nucleus_mass)
