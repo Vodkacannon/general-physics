@@ -3,6 +3,7 @@
 namespace simple_physics
 {
   	//Calculate the number of significant figures of a float.
+	//This function is not fully accurate.
 	float significant_figures(float value)
 	{
 		std::string value_as_string = std::to_string(value);
