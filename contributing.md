@@ -1,6 +1,6 @@
 # Guidelines:
 
-Please:
+Please adhere to the following:
 
 * use snake_case (underscores).
 
