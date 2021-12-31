@@ -1,7 +1,7 @@
 #pragma once
 #include <math.h>
 
-namespace simple_physics 
+namespace general_physics 
 {
     const float NEWTONS_GRAVITATIONAL_CONSTANT = 6.67430e-11;
     const float SPEED_OF_LIGHT = 299792458;
