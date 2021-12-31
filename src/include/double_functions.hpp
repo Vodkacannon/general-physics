@@ -1,7 +1,7 @@
 #pragma once
 #include "float_types.hpp"
 
-namespace simple_physics
+namespace general_physics
 {
 	double speed(double distance, double time);
 	double electric_energy(double voltage, double charge);
