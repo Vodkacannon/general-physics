@@ -2,8 +2,6 @@
 
 Please:
 
-* Use C++11 and above.
-
 * use snake_case (underscores).
 
 * keep variable and function names descriptive.
