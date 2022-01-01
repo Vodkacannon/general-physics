@@ -3,8 +3,8 @@
 
 int main()
 {
-    namespace sp = simple_physics;
+    namespace gp = general_physics;
     
-    std::cout << sp::density(10.0, 5.0);
+    std::cout << gp::density(10.0, 5.0);
     return 0;
 }
