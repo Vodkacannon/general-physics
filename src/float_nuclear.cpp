@@ -28,4 +28,9 @@ namespace simple_physics
         {
                 return atomic_number * simple_physics::PROTON_MASS + (mass_number - atomic_number) * simple_physics::NEUTRON_MASS - nucleus_mass;
         }
+
+        float neutron_flux(float neutron_density, float neutron_velocity)
+        {
+                return neutron_density * neutron_velocity;
+        }
 }
