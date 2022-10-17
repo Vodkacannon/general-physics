@@ -22,9 +22,9 @@ namespace simple_physics
 		return sqrtf((2 * NEWTONS_GRAVITATIONAL_CONSTANT * mass) / radius);
 	}
 	
-	float galaxy_rotation_velocity(float dummy)
+	float galaxy_rotation_velocity(float radius)
 	{
-		return dummy;
+		return sqrtf(radius * )
 	}
 	
 	float keplers_second_law(float major_axis, float minor_axis, float orbital_period)
