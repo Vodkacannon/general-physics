@@ -19,6 +19,7 @@ namespace simple_physics
                 return 1 / (nuclear_number_density * total_interaction_cross_section);
         }
         
+        //This may be a closely guarded secret.
         float prompt_criticality_reaction_growth_rate(float initial_growth_rate, neutron_time_to_cause_fission)
         {
                 return 0;
@@ -32,5 +33,15 @@ namespace simple_physics
         float neutron_flux(float neutron_density, float neutron_velocity)
         {
                 return neutron_density * neutron_velocity;
+        }
+             
+        float half_life(float decay_constant) 
+        {
+             return logf(2) / decay_constant; 
+        }
+        
+        float radiation_particles_remaining(float decay_constant, float radiation_particles_time_0, float current_time) 
+        {
+                return radiation_particles_time_0 * expf(decay_constant * current_time);
         }
 }
