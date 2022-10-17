@@ -1,10 +1,12 @@
 #pragma once
 
+#include <math.h>
+
 namespace simple_physics
 {
 	float period_of_spring_with_mass(float mass, float spring_constant)
 	{
-		2 * M_PI * sqrtf(mass / spring_constant);
+		return 2 * M_PI * sqrtf(mass / spring_constant);
 	}
 	
 	float pendulum_potential_energy(float mass, float gravitational_acceleration, float pendulum_length, float angle)
@@ -25,5 +27,5 @@ namespace simple_physics
 	float torque(float inertia, float angular_acceleration)
 	{
 		return inertia * angular_acceleration;
-	}  
+	}
 }
