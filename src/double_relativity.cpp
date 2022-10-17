@@ -1,6 +1,6 @@
 #include <cmath>
 
-namspace general_physics
+namespace general_physics
 {
   double relativistic_velocity_clamp(double velocity)
   {
