@@ -23,4 +23,9 @@ namespace simple_physics
 	{
 		return luminosity / (4 * M_PI * (1 + redshift) * (1 + redshift) * angular_diameter_distance); 	
 	}
+
+	float beer_lambert_law(float molar_absorption_coefficient, float optical_path_length, float molar_concentration_of_matter) 
+    {
+		return molar_absorption_coefficient * optical_path_length * molar_concentration_of_matter;
+    }
 }
