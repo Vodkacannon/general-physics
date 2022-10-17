@@ -27,7 +27,7 @@ namespace simple_physics
 
 	float displacement_2(float velocity_1, float time, float acceleration)
 	{
-		velocity_1 * time + (1 / 2) * acceleration * time * time;
+		return velocity_1 * time + (1 / 2) * acceleration * time * time;
 	}
 
 	float displacement_3(float velocity_1, float velocity_2, float acceleration)
