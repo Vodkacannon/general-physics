@@ -12,7 +12,7 @@ Please adhere to the following:
 
     }
 
-* keep function implementations 40 lines or under (for code quality compliance).
+* keep function implementations 40 lines or under (for code quality compliance and simplicity).
 
 * separate one-liners, that overflow, into multiple lines.
 
