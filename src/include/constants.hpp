@@ -1,5 +1,5 @@
 #pragma once
-#include <math.h>
+#include <cmath>
 
 namespace general_physics 
 {
@@ -14,6 +14,7 @@ namespace general_physics
     const float RAYLEIGHS_CRITERION_CONSTANT = 1.21966989;
     const float VACUUM_PERMITTIVITY_CONSTANT = 8.8541878128e-12;
     const float STEFAN_BOLTZMAN_CONSTANT = 5.670374419e-8;
+    const float MOND_TRANSITION_CONSTANT = 1.2e-10;
     const float PROTON_MASS = 1.67262192369e-27;
     const float NEUTRON_MASS = 1.67492749804e-27;
 };
