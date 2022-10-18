@@ -64,4 +64,14 @@ namespace simple_physics
 
 		return mass_moment_sum / sum_of_masses;
 	}
+
+	float bouyant_force(float fluid_density, float body_immersion_volume, float gravitational_acceleration) 
+	{
+		return fluid_density * body_immersion_volume * gravitational_acceleration;
+	}
+
+	float bouyant_weight(float fluid_density, float body_immersion_volume, float gravitational_acceleration, float actual_weight)
+	{
+		return actual_weight - bouyant_force(fluid_density, body_immersion_volume, gravitational_acceleration);
+	}
 }
