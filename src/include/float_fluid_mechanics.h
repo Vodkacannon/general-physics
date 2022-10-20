@@ -10,4 +10,7 @@ namespace general_physics
 	
 	//Useful for compressible fluids.
 	float cauchy_number(float fluid_density, float flow_velocity, float bulk_modulus_elasticity);
+	
+	//For when pressure difference is important.
+	float euler_number(float pressure, float density, float fluid_velocity);
 }
