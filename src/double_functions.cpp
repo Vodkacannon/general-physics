@@ -1,10 +1,8 @@
 #include "include/double_types.hpp"
 #include "include/constants.hpp"
 
-namespace simple_physics
+namespace general_physics
 {
-
-
     	double time(double frequency)
     	{
         	return 1 / frequency;
