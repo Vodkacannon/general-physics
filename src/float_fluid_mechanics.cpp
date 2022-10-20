@@ -18,4 +18,9 @@ namespace general_physics
 	{
 		return (M_PI * pressure_difference * pipe_radius * powf(pipe_radius, 4.0f)) / (8.0f * fluid_viscosity * pipe_length);
 	}
+	
+	float specific_weight(float fluid_density, float gravitational_acceleration) 
+	{
+		return fluid_density * gravitational_acceleration;
+	}
 }
