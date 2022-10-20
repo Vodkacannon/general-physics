@@ -15,5 +15,8 @@ namespace general_physics
 	float euler_number(float pressure, float density, float fluid_velocity);
 	
 	//Ratio of pressure forces to inertial forces.
-	float pressure_coefficient(float differential_pressure, float fluid_density, float fluid_velocity);	
+	float pressure_coefficient(float differential_pressure, float fluid_density, float fluid_velocity);
+	
+	//Inertia force to viscous or friction force ratio.
+	float reynolds_number(float cross_sectional_velocity, float characteristic_length, kinematic_viscosity);
 }
