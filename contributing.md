@@ -20,4 +20,6 @@ Please adhere to the following:
 
 * Separate one-liners, that overflow, into multiple lines.
 
+* Only numeric fractions of 1 / 2 can be put as decimals, for clarity purposes.
+
 Thank you.
