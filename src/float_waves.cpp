@@ -19,4 +19,9 @@ namespace simple_physics
 	{
 		return ((sound_wave_speed + observer_velocity) / (sound_wave_speed + source_velocity)) * origional_sound_wave_frequency;
 	}
+	
+	float waves_per_second(float wave_velocity, float wave_width) 
+	{
+		return wave_velocity / wave_width;
+	}
 }
