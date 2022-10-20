@@ -2,7 +2,7 @@
 
 namespace simple_physics
 {
-	bool are_momenta_in_equilibrium(const std::vector<std::pair<float_types::mass, float_types::velocity>> &momenta)
+	bool is_net_momentum_zero(const std::vector<std::pair<float_types::mass, float_types::velocity>> &momenta)
 	{
 		if(sum_of_momenta(momenta) == 0)
 		{
@@ -12,7 +12,7 @@ namespace simple_physics
 		return false;
 	}
 	
-	bool are_forces_in_equilibrium(const std::vector<std::pair<float_types::mass, float_types::acceleration>> &forces)
+	bool is_net_force_zero(const std::vector<std::pair<float_types::mass, float_types::acceleration>> &forces)
 	{
 		if(sum_of_forces(forces) == 0)
 		{
@@ -31,4 +31,6 @@ namespace simple_physics
 		
 		return false;
 	}
+	
+	bool is_net_force_zer()
 }
