@@ -1,15 +1,15 @@
-#include <math.h>
+#include <cmath>
 
 namespace simple_physics
 {
 	float time(float frequency)
 	{
-		return 1 / frequency;
+		return 1.0f / frequency;
 	}
 
 	float frequency(float time)
 	{
-		return 1 / time;
+		return 1.0f / time;
 	}
 	
   	float centripedal_acceleration_from_tangental(float tangental_velocity, float radius)
@@ -49,17 +49,17 @@ namespace simple_physics
 	
 	float orbital_period(float velocity, float radius)
 	{
-		return (2 * M_PI * radius) / velocity;
+		return (2.0f * M_PI * radius) / velocity;
 	}
 	
 	float harmonic_oscillator_position(float amplitude, float frequency, float time, float phase)
 	{
-		return amplitude * sinf(2 * M_PI * frequency * time + phase);
+		return amplitude * sinf(2.0f * M_PI * frequency * time + phase);
 	}
 	
 	float rotational_kinetic_energy(float rotational_inertia, float angular_velocity)
 	{
-		return (1 / 2) * rotational_inertia * angular_velocity * angular_velocity;
+		return 0.5f * rotational_inertia * angular_velocity * angular_velocity;
 	}
 
 	float rolling_object_kinetic_energy(float kinetic_energy, float rotational_kinetic_energy)
