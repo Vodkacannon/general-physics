@@ -5,4 +5,5 @@ namespace general_physics
         
         //Pipe volume flow rate.
 	float hagen_poiseuille_law(float pressure_difference, float pipe_radius, float fluid_viscosity, float pipe_length);
+	float specific_weight(float density_of_fluid, float gravitational_acceleration);
 }
