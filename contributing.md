@@ -2,7 +2,7 @@
 
 Please adhere to the following:
 
-* Place similar fields of physics together in one file.
+* Place a field of physics together in one file.
 
 * Place float and double versions of functions in separate files.
 
