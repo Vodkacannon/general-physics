@@ -11,3 +11,5 @@ Code inspected with code-inspector.com:
 Current "flawfinder" workflow artifacts: 0.
 
 If you would like to contribute, please see contributing.md for the simple contributing rules.
+
+If you're feeling generous, please add my name in the author of the code of your copy.
