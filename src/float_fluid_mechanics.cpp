@@ -39,7 +39,7 @@ namespace general_physics
 	//Ratio of pressure forces to inertial forces.
 	float pressure_coefficient(float pressure_difference, float fluid_density, float fluid_velocity) 
 	{
-		pressure_difference / (0.5f * fluid_density * fluid_velocity * fluid_velocity);
+		return pressure_difference / (0.5f * fluid_density * fluid_velocity * fluid_velocity);
 	}
 	
 	//For when fluid weight is important.
