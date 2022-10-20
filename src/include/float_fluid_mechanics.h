@@ -19,4 +19,7 @@ namespace general_physics
 	
 	//Inertia force to viscous or friction force ratio.
 	float reynolds_number(float cross_sectional_velocity, float characteristic_length, kinematic_viscosity);
+	
+	//For when fluid weight is important.
+	float froude_number(float fluid_velocity, float gravitational_acceleration, float hydraulic_mean_depth);
 }
