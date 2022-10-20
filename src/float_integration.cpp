@@ -14,7 +14,7 @@ namespace general_physics
 		integrate_jerk_to_acceleration(jerk, delta_time), delta_time), delta_time);
 	}
 	
-    float integrate_acceleration_to_velocity(float acceleration, float delta_time)
+    	float integrate_acceleration_to_velocity(float acceleration, float delta_time)
 	{
 		return acceleration * delta_time;
 	}
@@ -24,7 +24,7 @@ namespace general_physics
 		return integrate_velocity_to_position(integrate_acceleration_to_velocity(acceleration, delta_time), delta_time);
 	}
 	
-    float integrate_velocity_to_position(float velocity, float delta_time)
+    	float integrate_velocity_to_position(float velocity, float delta_time)
 	{
 		return velocity * delta_time;
 	}
