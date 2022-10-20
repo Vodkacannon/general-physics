@@ -9,6 +9,7 @@ Code inspected with code-inspector.com:
 [![Code Quality Score](<https://api.codiga.io/project/29293/score/svg>)](<https://frontend.code-inspector.com/project/29293/dashboard>)
 
 Current "flawfinder" workflow artifacts: 0.
+
 Link to flawfinder: https://github.com/david-a-wheeler/flawfinder
 
 If you would like to contribute, please see contributing.md for the simple contributing rules.
