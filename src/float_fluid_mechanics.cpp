@@ -23,4 +23,10 @@ namespace general_physics
 	{
 		return fluid_density * gravitational_acceleration;
 	}
+	
+	//Useful for compressible fluids.
+	float cauchy_number(float fluid_density, float flow_velocity, float bulk_modulus_elasticity)
+	{
+		return (fluid_density * flow_velocity * flow_velocity) / bulk_modulus_elasticity; 
+	}
 }
