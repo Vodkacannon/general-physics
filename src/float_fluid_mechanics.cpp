@@ -31,8 +31,14 @@ namespace general_physics
 	}
 
 	//For when pressure difference is important.
-	float euler_number(float pressure, float density, float fluid_velocity) 
+	float euler_number(float fluid_pressure, float fluid_density, float fluid_velocity) 
 	{
 		return pressure / (density * fluid_velocity * fluid_velocity);
+	}
+	
+	//Ratio of pressure forces to inertial forces.
+	float pressure_coefficient(float pressure_difference, float fluid_density, float fluid_velocity) 
+	{
+		pressure_difference / (0.5f * fluid_density * fluid_velocity * fluid_velocity);
 	}
 }
