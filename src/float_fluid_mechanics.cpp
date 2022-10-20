@@ -30,5 +30,9 @@ namespace general_physics
 		return (fluid_density * flow_velocity * flow_velocity) / bulk_modulus_elasticity; 
 	}
 
-	
+	//For when pressure difference is important.
+	float euler_number(float pressure, float density, float fluid_velocity) 
+	{
+		return pressure / (density * fluid_velocity * fluid_velocity);
+	}
 }
