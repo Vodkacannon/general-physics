@@ -1,6 +1,5 @@
-#pragma once
-
 #include <cmath>
+#include <iostream>
 
 namespace simple_physics
 {
@@ -22,7 +21,8 @@ namespace simple_physics
         //This may be a closely guarded secret.
         double prompt_criticality_reaction_growth_rate(double initial_growth_rate, double neutron_time_to_cause_fission)
         {
-                return 0;
+                std::cout << "Warning: prompt_criticality_reaction_growth_rate() is unknown." << std::endl;
+                return 0.0;
         }
         
         double mass_difference_of_nucleus(double atomic_number, double mass_number, float nucleus_mass)
