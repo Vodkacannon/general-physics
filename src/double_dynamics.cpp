@@ -1,4 +1,6 @@
-namespace simple_physics
+#include <cmath>
+
+namespace general_physics
 {
     	double momentum(double mass, double velocity)
     	{
@@ -47,12 +49,12 @@ namespace simple_physics
 
 	double drag_force(double air_density, double velocity, double drag_coefficient, double cross_sectional_area)
 	{
-		return (1 / 2) * air_density * velocity * velocity * drag_coefficient * cross_sectional_area;
+		return 0.5 * air_density * velocity * velocity * drag_coefficient * cross_sectional_area;
 	}
 	
 	double classical_kinetic_energy(double mass, double velocity)
 	{
-		return (1 / 2) * mass * velocity * velocity;
+		return 0.5 * mass * velocity * velocity;
 	}
 
 	double gravitational_potential_energy(double mass, double gravitational_acceleration, double height)
@@ -62,7 +64,7 @@ namespace simple_physics
 
 	double elastic_potential_energy(const double spring_constant, double displacement)
 	{
-		return (1 / 2) * spring_constant * displacement * displacement;
+		return 0.5 * spring_constant * displacement * displacement;
 	}
 	
 	double reynolds_number(double flow_speed, double characteristic_linear_dimension_as_length, double kinematic_viscosity)
@@ -77,7 +79,7 @@ namespace simple_physics
 
 	double drag_coefficient(double wet_area, double front_area, double bejan_number, double reynolds_number)
 	{
-		return 2 * (wet_area / front_area) * (bejan_number / (reynolds_number * reynolds_number));
+		return 2.0 * (wet_area / front_area) * (bejan_number / (reynolds_number * reynolds_number));
 	}
 
 	double ballistic_coefficient(double mass, double drag_coefficient, double cross_sectional_area)
