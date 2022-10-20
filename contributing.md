@@ -2,18 +2,22 @@
 
 Please adhere to the following:
 
-* use snake_case (underscores).
+* Place similar fields of physics together in one file.
 
-* keep variable and function names descriptive.
+* Place float and double versions of functions in separate files.
 
-* use curly braces in this format:
+* Use snake_case (underscores).
+
+* Keep variable and function names descriptive.
+
+* Use curly braces in this format:
 
     {
 
     }
 
-* keep function implementations 40 lines or under (for code quality compliance and simplicity).
+* Keep function implementations 40 lines or under (for code quality compliance and simplicity).
 
-* separate one-liners, that overflow, into multiple lines.
+* Separate one-liners, that overflow, into multiple lines.
 
 Thank you.
