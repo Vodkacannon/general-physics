@@ -1,5 +1,3 @@
-#pragma once
-
 namespace simple_physics
 {
   	float wave_intensity(float power, float area)
