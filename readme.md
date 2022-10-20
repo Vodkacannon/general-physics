@@ -1,7 +1,7 @@
 # general-physics
 A general, verbose physics library.
 
-Version 4.90.
+Version 4.99.
 
 Code inspected with code-inspector.com:
 
