@@ -41,4 +41,10 @@ namespace general_physics
 	{
 		pressure_difference / (0.5f * fluid_density * fluid_velocity * fluid_velocity);
 	}
+	
+	//For when fluid weight is important.
+	froude_number(float fluid_velocity, float gravitational_acceleration, float hydraulic_mean_depth)
+	{
+		return fluid_velocity / sqrtf(gravitational_acceleration * float hydraulic_mean_depth);
+	}
 }
