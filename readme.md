@@ -10,7 +10,7 @@ Code inspected with app.codiga.io:
 
 Current "flawfinder" workflow artifacts: 0.
 
-Link to flawfinder: https://github.com/david-a-wheeler/flawfinder
+Flawfinder: https://github.com/david-a-wheeler/flawfinder
 
 If you would like to contribute, please see contributing.md for the simple contributing rules.
 
