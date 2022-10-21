@@ -1,5 +1,5 @@
 #include <iostream>
-#include "include/simple_physics.hpp"
+#include "include/general_physics.hpp"
 
 int main()
 {
