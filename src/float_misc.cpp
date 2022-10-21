@@ -78,7 +78,7 @@ namespace simple_physics
 	}
 	
 	//Energy to separate.
-	float casimir_energy_2_plates(float area_of_plate_side, float distance_between_plates)
+	float casimir_energy_2_plates(float area_of_plate_front, float distance_between_plates)
 	{
 		return (REDUCED_PLANCK_CONSTANT * SPEED_OF_LIGHT * M_PI * M_PI * area_of_plate_side) / (720.0f * powf(distance_between_plates, 3.0f));
 	}
