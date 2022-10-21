@@ -24,8 +24,6 @@ namespace general_physics
 	{
 		return sqrtf((2 * NEWTONS_GRAVITATIONAL_CONSTANT * mass) / radius);
 	}
-
-	
 	
 	float keplers_second_law(float major_axis, float minor_axis, float orbital_period)
 	{
@@ -60,4 +58,9 @@ namespace general_physics
 		/
 		(MOND_standard_interpolate(orbiting_mass_acceleration) * orbital_radius * orbital_radius);
 	}
+	
+	float stellar_dynamical_time_scale(float stellar_radius, float stellar_mass) 
+	{
+		return sqrtf(powf(stellar_radius, 3) / (2.0f * NEWTONS_GRAVITATIONAL_CONSTANT * stellar_mass));  
+	}  
 }
