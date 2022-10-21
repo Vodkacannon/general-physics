@@ -45,6 +45,6 @@ namespace general_physics
 	//For when fluid weight is important.
 	float froude_number(float fluid_velocity, float gravitational_acceleration, float hydraulic_mean_depth)
 	{
-		return fluid_velocity / sqrtf(gravitational_acceleration * float hydraulic_mean_depth);
+		return fluid_velocity / sqrtf(gravitational_acceleration * hydraulic_mean_depth);
 	}
 }

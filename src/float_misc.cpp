@@ -68,18 +68,18 @@ namespace simple_physics
 	//Between two plates.
 	float casimir_plates_force(float area_of_plate_front, float distance_between_plates)
 	{
-		return (M_PI * PLANCK_CONSTANT * SPEED_OF_LIGHT * area_of_plate_front) / (480.0f * powf(distance_between_plates, 4.0f));
+		return (M_PI * PLANCKS_CONSTANT * SPEED_OF_LIGHT * area_of_plate_front) / (480.0f * powf(distance_between_plates, 4.0f));
 	}
 	
 	//Between two plates.
 	float casimir_plates_pressure(float area_of_plate_front, float distance_between_plates)
 	{
-		return (REDUCED_PLANCK_CONSTANT * SPEED_OF_LIGHT *  M_PI * M_PI) / (240.0f * powf(distance_between_plates, 4.0f));
+		return (REDUCED_PLANCKS_CONSTANT * SPEED_OF_LIGHT *  M_PI * M_PI) / (240.0f * powf(distance_between_plates, 4.0f));
 	}
 	
 	//Energy to separate.
 	float casimir_energy_2_plates(float area_of_plate_front, float distance_between_plates)
 	{
-		return (REDUCED_PLANCK_CONSTANT * SPEED_OF_LIGHT * M_PI * M_PI * area_of_plate_front) / (720.0f * powf(distance_between_plates, 3.0f));
+		return (REDUCED_PLANCKS_CONSTANT * SPEED_OF_LIGHT * M_PI * M_PI * area_of_plate_front) / (720.0f * powf(distance_between_plates, 3.0f));
 	}
 }
