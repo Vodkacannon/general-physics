@@ -52,8 +52,8 @@ namespace general_physics
 	//MOND.
 	double milgroms_law(double orbited_mass, double orbiting_mass, double orbiting_mass_acceleration, double orbital_radius) 
 	{
-		return NEWTONS_GRAVITATIONAL_CONSTANT * orbited_mass * orbiting_mass 
-		/
+		return 
+		NEWTONS_GRAVITATIONAL_CONSTANT * orbited_mass * orbiting_mass /
 		(MOND_standard_interpolate(orbiting_mass_acceleration) * orbital_radius * orbital_radius);
 	}
 }
