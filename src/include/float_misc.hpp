@@ -23,4 +23,6 @@ This function is not fully accurate!
 	
 	//Energy to separate (Between two plates).
 	float casimir_energy_2_plates(float area_of_plate_front, float distance_between_plates);
+	
+	float lorentz_force(float charge, float velocity, float magnetic_field_strength, float angle_between_magnetic_field_and_velocity);	
 }
