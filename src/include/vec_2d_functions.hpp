@@ -1,4 +1,4 @@
-namespace simple_physics
+namespace general_physics
 {
   //TODO.
 }
