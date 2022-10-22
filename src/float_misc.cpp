@@ -2,6 +2,7 @@
 #include <string>
 #include <vector>
 #include <iostream>
+#include <cmath>
 #include "include/constants.hpp"
 #include "include/float_types.hpp"
 
@@ -90,5 +91,10 @@ namespace general_physics
 	float casimir_energy_2_plates(float area_of_plate_front, float distance_between_plates)
 	{
 		return (REDUCED_PLANCKS_CONSTANT * SPEED_OF_LIGHT * M_PI * M_PI * area_of_plate_front) / (720.0f * powf(distance_between_plates, 3.0f));
+	}
+	
+	float lorentz_force(float charge, float velocity, float magnetic_field_strength, float angle_between_magnetic_field_and_velocity) 
+	{
+		return charge * velocity * magnetic_field_strength * sinf(angle_between_magnetic_field_and_velocity);
 	}
 }
