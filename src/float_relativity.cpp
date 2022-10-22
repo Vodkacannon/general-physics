@@ -3,7 +3,7 @@
 
 namespace general_physics
 {
-        float relativistic_velocity_clamp(float velocity)
+    float relativistic_velocity_clamp(float velocity)
 	{
 		if(velocity > SPEED_OF_LIGHT)
 		{
