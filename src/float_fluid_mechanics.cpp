@@ -1,5 +1,6 @@
+#define _USE_MATH_DEFINES
 #include <cmath>
-#include "../include/float_fluid_mechanics.h"
+#include "include/float_fluid_mechanics.hpp"
 
 namespace general_physics
 {
@@ -33,7 +34,7 @@ namespace general_physics
 	//For when pressure difference is important.
 	float euler_number(float fluid_pressure, float fluid_density, float fluid_velocity) 
 	{
-		return pressure / (density * fluid_velocity * fluid_velocity);
+		return fluid_pressure / (fluid_density * fluid_velocity * fluid_velocity);
 	}
 	
 	//Ratio of pressure forces to inertial forces.

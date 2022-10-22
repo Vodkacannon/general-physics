@@ -2,7 +2,7 @@
 
 #include "include/constants.hpp"
 
-namespace simple_physics
+namespace general_physics
 {
 	float maluses_law(float initial_intensity, float angle_between_polarizer_and_initial_polarization_direction)
 	{

@@ -1,15 +1,9 @@
-//simple-phys: A verbose C++ physics library.
+//general-physics: A verbose C++ physics library.
 //All units are SI.
 
 #pragma once
 
-#include <math.h>
-#include <numeric>
-#include <string>
-#include <algorithm>
-#include <vector>
-
-namespace simple_physics
+namespace general_physics
 {
 	namespace double_types
 	{

@@ -1,6 +1,7 @@
+#define _USE_MATH_DEFINES
 #include <cmath>
 
-namespace simple_physics
+namespace general_physics
 {
 	float time(float frequency)
 	{

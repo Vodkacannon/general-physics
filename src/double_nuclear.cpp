@@ -1,11 +1,12 @@
 #include <cmath>
 #include <iostream>
+#include "include/constants.hpp"
 
-namespace simple_physics
+namespace general_physics
 {
         double s_factor(double energy, double cross_section_of_energy, double sommerfeld_parameter)
         {
-                return (energy * cross_section_of_energy) / exp(-2.0 * M_PI * cross_section); 
+                return (energy * cross_section_of_energy) / exp(-2.0 * M_PI * cross_section_of_energy);
         }
         
         double excess_mass(double total_rest_mass_of_fission_products, double mass_of_origional_fuel_nucleus)
@@ -27,7 +28,7 @@ namespace simple_physics
         
         double mass_difference_of_nucleus(double atomic_number, double mass_number, float nucleus_mass)
         {
-                return atomic_number * simple_physics::PROTON_MASS + (mass_number - atomic_number) * simple_physics::NEUTRON_MASS - nucleus_mass;
+                return atomic_number * PROTON_MASS + (mass_number - atomic_number) * general_physics::NEUTRON_MASS - nucleus_mass;
         }
 
         double neutron_flux(float neutron_density, double neutron_velocity)

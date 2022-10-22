@@ -1,6 +1,8 @@
 #include "include/float_types.hpp"
+#include "include/float_misc.hpp"
 
-namespace simple_physics
+
+namespace general_physics
 {
 	bool is_net_momentum_zero(const std::vector<std::pair<float_types::mass, float_types::velocity>> &momenta)
 	{
@@ -31,6 +33,4 @@ namespace simple_physics
 		
 		return false;
 	}
-	
-	bool is_net_force_zer()
 }

@@ -1,8 +1,8 @@
 #pragma once
+#define _USE_MATH_DEFINES
+#include <cmath>
 
-#include <math.h>
-
-namespace simple_physics
+namespace general_physics
 {
 	float period_of_spring_with_mass(float mass, float spring_constant)
 	{
@@ -11,7 +11,7 @@ namespace simple_physics
 	
 	float pendulum_potential_energy(float mass, float gravitational_acceleration, float pendulum_length, float angle)
 	{
-		return mass * gravitational_acceleration * pendulum_length * (1 - cos(angle));
+		return mass * gravitational_acceleration * pendulum_length * (1.0f - cosf(angle));
 	}
 	
 	float centripedal_force(float mass, float tangental_velocity, float radius)

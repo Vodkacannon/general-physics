@@ -1,6 +1,8 @@
-namespace simple_physics
+#include <cmath>
+
+namespace general_physics
 {
-    	float speed(float distance, float time)
+	float speed(float distance, float time)
 	{
 		return fabs(distance) / time;
 	}
@@ -27,7 +29,7 @@ namespace simple_physics
 
 	float displacement_2(float velocity_1, float time, float acceleration)
 	{
-		return velocity_1 * time + (1 / 2) * acceleration * time * time;
+		return velocity_1 * time + 0.5f * acceleration * time * time;
 	}
 
 	float displacement_3(float velocity_1, float velocity_2, float acceleration)
@@ -47,7 +49,6 @@ namespace simple_physics
 	
 	float final_free_fall_velocity(float acceleration_of_gravity, float initial_height)
 	{
-		return sqrtf(2 * acceleration_of_gravity * initial_height);
+		return sqrtf(2.0f * acceleration_of_gravity * initial_height);
 	}
-
-};
+}

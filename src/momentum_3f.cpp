@@ -1,11 +1,11 @@
-#include "../include/float_types.hpp"
-#include "../include/vec_3f.hpp"
-#include "../include/momentum_3f.hpp"
+#include "include/float_types.hpp"
+#include "include/vec_3f.hpp"
+#include "include/momentum_3f.hpp"
 
-namespace simple_physics
+namespace general_physics
 {
     momentum_3f momentum_3f::sum(const struct momentum_3f &momentum_1, const struct momentum_3f &momentum_2) {
-        struct momentum_3f sum_momentum;
+        struct momentum_3f sum_momentum {0.0f, 0.0f, 0.0f};
 
         sum_momentum.mass += momentum_1.mass + momentum_2.mass;
 

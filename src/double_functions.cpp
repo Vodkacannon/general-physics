@@ -1,5 +1,10 @@
+#include <vector>
+#include <string>
 #include "include/double_types.hpp"
 #include "include/constants.hpp"
+#include "include/vec_2f.hpp"
+#include "include/vec_3d.hpp"
+#include "include/vec_2d.hpp"
 
 namespace general_physics
 {
@@ -68,44 +73,14 @@ namespace general_physics
         	return inertia * angular_acceleration;
     	}
 
-    	double dry_friction(double coefficient_of_friction, double normal_force)
-    	{
-        	return coefficient_of_friction * normal_force;
-    	}
-
-    	double newtons_gravitational_force(double mass_1, double mass_2, double radius_between_masses)
-    	{
-        	return NEWTONS_GRAVITATIONAL_CONSTANT * mass_1 * mass_2 / (radius_between_masses * radius_between_masses);
-    	}
-
-    	double escape_speed(double mass, double radius)
-    	{
-        	return sqrt((2 * NEWTONS_GRAVITATIONAL_CONSTANT * mass) / radius);
-    	}
-
-    	double classical_kinetic_energy(double mass, double velocity)
-    	{
-        	return (1 / 2) * mass * velocity * velocity;
-    	}
-
-    	double gravitational_potential_energy(double mass, double gravitational_acceleration, double height)
-    	{
-        	return mass * gravitational_acceleration * height;
-    	}
-
     	double orbital_period(double velocity, double radius)
     	{
         	return (2 * M_PI * radius) / velocity;
     	}
 
-    	double elastic_potential_energy(const double spring_constant, double displacement)
-    	{
-        	return (1 / 2) * spring_constant * displacement * displacement;
-    	}
-
     	double rotational_kinetic_energy(double rotational_inertia, double angular_velocity)
     	{
-        	return (1 / 2) * rotational_inertia * angular_velocity * angular_velocity;
+        	return 0.5f * rotational_inertia * angular_velocity * angular_velocity;
     	}
 
     	double rolling_object_kinetic_energy(double kinetic_energy, double rotational_kinetic_energy)
@@ -113,22 +88,9 @@ namespace general_physics
         	return kinetic_energy + rotational_kinetic_energy;
     	}
 
-    double sum_of_momenta(const std::vector<std::pair<double_types::mass, double_types::velocity>> &momenta)
-    {
-        unsigned int momenta_size = momenta.size();
-        double sum_of_momenta = 0.0;
-
-        for(unsigned int i = 0; i < momenta_size; i++)
-        {
-            sum_of_momenta += momenta[i].first * momenta[i].second;
-        }
-
-        return sum_of_momenta;
-    }
-
     double sum_of_forces(std::vector<std::pair<double_types::mass, double_types::acceleration>> forces)
     {
-        unsigned int forces_size = forces.size();
+        size_t forces_size = forces.size();
         double sum_of_forces = 0.0;
 
         for(unsigned int i = 0; i < forces_size; i++)
@@ -153,7 +115,7 @@ namespace general_physics
     {
         double sum_of_masses = 0.0;
         double mass_moment_sum = 0.0;
-        unsigned int mass_moments_size = mass_moments.size();
+        size_t mass_moments_size = mass_moments.size();
 
         for(unsigned int i = 0; i < mass_moments_size; i++)
         {
@@ -169,7 +131,7 @@ namespace general_physics
     {
         std::string value_as_string = std::to_string(value);
 
-        unsigned int string_length = value_as_string.length();
+        size_t string_length = value_as_string.length();
         unsigned short significant_figure_count = 0;
 
         for(unsigned int i = 0; i < string_length; i++)
@@ -204,7 +166,7 @@ namespace general_physics
 
     double pendulum_potential_energy(double mass, double gravitational_acceleration, double pendulum_length, double angle)
     {
-        return mass * gravitational_acceleration * pendulum_length * (1 - cos(angle));
+        return mass * gravitational_acceleration * pendulum_length * (1.0 - cos(angle));
     }
 
     double efficiency(double energy_out, double energy_in)
@@ -212,24 +174,9 @@ namespace general_physics
         return energy_out / energy_in;
     }
 
-    double power(double energy, double time)
-    {
-        return energy / time;
-    }
-
     double power_velocity(double force, double velocity, double applied_angle)
     {
         return force * velocity * cos(applied_angle);
-    }
-
-    double drag_force(double air_density, double velocity, double drag_coefficient, double cross_sectional_area)
-    {
-        return (1 / 2) * air_density * velocity * velocity * drag_coefficient * cross_sectional_area;
-    }
-
-    double index_of_refraction(double speed_of_light_in_medium)
-    {
-        return SPEED_OF_LIGHT / speed_of_light_in_medium;
     }
 
     double photon_energy(double frequency)
@@ -242,19 +189,14 @@ namespace general_physics
         return PLANCKS_CONSTANT * wavelength;
     }
 
-    double wave_velocity(double frequency, double wavelength)
-    {
-        return frequency * wavelength;
-    }
-
     double heisenberg_momentum_uncertainty(double max_position, double min_position)
     {
-        return REDUCED_PLANCKS_CONSTANT / (2 * (max_position - min_position));
+        return REDUCED_PLANCKS_CONSTANT / (2.0 * (max_position - min_position));
     }
 
     double heisenberg_position_uncertainty(double max_momentum, double min_momentum)
     {
-        return REDUCED_PLANCKS_CONSTANT / (2 * (max_momentum - min_momentum));
+        return REDUCED_PLANCKS_CONSTANT / (2.0 * (max_momentum - min_momentum));
     }
 
     double boltzman_entropy(unsigned long multiplicity)
@@ -267,14 +209,14 @@ namespace general_physics
         return sqrt(velocity_x * velocity_x + velocity_y * velocity_y);
     }
 
-    double momentum_from_velocity_vec_2(double mass, vec_2 velocity)
+    double momentum_from_velocity_vec_2(double mass, vec_2d velocity)
     {
-        return mass * sqrtf(velocity.x * velocity.x + velocity.y * velocity.y);
+        return mass * sqrt(velocity.x * velocity.x + velocity.y * velocity.y);
     }
 
-    double momentum_from_velocity_vec_3(double mass, vec_3 velocity)
+    double momentum_from_velocity_vec_3(double mass, vec_3d velocity)
     {
-        return mass * sqrtf(velocity.x * velocity.x + velocity.y * velocity.y + velocity.z * velocity.z);
+        return mass * sqrt(velocity.x * velocity.x + velocity.y * velocity.y + velocity.z * velocity.z);
     }
 
     double celcius_to_kelvin(double celcius)
@@ -294,12 +236,7 @@ namespace general_physics
 
     double average_kinetic_energy_of_ideal_gas(double gas_temperature)
     {
-        return (3 / 2) * BOLTZMANS_CONSTANT * gas_temperature;
-    }
-
-    double reynolds_number(double flow_speed, double characteristic_linear_dimension_as_length, double kinematic_viscosity)
-    {
-        return (flow_speed * characteristic_linear_dimension_as_length) / kinematic_viscosity;
+        return (3.0 / 2.0) * BOLTZMANS_CONSTANT * gas_temperature;
     }
 
     double reynolds_number_2(double fluid_density, double flow_speed, double characteristic_linear_dimension_as_length, double dynamic_viscosity)
@@ -307,54 +244,9 @@ namespace general_physics
         return (fluid_density * flow_speed * characteristic_linear_dimension_as_length) / dynamic_viscosity;
     }
 
-    double drag_coefficient(double wet_area, double front_area, double bejan_number, double reynolds_number)
-    {
-        return 2 * (wet_area / front_area) * (bejan_number / (reynolds_number * reynolds_number));
-    }
-
-    double ballistic_coefficient(double mass, double drag_coefficient, double cross_sectional_area)
-    {
-        return (mass * drag_coefficient) / cross_sectional_area;
-    }
-
     double ballistic_coefficient_2(double mass, double drag_coefficient, double cross_sectional_area)
     {
         return (mass * drag_coefficient) / cross_sectional_area;
-    }
-
-    double maluses_law(double initial_intensity, double angle_between_polarizer_and_initial_polarization_direction)
-    {
-        return initial_intensity * cos(angle_between_polarizer_and_initial_polarization_direction) * cos(angle_between_polarizer_and_initial_polarization_direction);
-    }
-
-    double rayleigh_criterion(double light_wavelength, double lens_aperture_diameter)
-    {
-        return RAYLEIGHS_CRITERION_CONSTANT * (light_wavelength / lens_aperture_diameter);
-    }
-
-    double lateral_resolution(double light_wavelength, double half_angle_of_light, double index_of_refraction)
-    {
-        return (RAYLEIGHS_CRITERION_CONSTANT * light_wavelength) / (2 * index_of_refraction * sin(half_angle_of_light));
-    }
-
-    double luminosity_distance(double luminosity, double redshift, double angular_diameter_distance)
-    {
-        return luminosity / (4 * M_PI * (1 + redshift) * (1 + redshift) * angular_diameter_distance);
-    }
-    
-    double wave_intensity(double power, double area)
-    {
-        return power / area;
-    }
-    
-    double orbital_period(double mass_of_orbited_body)
-    {
-	return (4 * M_PI * M_PI) / (NEWTONS_GRAVITATIONAL_CONSTANT * mass_of_orbited_body);
-    }
-	
-    double rocket_delta_velocity(double specific_impulse, double gravitational_acceleration, double initial_mass, double final_mass)
-    {
-	return specific_impulse * gravitational_acceleration * log(initial_mass / final_mass);
     }
 	
 	double doppler_effect(float sound_wave_speed, double observer_velocity, double source_velocity, double origional_sound_wave_frequency)
@@ -364,58 +256,12 @@ namespace general_physics
 	
 	double spectral_radiance(double electromagnetic_frequency, double absolute_temperature)
 	{
-		double first_half = (((2 * simple_physics::PLANCKS_CONSTANT * electromagnetic_frequency * electromagnetic_frequency * electromagnetic_frequency) / (simple_physics::SPEED_OF_LIGHT * simple_physics::SPEED_OF_LIGHT)));
-		double second_half = (1 / expf(simple_physics::PLANCKS_CONSTANT * electromagnetic_frequency / simple_physics::BOLTZMANS_CONSTANT * absolute_temperature) - 1);
+		double first_half = (((2.0 * PLANCKS_CONSTANT * electromagnetic_frequency * electromagnetic_frequency * electromagnetic_frequency) / (SPEED_OF_LIGHT * SPEED_OF_LIGHT)));
+		double second_half = (1.0 / exp(PLANCKS_CONSTANT * electromagnetic_frequency / BOLTZMANS_CONSTANT * absolute_temperature) - 1.0);
 		return first_half * second_half;
 	}
 	
-	double coulombs_force(double charge_1, double charge_2, double distance_between_charges)
-	{
-		return (COULOMBS_CONSTANT * charge_1 * charge_2) / (distance_between_charges * distance_between_charges);
-	}
-	
-	double integrate_jerk_to_acceleration(double jerk, double delta_time)
-	{
-		return jerk * delta_time;
-	}
-	
-	double integrate_acceleration_to_velocity(double acceleration, double delta_time)
-	{
-		return acceleration * delta_time;
-	}
-	
-	double integrate_velocity_to_position(double velocity, double delta_time)
-	{
-		return velocity * delta_time;
-	}
-	
-	double integrate_jerk_to_position(double jerk, double delta_time)
-	{
-		return integrate_velocity_to_position
-		(
-			integrate_acceleration_to_velocity
-			(
-				integrate_jerk_to_acceleration
-				(
-					jerk, delta_time
-				)
-				, delta_time
-			)
-			, delta_time
-		);
-	}
-	
-	double integrate_acceleration_to_position(double acceleration, double delta_time)
-	{
-		return integrate_velocity_to_position
-		(
-			integrate_acceleration_to_velocity
-			(
-				acceleration, delta_time
-			)
-			, delta_time
-		);
-	}
+    double coulombs_force(double charge_1, double charge_2, double distance_between_charges);
 	
 	bool is_total_energy_zero(double kinetic_energy, double potential_energy, double double_tolerance)
 	{

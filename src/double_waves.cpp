@@ -1,6 +1,6 @@
-#include "../include/constants.hpp"
+#include "include/constants.hpp"
 
-namespace simple_physics
+namespace general_physics
 {
   	double wave_intensity(double power, double area)
 	{

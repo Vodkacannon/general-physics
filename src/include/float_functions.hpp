@@ -2,7 +2,7 @@
 
 #include "float_types.hpp"
 
-namespace simple_physics
+namespace general_physics
 {
     float speed(float distance, float time);
     float electric_energy(float voltage, float charge);
@@ -12,7 +12,7 @@ namespace simple_physics
     float time(float distance, float velocity);
     float displacement_2(float velocity_1, float time, float acceleration);
     float displacement_3(float velocity_1, float velocity_2, float acceleration);
-    float acceleration(float velocity_2, float velocity_1, float time_2, float time_1);
+    
     float momentum(float mass, float velocity);
     float force(float mass, float acceleration);
     float pressure(float force, float area);

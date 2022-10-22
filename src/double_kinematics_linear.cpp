@@ -14,12 +14,12 @@ namespace general_physics
 
   double displacement(double velocity, double time)
   {
-    return velocity / time;
+    return velocity * fabs(time);
   }
 
   double distance(double speed, double time)
   {
-    return fabs(speed) / time;
+    return fabs(speed) * fabs(time);
   }
 
   double time(double distance, double velocity)

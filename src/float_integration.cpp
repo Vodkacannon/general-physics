@@ -1,3 +1,5 @@
+#include "include/float_integration.hpp"
+
 namespace general_physics
 {
 	float integrate_jerk_to_acceleration(float jerk, float delta_time)

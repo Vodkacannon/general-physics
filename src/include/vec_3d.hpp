@@ -1,8 +1,11 @@
-#include "simple_physics.hpp"
+#pragma once
 
-struct vec_3d
+namespace general_physics
 {
-  double x;
-  double y;
-  double z;
-};
+    struct vec_3d
+    {
+        double x;
+        double y;
+        double z;
+    };
+}

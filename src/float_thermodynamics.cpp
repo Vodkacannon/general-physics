@@ -1,4 +1,7 @@
-namespace simple_physics
+#include "include/constants.hpp"
+#include "float_thermodynamics.hpp"
+
+namespace general_physics
 {
 	float celcius_to_kelvin(float celcius)
 	{
@@ -12,7 +15,7 @@ namespace simple_physics
 	
 	float boltzman_entropy(unsigned int multiplicity)
 	{
-		return BOLTZMANS_CONSTANT * log(multiplicity);
+		return BOLTZMANS_CONSTANT * logf(multiplicity);
 	}
 	
 	float heat_flow(float mass, float specific_heat_capacity, float temperature_change)
@@ -47,7 +50,7 @@ namespace simple_physics
 	
 	float spectral_radiance(float electromagnetic_frequency, float absolute_temperature)
 	{
-		float first_half = (((2 * PLANCKS_CONSTANT * electromagnetic_frequency * electromagnetic_frequency * electromagnetic_frequency) / (simple_physics::SPEED_OF_LIGHT * simple_physics::SPEED_OF_LIGHT)));
+		float first_half = (((2 * PLANCKS_CONSTANT * electromagnetic_frequency * electromagnetic_frequency * electromagnetic_frequency) / (general_physics::SPEED_OF_LIGHT * general_physics::SPEED_OF_LIGHT)));
 		float second_half = (1 / expf(PLANCKS_CONSTANT * electromagnetic_frequency / BOLTZMANS_CONSTANT * absolute_temperature) - 1);
 		return first_half * second_half;
 	}

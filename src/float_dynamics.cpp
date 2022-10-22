@@ -1,8 +1,8 @@
 #include <math.h>
 
-namespace simple_physics
+namespace general_physics
 {
-        float momentum(float mass, float velocity)
+    float momentum(float mass, float velocity)
 	{
 		return mass * velocity;
 	}
@@ -54,12 +54,12 @@ namespace simple_physics
 
 	float drag_force(float air_density, float velocity, float drag_coefficient, float cross_sectional_area)
 	{
-		return (1 / 2) * air_density * velocity * velocity * drag_coefficient * cross_sectional_area;
+		return 0.5f * air_density * velocity * velocity * drag_coefficient * cross_sectional_area;
 	}
 	
 	float classical_kinetic_energy(float mass, float velocity)
 	{
-		return (1 / 2) * mass * velocity * velocity;
+		return 0.5f * mass * velocity * velocity;
 	}
 
 	float gravitational_potential_energy(float mass, float gravitational_acceleration, float height)
@@ -69,7 +69,7 @@ namespace simple_physics
 
 	float elastic_potential_energy(const float spring_constant, float displacement)
 	{
-		return (1 / 2) * spring_constant * displacement * displacement;
+		return 0.5f * spring_constant * displacement * displacement;
 	}
 	
 	float reynolds_number(float flow_speed, float characteristic_linear_dimension_as_length, float kinematic_viscosity)
@@ -84,7 +84,7 @@ namespace simple_physics
 
 	float drag_coefficient(float wet_area, float front_area, float bejan_number, double reynolds_number)
 	{
-		return 2 * (wet_area / front_area) * (bejan_number / (reynolds_number * reynolds_number));
+		return 2.0f * (wet_area / front_area) * (bejan_number / (reynolds_number * reynolds_number));
 	}
 
 	float ballistic_coefficient(float mass, float drag_coefficient, float cross_sectional_area)

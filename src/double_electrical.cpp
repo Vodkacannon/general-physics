@@ -1,6 +1,6 @@
 #include "include/constants.hpp"
 
-namespace simple_physics
+namespace general_physics
 {
 	double voltage(double current, double resistance)
 	{
@@ -39,7 +39,7 @@ namespace simple_physics
   
   	double capacitor_energy(double quantity_of_charge_separated, double applied_potential_difference)
   	{
-    		return (1 / 2) * (quantity_of_charge_separated * quantity_of_charge_separated) / applied_potential_difference;
+    		return 0.5f * (quantity_of_charge_separated * quantity_of_charge_separated) / applied_potential_difference;
   	}
 	
 	double electric_flux(double total_charge_in_volume)

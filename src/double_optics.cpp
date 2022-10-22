@@ -1,6 +1,6 @@
 #include "include/constants.hpp"
 
-namespace simple_physics
+namespace general_physics
 {
 	double maluses_law(double initial_intensity, double angle_between_polarizer_and_initial_polarization_direction)
 	{

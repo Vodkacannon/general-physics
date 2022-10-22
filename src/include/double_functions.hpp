@@ -11,7 +11,6 @@ namespace general_physics
 	double time(double distance, double velocity);
 	double displacement_2(double velocity_1, double time, double acceleration);
 	double displacement_3(double velocity_1, double velocity_2, double acceleration);
-	double acceleration(double velocity_2, double velocity_1, double time_2, double time_1);
 	double momentum(double mass, double velocity);
 	double force(double mass, double acceleration);
 	double pressure(double force, double area);

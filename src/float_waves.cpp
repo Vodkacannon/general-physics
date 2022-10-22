@@ -1,4 +1,6 @@
-namespace simple_physics
+#include "include/constants.hpp"
+
+namespace general_physics
 {
   	float wave_intensity(float power, float area)
 	{

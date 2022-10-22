@@ -1,6 +1,7 @@
 #pragma once
+#include "include/constants.hpp"
 
-namespace simple_physics
+namespace general_physics
 {
         float relativistic_velocity_clamp(float velocity)
 	{
@@ -21,7 +22,7 @@ namespace simple_physics
 
 	float lorentz_factor(float velocity)
 	{
-		return 1 / sqrtf(1 - (velocity * velocity) / (SPEED_OF_LIGHT * SPEED_OF_LIGHT));
+		return 1 / sqrtf(1.0f - (velocity * velocity) / (SPEED_OF_LIGHT * SPEED_OF_LIGHT));
 	}
 
 	float relativistic_time_dilation(float lorentz_factor, float proper_time)

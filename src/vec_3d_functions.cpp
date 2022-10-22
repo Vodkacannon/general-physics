@@ -1,4 +1,0 @@
-namespace simple_physics
-{
-  
-};

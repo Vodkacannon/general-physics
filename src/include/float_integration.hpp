@@ -1,4 +1,4 @@
-namespace simple_physics
+namespace general_physics
 {
     float integrate_jerk_to_acceleration(float jerk, float delta_time);
     float itegrate_jerk_to_velocity(float jerk, float delta_time);
