@@ -42,7 +42,7 @@ namespace simple_physics
 	//Why is this time dilation equation different?
 	float relativistic_time(float proper_time, float proper_velocity, float proper_travel_distance) 
 	{
-		return gamma(proper_velocity) * (proper_time - (proper_velocity * proper_travel_distance) / (SPEED_OF_LIGHT * SPEED_OF_LIGHT));
+		return lorentz_factor(proper_velocity) * (proper_time - (proper_velocity * proper_travel_distance) / (SPEED_OF_LIGHT * SPEED_OF_LIGHT));
 	}
 	
 	float relativistic_length_contraction(float lorentz_factor, float proper_length)
