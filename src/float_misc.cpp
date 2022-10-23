@@ -97,4 +97,9 @@ namespace general_physics
 	{
 		return charge * velocity * magnetic_field_strength * sinf(angle_between_magnetic_field_and_velocity);
 	}
+	
+	float magnetic_force(float particle_charge, float particle_velocity, magnetic_field_strength, float angle_between_velocity_and_field) 
+	{
+		return particle_charge * particle_velocity * magnetic_field_strength * sinf(angle_between_velocity_and_field);
+	}
 }
