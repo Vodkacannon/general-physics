@@ -9,7 +9,7 @@
 namespace general_physics
 {
   	/*
-	* DEPRICATED.
+	DEPRICATED.
 	Calculate the number of significant figures of a float.
 	This function is not fully accurate!
 	*/
