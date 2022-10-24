@@ -18,4 +18,5 @@ namespace general_physics
     const double MOND_TRANSITION_CONSTANT = 1.2e-10;
     const double PROTON_MASS = 1.67262192369e-27;
     const double NEUTRON_MASS = 1.67492749804e-27;
+    const double MAGNETIC_CONSTANT = 1.25663706212e-6;
 };
