@@ -105,7 +105,7 @@ namespace general_physics
 	
 	float magnetic_flow_meter_induced_voltage(float -magnetic_field, float distance_between_electrodes, float liquid_velocity)
 	{
-		return -magnetic_field *  distance between electrodes * liquid_velocity;
+		return -magnetic_field * distance between electrodes * liquid_velocity;
 	}
 	
 	float magnetic_h_field(float magnetic_field, float magnetization_vector)
