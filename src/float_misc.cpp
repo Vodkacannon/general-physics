@@ -108,8 +108,8 @@ namespace general_physics
 		return -magnetic_field *  distance between electrodes * liquid_velocity;
 	}
 	
-	float magnetic_h_field()
+	float magnetic_h_field(float magnetic_field, float magnetization_vector)
 	{
-		return VACCUM_PERMEABILITY * 
+		return VACCUM_PERMEABILITY * magnetic_field - magnetization_vector;
 	}
 }
