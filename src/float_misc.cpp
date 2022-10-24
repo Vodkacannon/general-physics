@@ -104,7 +104,7 @@ namespace general_physics
 		return particle_charge * particle_velocity * magnetic_field_strength * sinf(angle_between_velocity_and_field);
 	}
 	
-	float magnetic_flow_meter_induced_voltage(float -magnetic_field, float distance_between_electrodes, float liquid_velocity)
+	float magnetic_flow_meter_induced_voltage(float magnetic_field, float distance_between_electrodes, float liquid_velocity)
 	{
 		return -magnetic_field * distance between electrodes * liquid_velocity;
 	}
