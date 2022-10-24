@@ -79,7 +79,7 @@ namespace general_physics
 	//Between two plates.
 	double casimir_plates_force(double area_of_plate_front, double distance_between_plates)
 	{
-		return (M_PI * PLANCKS_CONSTANT * SPEED_OF_LIGHT * area_of_plate_front) / (480.0 * powf(distance_between_plates, 4.0));
+		return (M_PI * PLANCKS_CONSTANT * SPEED_OF_LIGHT * area_of_plate_front) / (480.0 * pow(distance_between_plates, 4.0));
 	}
 	
 	//Between two plates.
