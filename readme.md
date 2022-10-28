@@ -8,13 +8,13 @@ Code inspected with app.codiga.io:
 [![Code Grade](<https://api.codiga.io/project/29293/status/svg>)](<https://frontend.code-inspector.com/project/29293/dashboard>)
 [![Code Quality Score](<https://api.codiga.io/project/29293/score/svg>)](<https://frontend.code-inspector.com/project/29293/dashboard>)
 
-codeQL:
+3rd party .yml inspections:
 
 [![flawfinder](https://github.com/Vodkacannon/general-physics/actions/workflows/flawfinder.yml/badge.svg?branch=main)](https://github.com/Vodkacannon/general-physics/actions/workflows/flawfinder.yml)
 
-Current "flawfinder" workflow artifacts: 0.
+https://github.com/david-a-wheeler/flawfinder
 
-Flawfinder: https://github.com/david-a-wheeler/flawfinder
+[![Semgrep](https://github.com/Vodkacannon/general-physics/actions/workflows/semgrep.yml/badge.svg?branch=main)](https://github.com/Vodkacannon/general-physics/actions/workflows/semgrep.yml)
 
 If you would like to contribute, please see contributing.md for the simple contributing rules.
 
