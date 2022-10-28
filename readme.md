@@ -10,11 +10,9 @@ Code inspected with app.codiga.io:
 
 3rd party .yml inspections:
 
-[![flawfinder](https://github.com/Vodkacannon/general-physics/actions/workflows/flawfinder.yml/badge.svg?branch=main)](https://github.com/Vodkacannon/general-physics/actions/workflows/flawfinder.yml)
-
-https://github.com/david-a-wheeler/flawfinder
-
 [![Semgrep](https://github.com/Vodkacannon/general-physics/actions/workflows/semgrep.yml/badge.svg?branch=main)](https://github.com/Vodkacannon/general-physics/actions/workflows/semgrep.yml)
+
+[![flawfinder](https://github.com/Vodkacannon/general-physics/actions/workflows/flawfinder.yml/badge.svg?branch=main)](https://github.com/Vodkacannon/general-physics/actions/workflows/flawfinder.yml)
 
 If you would like to contribute, please see contributing.md for the simple contributing rules.
 
