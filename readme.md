@@ -8,6 +8,10 @@ Code inspected with app.codiga.io:
 [![Code Grade](<https://api.codiga.io/project/29293/status/svg>)](<https://frontend.code-inspector.com/project/29293/dashboard>)
 [![Code Quality Score](<https://api.codiga.io/project/29293/score/svg>)](<https://frontend.code-inspector.com/project/29293/dashboard>)
 
+codeQL:
+
+[![flawfinder](https://github.com/Vodkacannon/general-physics/actions/workflows/flawfinder.yml/badge.svg?branch=main)](https://github.com/Vodkacannon/general-physics/actions/workflows/flawfinder.yml)
+
 Current "flawfinder" workflow artifacts: 0.
 
 Flawfinder: https://github.com/david-a-wheeler/flawfinder
