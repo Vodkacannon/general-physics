@@ -9,7 +9,7 @@
 
 int main()
 {
-    namespace gpf = general_physics;
+    namespace gp = general_physics;
     
     std::cout << gp::acceleration(5.0, 2.0, 3.0, 1.0) << "\n";
     std::cout << gp::stellar_dynamical_time_scale(1000.0f, 500.0f) << "\n";
