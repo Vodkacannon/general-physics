@@ -24,4 +24,9 @@ namespace general_physics
 	{
 		return wave_velocity / wave_width;
 	}
+
+	float wavelength(float frequency, float wave_velocity)
+	{
+		return wave_velocity / frequency;
+	}
 }

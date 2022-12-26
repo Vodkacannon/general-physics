@@ -1,5 +1,3 @@
-#pragma once
-
 #include "include/constants.hpp"
 
 namespace general_physics
@@ -41,7 +39,7 @@ namespace general_physics
   
   	float capacitor_energy(float quantity_of_charge_separated, float applied_potential_difference)
   	{
-    		return (1 / 2) * (quantity_of_charge_separated * quantity_of_charge_separated) / applied_potential_difference;
+    		return 0.5f * (quantity_of_charge_separated * quantity_of_charge_separated) / applied_potential_difference;
   	}
 	
 	float electric_flux(float total_charge_in_volume)
@@ -52,5 +50,10 @@ namespace general_physics
 	float coulombs_force(float charge_1, float charge_2, float distance_between_charges)
 	{
 		return (COULOMBS_CONSTANT * charge_1 * charge_2) / (distance_between_charges * distance_between_charges);
+	}
+
+	float coulombs_force(float electric_flux, float distance_between_charges)
+	{
+		return electric_flux / distance_between_charges;
 	}
 }

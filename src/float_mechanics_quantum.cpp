@@ -1,5 +1,3 @@
-#pragma once
-
 #include "include/constants.hpp"
 
 namespace general_physics

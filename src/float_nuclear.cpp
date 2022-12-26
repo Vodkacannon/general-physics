@@ -1,5 +1,3 @@
-#pragma once
-
 #include <iostream>
 #define _USE_MATH_DEFINES
 #include <math.h>
@@ -18,10 +16,14 @@ namespace general_physics
         return (energy * energy_cross_section) / expf(-2.0f * M_PI * energy_cross_section * sommerfeld_parameter); 
     }
     
-    //TODO.
-    float gamow_factor() 
+    float total_interaction_cross_section(float s_factor, float sommerfeld_parameter)
     {
-        return 0.0f;
+        return s_factor * expf(-2.0f * M_PI * sommerfeld_parameter);
+    }
+
+    float gamow_factor(float z_1, float z_2, float e, float relative_incident_velocity)
+    {
+        return (z_1 * z_2 * e * e) / (4.0f * M_PI * VACUUM_PERMITTIVITY_CONSTANT * REDUCED_PLANCKS_CONSTANT * relative_incident_velocity);
     }
 
     float excess_mass(float total_rest_mass_of_fission_products, float mass_of_origional_fuel_nucleus)

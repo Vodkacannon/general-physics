@@ -45,18 +45,23 @@ namespace general_physics
 
 	float average_kinetic_energy_of_ideal_gas(float gas_temperature)
 	{
-		return (3 / 2) * BOLTZMANS_CONSTANT * gas_temperature;
+		return (3.0f / 2.0f) * BOLTZMANS_CONSTANT * gas_temperature;
 	}
 	
 	float spectral_radiance(float electromagnetic_frequency, float absolute_temperature)
 	{
-		float first_half = (((2 * PLANCKS_CONSTANT * electromagnetic_frequency * electromagnetic_frequency * electromagnetic_frequency) / (general_physics::SPEED_OF_LIGHT * general_physics::SPEED_OF_LIGHT)));
-		float second_half = (1 / expf(PLANCKS_CONSTANT * electromagnetic_frequency / BOLTZMANS_CONSTANT * absolute_temperature) - 1);
+		float first_half = (((2.0f * PLANCKS_CONSTANT * electromagnetic_frequency * electromagnetic_frequency * electromagnetic_frequency) / (SPEED_OF_LIGHT * SPEED_OF_LIGHT)));
+		float second_half = (1.0f / expf(PLANCKS_CONSTANT * electromagnetic_frequency / BOLTZMANS_CONSTANT * absolute_temperature) - 1.0f);
 		return first_half * second_half;
 	}
 	
 	float total_power_radiated(float body_area, float emissivity, float body_temperature)
-        {
-                return body_area * emissivity * STEFAN_BOLTZMAN_CONSTANT * powf(body_temperature, 4);
-        }
+    {
+        return body_area * emissivity * STEFAN_BOLTZMAN_CONSTANT * powf(body_temperature, 4.0f);
+    }
+
+	float total_power_radiated(float body_area, float emissivity, float body_temperature, float ambient_temperature)
+	{
+		return body_area * emissivity * STEFAN_BOLTZMAN_CONSTANT * (powf(body_temperature, 4.0f) - powf(ambient_temperature, 4.0f));
+	}
 }

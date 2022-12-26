@@ -58,13 +58,5 @@ namespace general_physics
 		return amplitude * sinf(2.0f * M_PI * frequency * time + phase);
 	}
 	
-	float rotational_kinetic_energy(float rotational_inertia, float angular_velocity)
-	{
-		return 0.5f * rotational_inertia * angular_velocity * angular_velocity;
-	}
 
-	float rolling_object_kinetic_energy(float kinetic_energy, float rotational_kinetic_energy)
-	{
-		return kinetic_energy + rotational_kinetic_energy;
-	}
 };

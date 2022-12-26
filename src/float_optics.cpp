@@ -28,4 +28,9 @@ namespace general_physics
     {
 		return molar_absorption_coefficient * optical_path_length * molar_concentration_of_matter;
     }
+
+	float beer_lambert_law(float molar_absorption_coefficient, float optical_path_length, float molar_concentration_of_matter, float molar_absorption_coefficient_2, float optical_path_length_2, float molar_concentration_of_matter_2) 
+	{
+		return molar_absorption_coefficient * optical_path_length * molar_concentration_of_matter + molar_absorption_coefficient_2 * optical_path_length_2 * molar_concentration_of_matter_2;
+	}
 }

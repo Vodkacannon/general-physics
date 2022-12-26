@@ -48,4 +48,9 @@ namespace general_physics
 	{
 		return fluid_velocity / sqrtf(gravitational_acceleration * hydraulic_mean_depth);
 	}
+
+	float rayleigh_number(float fluid_density, float fluid_velocity, float fluid_viscosity, float gravitational_acceleration, float hydraulic_mean_depth)
+	{
+		return (fluid_density * fluid_velocity * fluid_velocity * hydraulic_mean_depth) / (fluid_viscosity * gravitational_acceleration);
+	}
 }

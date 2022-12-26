@@ -1,4 +1,3 @@
-#pragma once
 #include "include/constants.hpp"
 
 namespace general_physics
@@ -79,8 +78,18 @@ namespace general_physics
 		return sqrtf(momentum_part + mass_energy_part);
 	}
 
-	float relativistic_kinetic_energy(float mass_energy, float velocity)
+	float relativistic_kinetic_energy_2(float mass_energy, float velocity)
 	{
-		return mass_energy * (lorentz_factor(velocity) - 1);
+		return mass_energy * (lorentz_factor(velocity) - 1.0f);
+	}
+
+	float relativistic_kinetic_energy_1(float mass, float velocity)
+	{
+		return mass_energy(mass) * (lorentz_factor(velocity) - 1.0f);
+	}
+
+	float relativistic_velocity_addition(float velocity_one, float velocity_two)
+	{
+		return (velocity_one + velocity_two) / (1.0f + (velocity_one * velocity_two) / (SPEED_OF_LIGHT * SPEED_OF_LIGHT));
 	}
 }
