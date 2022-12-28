@@ -1,7 +1,7 @@
 # general-physics
 A general, verbose physics library.
 
-Version 5.75.
+Version 5.9.1. This corresponds to the number of commits.
 
 Code inspected with app.codiga.io:
 
