@@ -32,4 +32,6 @@ namespace general_physics
 	float relativistic_kinetic_energy_2(float mass, float velocity);
 
 	float relativistic_velocity_addition(float velocity_one, float velocity_two);
+	
+	float gravitational_time_dilation(float parent_mass, float proper_time, float parent_mass_radius)
 }

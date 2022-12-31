@@ -1,4 +1,5 @@
 #include "include/constants.hpp"
+#include "include/float_astrophysics.hpp"
 
 namespace general_physics
 {
@@ -91,5 +92,15 @@ namespace general_physics
 	float relativistic_velocity_addition(float velocity_one, float velocity_two)
 	{
 		return (velocity_one + velocity_two) / (1.0f + (velocity_one * velocity_two) / (SPEED_OF_LIGHT * SPEED_OF_LIGHT));
+	}
+
+	//Calculate the gravitational time dilation without rotation.
+	float gravitational_time_dilation(float parent_mass, float proper_time, float parent_mass_radius) {
+		return proper_time * sqrtf(escape_speed(parent_mass, parent_mass_radius) / (parent_mass_radius * SPEED_OF_LIGHT * SPEED_OF_LIGHT));
+	}
+
+	//Calculate the gravitational time dilation for a circular orbit.
+	float gravitational_time_dilation_circular_orbit(float proper_time, float schwarzschild_radius, float radius_of_orbit) {
+		return proper_time * sqrtf(1.0f - (3.0f / 2.0f) * (schwarzschild_radius / radius_of_orbit));
 	}
 }
