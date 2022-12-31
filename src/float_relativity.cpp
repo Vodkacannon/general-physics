@@ -48,7 +48,7 @@ namespace general_physics
 	
 	float relativistic_length_contraction(float lorentz_factor, float proper_length)
 	{
-		return (1 / lorentz_factor) * proper_length;
+		return (1.0f / lorentz_factor) * proper_length;
 	}
 
 	float relativistic_length_contraction_2(float velocity, float proper_length)

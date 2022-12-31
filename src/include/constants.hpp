@@ -6,6 +6,7 @@ namespace general_physics
 {
     const double NEWTON_GRAVITATIONAL_CONSTANT = 6.67430e-11;
     const double SPEED_OF_LIGHT = 299792458;
+    const u_int64_t SPEED_OF_LIGHT_SQUARED = 89875517873681764;
     const double EARTHS_GRAVITATIONAL_CONSTANT = 9.80665;
     const double COULOMBS_CONSTANT = 8.9875517923e9;
     const double PLANCKS_CONSTANT = 6.62607004e-34;
