@@ -10,17 +10,17 @@ namespace general_physics
 {
     	double time(double frequency)
     	{
-        	return 1 / frequency;
+        	return 1.0 / frequency;
     	}
 
     	double frequency(double time)
     	{
-        	return 1 / time;
+        	return 1.0 / time;
     	}
 
     	double final_free_fall_velocity(double acceleration_of_gravity, double initial_height)
     	{
-        	return sqrt(2 * acceleration_of_gravity * initial_height);
+        	return sqrt(2.0 * acceleration_of_gravity * initial_height);
     	}
 
     	double centripedal_acceleration_from_tangental(double tangental_velocity, double radius)
@@ -75,12 +75,12 @@ namespace general_physics
 
     	double orbital_period(double velocity, double radius)
     	{
-        	return (2 * M_PI * radius) / velocity;
+        	return (2.0 * M_PI * radius) / velocity;
     	}
 
     	double rotational_kinetic_energy(double rotational_inertia, double angular_velocity)
     	{
-        	return 0.5f * rotational_inertia * angular_velocity * angular_velocity;
+        	return 0.5 * rotational_inertia * angular_velocity * angular_velocity;
     	}
 
     	double rolling_object_kinetic_energy(double kinetic_energy, double rotational_kinetic_energy)
@@ -275,7 +275,7 @@ namespace general_physics
 	
 	double period_of_spring_with_mass(double mass, double spring_constant)
 	{
-		return 2 * M_PI * sqrt(mass / spring_constant);
+		return 2.0 * M_PI * sqrt(mass / spring_constant);
 	}
 	
 	double harmonic_oscillator_position(double amplitude, double frequency, double time, double phase)
