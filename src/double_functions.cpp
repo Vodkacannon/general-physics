@@ -280,7 +280,7 @@ namespace general_physics
 	
 	double harmonic_oscillator_position(double amplitude, double frequency, double time, double phase)
 	{
-		return amplitude * sin(2 * M_PI * frequency * time + phase);
+		return amplitude * sin(2.0 * M_PI * frequency * time + phase);
 	}
 	
 	double total_power_radiated(double body_area, double emissivity, double body_temperature)
